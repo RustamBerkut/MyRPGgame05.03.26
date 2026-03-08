@@ -307,6 +307,7 @@ UnityEngine.Animator::get_runtimeAnimatorController_Injected
 UnityEngine.Animator::Rebind_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
 UnityEngine.Animator::SetBoolString_Injected
+UnityEngine.Animator::SetFloatString_Injected
 UnityEngine.Animator::SetTriggerString_Injected
 UnityEngine.Animator::set_runtimeAnimatorController_Injected
 UnityEngine.Animator::get_parameters_Injected
