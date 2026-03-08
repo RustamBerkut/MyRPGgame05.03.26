@@ -36,9 +36,14 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 }
 public enum Resours
 {
-    Lumber,
-    Rock,
-    Meat,
-    Rubin,
-    Wool
+    Sword,
+    Bow,
+    Dual,
+    Mage,
+    Helmet,
+    Shield,
+    Body,
+    Legs,
+    HPpotion,
+    MPpotion
 }
