@@ -7,7 +7,15 @@ public class CameraFollow : MonoBehaviour
     public float Velocity;
     public float MinDistance;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Invoke(nameof(SetupPlayerInCamera), 1f);
+    }
+    private void SetupPlayerInCamera()
+    {
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void LateUpdate()
     {
         if (Target == null)

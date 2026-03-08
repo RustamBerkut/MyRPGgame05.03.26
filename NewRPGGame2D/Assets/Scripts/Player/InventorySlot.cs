@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour
         {
             var otherSlotTransform = eventData.pointerDrag.transform;
             otherSlotTransform.SetParent(transform);
-            otherSlotTransform.localPosition = Vector3.zero;
+            otherSlotTransform.localPosition = Vector3.zero; Debug.Log("svoboda");
         }
         else
         {
