@@ -260,7 +260,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 16
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2554473656886179314, guid: 470cfb1e4f7865c40b83d403037c90c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2878257142696626748}
   - component: {fileID: 1071049078185890773}
+  - component: {fileID: 5944696487094382239}
   m_Layer: 0
   m_Name: Rfoot
   m_TagString: Untagged
@@ -363,6 +364,33 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5944696487094382239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280902855806586141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3b45a0733505743bda9e6f367a2ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
+  listSprites:
+  - {fileID: 5053251350606442050, guid: 470cfb1e4f7865c40b83d403037c90c9, type: 3}
+  - {fileID: 2852722183679507330, guid: 7eb057e51cdb4b84596e869c11cf26ba, type: 3}
+  - {fileID: 8616813021583795274, guid: 4f4d6264408da453a8511876ebec8ae3, type: 3}
+  - {fileID: -6657482867516515422, guid: ed0836d2b0b084f2a842be7fa476e1e5, type: 3}
+  - {fileID: 2710371681560268619, guid: c8a4db297c0ce4a38abd3c1d2da37e98, type: 3}
+  - {fileID: 2227563860517246555, guid: e17d600fcd74948bd8547a87f8f5839a, type: 3}
+  - {fileID: -62334307996113135, guid: a4b630b105c514614b9ba9d9937fef5d, type: 3}
+  - {fileID: -997006319698520551, guid: 75c6efef2560d4417bd40473e15859cb, type: 3}
+  - {fileID: 7509469182213787861, guid: c9a0377619143454f813b786ccb2467c, type: 3}
+  - {fileID: 7194678473495877024, guid: 9f70f3b311741431cbbda23a4cfbc285, type: 3}
+  - {fileID: 1163637350275628661, guid: e7d2d469a9a9548bcb468fc5ff5792c1, type: 3}
+  - {fileID: -3490681349583411707, guid: c8b0805f6931f4f7f90aea6bd3b08f57, type: 3}
+  - {fileID: -1315093970748110446, guid: 8ac8f08f2a7884907b931477b1694539, type: 3}
+  - {fileID: -4207956258031686970, guid: 37e94653dd0034cee98125a6d5d6a2bf, type: 3}
 --- !u!1 &455347688938574267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1577,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8774901873806554782}
   - component: {fileID: 6682003243883075217}
-  - component: {fileID: 7427646938695075123}
   m_Layer: 0
   m_Name: bot
   m_TagString: Untagged
@@ -1631,31 +1658,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7427646938695075123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3725891347008106317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb3b45a0733505743bda9e6f367a2ef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
-  listSprites:
-  - {fileID: -3618802667364733500, guid: a05ebb241a0b14dec9a0d4bdd31301a3, type: 3}
-  - {fileID: -3992137426342128158, guid: 1810f09d324df46289d58e432045bcd1, type: 3}
-  - {fileID: 7505278090536262311, guid: 6dc30e5993cb04a47a6845283a352d2e, type: 3}
-  - {fileID: 1589403714872849932, guid: fbddd4306af2b47458c43097d5b91f87, type: 3}
-  - {fileID: -6702876299118751804, guid: 1416614edddf54e2bb98c61ab32dc586, type: 3}
-  - {fileID: -314589219302796148, guid: 7f34c450245f5488bac2d54b5fbbae81, type: 3}
-  - {fileID: -6505695957970812123, guid: 61f60bf66a0684be3b448f6e237a3f12, type: 3}
-  - {fileID: 2063926097333013154, guid: 49278b333c23b464fbe87f4618639aa0, type: 3}
-  - {fileID: -8707472796148539467, guid: 7c5a293137726445abd2b50a8922119b, type: 3}
-  - {fileID: 8681217020312184217, guid: 7837b3161c8b7477e9711cb259036797, type: 3}
-  - {fileID: 3193519689285016258, guid: cdf6ea08334f54b81b8e1bfb81a896c7, type: 3}
-  - {fileID: 676671511496910333, guid: f5bfb7e5e8f8d482a8209d1f2f91e467, type: 3}
 --- !u!1 &3748249033218262754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,7 +3477,7 @@ Transform:
   m_GameObject: {fileID: 5884947733841586315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.119, z: 0}
   m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3528,7 +3530,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2921928543939359008, guid: 8ada8c9e757cf49d8a0418a5be86796a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3571,10 +3573,17 @@ MonoBehaviour:
   - {fileID: -314589219302796148, guid: 7f34c450245f5488bac2d54b5fbbae81, type: 3}
   - {fileID: -6505695957970812123, guid: 61f60bf66a0684be3b448f6e237a3f12, type: 3}
   - {fileID: 2063926097333013154, guid: 49278b333c23b464fbe87f4618639aa0, type: 3}
-  - {fileID: -8707472796148539467, guid: 7c5a293137726445abd2b50a8922119b, type: 3}
+  - {fileID: -2733704329670916693, guid: 0aba1c3d9e6814991b93ff6a9540656b, type: 3}
   - {fileID: 8681217020312184217, guid: 7837b3161c8b7477e9711cb259036797, type: 3}
   - {fileID: 3193519689285016258, guid: cdf6ea08334f54b81b8e1bfb81a896c7, type: 3}
   - {fileID: 676671511496910333, guid: f5bfb7e5e8f8d482a8209d1f2f91e467, type: 3}
+  - {fileID: -1051182729592144375, guid: deb413cebdc864517b43b7beaa19d2a5, type: 3}
+  - {fileID: 6828881972621389015, guid: d7a1a0aeecfbf49a2af4eb4ac19f90e3, type: 3}
+  - {fileID: -5138849381010601345, guid: da6895bd4082d441cbe5911031d0f43b, type: 3}
+  - {fileID: -401103313191006133, guid: 7a18280193ba94224b27d6dedc9fa979, type: 3}
+  - {fileID: 2949992012896409553, guid: e58444fb66d4648758da6a91ccbd3fe9, type: 3}
+  - {fileID: -6287698273869241847, guid: 8e0564280a4e94fe9ab922abf53543db, type: 3}
+  - {fileID: -8439029293663886290, guid: 44caccf8dc342c54987ccaf53653b2c8, type: 3}
 --- !u!1 &5990497699962049868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,7 +4528,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.9
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5305,6 +5314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039059432478640932}
   - component: {fileID: 6332585161822601328}
+  - component: {fileID: 1268717007494987008}
   m_Layer: 0
   m_Name: Lfoot
   m_TagString: Untagged
@@ -5386,6 +5396,33 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1268717007494987008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7978569140058703931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3b45a0733505743bda9e6f367a2ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
+  listSprites:
+  - {fileID: 5053251350606442050, guid: 470cfb1e4f7865c40b83d403037c90c9, type: 3}
+  - {fileID: 2852722183679507330, guid: 7eb057e51cdb4b84596e869c11cf26ba, type: 3}
+  - {fileID: 8616813021583795274, guid: 4f4d6264408da453a8511876ebec8ae3, type: 3}
+  - {fileID: -6657482867516515422, guid: ed0836d2b0b084f2a842be7fa476e1e5, type: 3}
+  - {fileID: 2710371681560268619, guid: c8a4db297c0ce4a38abd3c1d2da37e98, type: 3}
+  - {fileID: 2227563860517246555, guid: e17d600fcd74948bd8547a87f8f5839a, type: 3}
+  - {fileID: -62334307996113135, guid: a4b630b105c514614b9ba9d9937fef5d, type: 3}
+  - {fileID: -997006319698520551, guid: 75c6efef2560d4417bd40473e15859cb, type: 3}
+  - {fileID: 7509469182213787861, guid: c9a0377619143454f813b786ccb2467c, type: 3}
+  - {fileID: 7194678473495877024, guid: 9f70f3b311741431cbbda23a4cfbc285, type: 3}
+  - {fileID: 1163637350275628661, guid: e7d2d469a9a9548bcb468fc5ff5792c1, type: 3}
+  - {fileID: -3490681349583411707, guid: c8b0805f6931f4f7f90aea6bd3b08f57, type: 3}
+  - {fileID: -1315093970748110446, guid: 8ac8f08f2a7884907b931477b1694539, type: 3}
+  - {fileID: -4207956258031686970, guid: 37e94653dd0034cee98125a6d5d6a2bf, type: 3}
 --- !u!1 &8197982560074088396
 GameObject:
   m_ObjectHideFlags: 0
@@ -9822,13 +9859,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301133513256800234}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc98a3cbbbffd9143afa02ab707650d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentSlot
   resours: 08000000
-  equipmentSlotOnPlayer: []
+  equipmentSlotOnPlayer:
+  - {fileID: 280902855806586141}
+  - {fileID: 7978569140058703931}
 --- !u!1001 &4792791828862900524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10282,7 +10321,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6733598685337465927}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc98a3cbbbffd9143afa02ab707650d7, type: 3}
   m_Name: 

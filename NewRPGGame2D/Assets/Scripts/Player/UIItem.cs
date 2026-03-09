@@ -8,6 +8,10 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public Resours resours;
     public static Action UpdateItemSlotAction;
 
+    public float meleeAttack, bowAttack, 
+        mageAttack, shield, MP, HP,
+        STR, DEX, INT;
+
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;
     private Canvas mainCanvas;
