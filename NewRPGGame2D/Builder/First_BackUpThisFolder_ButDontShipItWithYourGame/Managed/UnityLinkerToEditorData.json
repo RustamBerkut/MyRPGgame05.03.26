@@ -401,6 +401,7 @@
             "scenes": [
               "Assets/Scenes/MainScene.unity",
               "Assets/Scenes/MapScene.unity",
+              "Assets/Scenes/SampleScene.unity",
               "Assets/Scenes/StoreScene.unity",
               "Assets/Scenes/WorkshopScene.unity"
             ],
@@ -1102,6 +1103,15 @@
         "name": "Physics2D",
         "dependencies": [
           {
+            "name": "BoxCollider2D",
+            "scenes": [
+              "Assets/Scenes/MainScene.unity",
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "CapsuleCollider2D",
             "scenes": [
               "Assets/Scenes/MainScene.unity"
@@ -1654,7 +1664,8 @@
           {
             "name": "CanvasGroup",
             "scenes": [
-              "Assets/Scenes/MainScene.unity"
+              "Assets/Scenes/MainScene.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1664,6 +1675,7 @@
             "scenes": [
               "Assets/Scenes/MainScene.unity",
               "Assets/Scenes/MapScene.unity",
+              "Assets/Scenes/SampleScene.unity",
               "Assets/Scenes/StoreScene.unity",
               "Assets/Scenes/WorkshopScene.unity"
             ],

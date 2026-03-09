@@ -1,13 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public int numberOfItem;
+    public Resours resours;
+    public static Action UpdateItemSlotAction;
+
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;
     private Canvas mainCanvas;
 
-    public Resours resours;
+    
 
     private void Start()
     {
@@ -32,6 +37,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     {
         transform.localPosition = Vector3.zero;
         m_CanvasGroup.blocksRaycasts = true;
+        UpdateItemSlotAction?.Invoke();
     }
 }
 public enum Resours
@@ -43,6 +49,7 @@ public enum Resours
     Helmet,
     Shield,
     Body,
+    Hand,
     Legs,
     HPpotion,
     MPpotion

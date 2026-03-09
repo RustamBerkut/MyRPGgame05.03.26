@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         {
             var otherSlotTransform = eventData.pointerDrag.transform;
             otherSlotTransform.SetParent(transform);
-            otherSlotTransform.localPosition = Vector3.zero; Debug.Log("svoboda");
+            otherSlotTransform.localPosition = Vector3.zero;
         }
         else
         {

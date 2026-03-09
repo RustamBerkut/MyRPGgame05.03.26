@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
   m_Layer: 0
-  m_Name: SwordSimpleUI
+  m_Name: HelmetUI9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: df96032537d4c482e9b20c674c73dc45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06fd7b75262e041e1a78baecb78cd2ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712b934be74363d49932a8b945152404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
-  resours: 0
+  numberOfItem: 9
+  resours: 4
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

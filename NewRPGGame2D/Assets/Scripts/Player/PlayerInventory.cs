@@ -33,6 +33,7 @@ namespace PlayerBehaviour
         private void OnTakeLoot(GameObject looting)
         {
             var itemsLoot = looting.GetComponent<LootingItem>().UIItem.name;
+            itemsLoot = string.Format("Loot/{0}", itemsLoot);
             var playerLoot = Resources.Load<GameObject>(itemsLoot);
             GameObject loot = Instantiate(playerLoot, transform.position, Quaternion.identity);
             for (int i = 0; i < UIslots.Count; i++)
@@ -42,6 +43,10 @@ namespace PlayerBehaviour
                     loot.transform.SetParent(UIslots[i].transform);
                     loot.transform.localPosition = Vector3.zero;
                     break;
+                }
+                else 
+                {
+                    Debug.Log("Ytn mesta");
                 }
             }
         }
