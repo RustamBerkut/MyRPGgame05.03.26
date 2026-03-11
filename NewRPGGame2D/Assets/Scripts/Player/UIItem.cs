@@ -10,7 +10,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     public float meleeAttack, bowAttack, 
         mageAttack, shield, MP, HP,
-        STR, DEX, INT;
+        STR, DEX, INT, CON;
 
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;
