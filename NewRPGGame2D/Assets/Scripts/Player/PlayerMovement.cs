@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PlayerBehaviour
 {
     public class PlayerMovement : MonoBehaviour
     {
         public float Speed = 5f;
-        public Joystick joystick;
 
         [SerializeField]
         private Transform attackHandTransform;
@@ -21,15 +21,19 @@ namespace PlayerBehaviour
             _animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
         }
-
+        public void InputPlayer(InputAction.CallbackContext _context)
+        {
+            moveVector = _context.ReadValue<Vector2>();
+        }
         void FixedUpdate()
         {
             MovementLogic();
         }
         private void MovementLogic()
         {
-            moveVector.x = Input.GetAxis("Horizontal") + joystick.Horizontal;
-            moveVector.y = Input.GetAxis("Vertical") + joystick.Vertical;
+            Vector3 move = new(moveVector.x, moveVector.y, 0);
+            move.Normalize();
+            
             _rb.MovePosition(_rb.position + Speed * Time.deltaTime * moveVector);
 
             float anim = Mathf.Abs(moveVector.y) + Mathf.Abs(moveVector.x); ;

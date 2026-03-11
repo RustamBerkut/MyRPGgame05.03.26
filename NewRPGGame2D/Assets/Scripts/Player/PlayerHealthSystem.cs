@@ -10,11 +10,9 @@ namespace PlayerBehaviour
         private Slider hpSlider;
         [SerializeField]
         private TextMeshProUGUI HPText;
-        [SerializeField]
+        
         private int MaxHP;
-
         private int currentHP;
-
 
         public void SetupMaxHp(int CON)
         {
@@ -29,13 +27,24 @@ namespace PlayerBehaviour
             currentHP -= damage;
             hpSlider.value = currentHP;
             HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
-        }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            if (currentHP <= 0)
             {
-                OnDamage(10);
+                OnPlayerDead();
             }
+        }
+        public void OnHealth(int health)
+        {
+            currentHP += health;
+            hpSlider.value = currentHP;
+            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            if (currentHP >= MaxHP)
+            {
+                currentHP = MaxHP;
+            }
+        }
+        private void OnPlayerDead()
+        {
+            Debug.Log("Player dead");
         }
     }
 }
