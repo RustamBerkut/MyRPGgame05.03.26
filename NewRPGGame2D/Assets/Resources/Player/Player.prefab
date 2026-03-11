@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.9
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5999999
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3198,7 +3198,7 @@ GameObject:
   - component: {fileID: 7135861364653281063}
   - component: {fileID: 7328663424823523524}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: MPText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4792,6 +4792,7 @@ GameObject:
   - component: {fileID: 820868603108727541}
   - component: {fileID: 2801549463599860403}
   - component: {fileID: 5823068465996970283}
+  - component: {fileID: 6981136953897711616}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5165,17 +5166,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2764814026a49e24a883fbdaf7e1eb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  lvlText: {fileID: 7066526268247183242}
+  currExpText: {fileID: 5461385741678797504}
+  lvlString: LvlstringName
+  currExpString: currExpStringName
+  expToNextLvlString: 100
   statFreePoints: 5
-  STR: 0
-  DEX: 0
-  INT: 0
-  CON: 0
+  STR: 10
+  DEX: 10
+  INT: 10
+  CON: 10
   strText: {fileID: 5564989722066496091}
   dexText: {fileID: 6865338651296698329}
   intText: {fileID: 7951293460131091492}
   conText: {fileID: 8094272313797708547}
-  MaxHP: 0
-  MaxMP: 0
+  statText: {fileID: 4580102318933534286}
+  strString: StrStringName
+  dexString: DexStringName
+  intString: IntStringName
+  conString: ConStringName
+  statString: StatStringName
+  MPText: {fileID: 7328663424823523524}
   MeleeDamage: 0
   MagicDamage: 0
   RangeDamage: 0
@@ -5183,6 +5194,21 @@ MonoBehaviour:
   CritChance: 0
   HpRegen: 0
   MpRegen: 0
+--- !u!114 &6981136953897711616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132015569861268908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcb1a613cf91014686568fd18afb035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour.PlayerHealthSystem
+  hpSlider: {fileID: 1991086641247354103}
+  HPText: {fileID: 5550901110276965767}
+  MaxHP: 0
 --- !u!1 &7170776480896932949
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,7 +5478,7 @@ GameObject:
   - component: {fileID: 2905293388407792230}
   - component: {fileID: 4580102318933534286}
   m_Layer: 0
-  m_Name: Counter
+  m_Name: StatCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5845,7 +5871,7 @@ GameObject:
   - component: {fileID: 4096260615705452205}
   - component: {fileID: 5550901110276965767}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: HPText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
