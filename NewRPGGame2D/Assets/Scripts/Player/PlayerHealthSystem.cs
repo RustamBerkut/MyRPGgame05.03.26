@@ -13,9 +13,28 @@ namespace PlayerBehaviour
         
         private int MaxHP;
         private int currentHP;
+        
+        private int HpRegen;
+        private int playerCon = 10;
+        private float timeRegen = 10;
+        public float timeAfterAttack = 10;
+        
+        private void Update()
+        {
+            timeAfterAttack -= Time.deltaTime;
+            if (timeAfterAttack <= 0)
+            {
+                timeRegen -= Time.deltaTime;
+                if (timeRegen <= 0)
+                {
+                    OnPlayerHealthRegen();
+                }
+            }
+        }
 
         public void SetupMaxHp(int CON)
         {
+            playerCon = CON;
             MaxHP = 100 + (CON - 10) * 5;
             currentHP = MaxHP;
             hpSlider.maxValue = currentHP;
@@ -26,6 +45,7 @@ namespace PlayerBehaviour
         {
             currentHP -= damage;
             hpSlider.value = currentHP;
+            timeAfterAttack = 10;
             HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
             if (currentHP <= 0)
             {
@@ -35,12 +55,18 @@ namespace PlayerBehaviour
         public void OnHealth(int health)
         {
             currentHP += health;
-            hpSlider.value = currentHP;
-            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
             if (currentHP >= MaxHP)
             {
                 currentHP = MaxHP;
             }
+            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            hpSlider.value = currentHP;
+        }
+        private void OnPlayerHealthRegen()
+        {
+            HpRegen = 2 + (playerCon - 10);
+            timeRegen = 10;
+            OnHealth(HpRegen);
         }
         private void OnPlayerDead()
         {

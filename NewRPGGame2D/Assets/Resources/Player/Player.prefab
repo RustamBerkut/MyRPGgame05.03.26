@@ -4972,6 +4972,7 @@ GameObject:
   - component: {fileID: 7724148276355686965}
   - component: {fileID: 7996821756877561026}
   - component: {fileID: 6713864911974791299}
+  - component: {fileID: 6120975455236736438}
   - component: {fileID: 8906856525510043625}
   - component: {fileID: 7056039027569151528}
   - component: {fileID: 932647093842543525}
@@ -4980,7 +4981,8 @@ GameObject:
   - component: {fileID: 2801549463599860403}
   - component: {fileID: 5823068465996970283}
   - component: {fileID: 6981136953897711616}
-  - component: {fileID: 6120975455236736438}
+  - component: {fileID: 7742933401332416461}
+  - component: {fileID: 7396069750015250830}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5082,6 +5084,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour.PlayerMovement
   Speed: 3
   attackHandTransform: {fileID: 8424381345537238049}
+--- !u!114 &6120975455236736438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132015569861268908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 0103a3c2b3b422148a6847c49ca7b36c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6713864911974791299}
+        m_TargetAssemblyTypeName: PlayerBehaviour.PlayerMovement, Assembly-CSharp
+        m_MethodName: InputPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b02c7250-5495-4fa3-82d1-79dc31f130b6
+    m_ActionName: Movement/Input
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Movement
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!50 &8906856525510043625
 Rigidbody2D:
   serializedVersion: 5
@@ -5353,11 +5401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2764814026a49e24a883fbdaf7e1eb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  lvlText: {fileID: 7066526268247183242}
-  currExpText: {fileID: 5461385741678797504}
-  lvlString: LvlstringName
-  currExpString: currExpStringName
-  expToNextLvlString: 100
   statFreePoints: 5
   STR: 10
   DEX: 10
@@ -5373,14 +5416,11 @@ MonoBehaviour:
   intString: IntStringName
   conString: ConStringName
   statString: StatStringName
-  MPText: {fileID: 7328663424823523524}
   MeleeDamage: 0
   MagicDamage: 0
   RangeDamage: 0
   AttackSpeed: 0
   CritChance: 0
-  HpRegen: 0
-  MpRegen: 0
 --- !u!114 &6981136953897711616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,8 +5435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour.PlayerHealthSystem
   hpSlider: {fileID: 1991086641247354103}
   HPText: {fileID: 5550901110276965767}
-  MaxHP: 0
---- !u!114 &6120975455236736438
+  timeAfterAttack: 10
+--- !u!114 &7742933401332416461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5405,43 +5445,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 7132015569861268908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 03435af788ae3e24fbde67a6a68f1836, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 0103a3c2b3b422148a6847c49ca7b36c, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6713864911974791299}
-        m_TargetAssemblyTypeName: PlayerBehaviour.PlayerMovement, Assembly-CSharp
-        m_MethodName: InputPlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b02c7250-5495-4fa3-82d1-79dc31f130b6
-    m_ActionName: Movement/Input
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Movement
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerManaSystem
+  mpSlider: {fileID: 7403302892872819807}
+  MPText: {fileID: 7328663424823523524}
+  timeAfterAttack: 10
+--- !u!114 &7396069750015250830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132015569861268908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7029763eaf8a64a418577c2cbbc8d729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerExperienceSystem
+  expSlider: {fileID: 1405154210281441608}
+  expText: {fileID: 5461385741678797504}
+  lvlText: {fileID: 7066526268247183242}
+  lvlString: LvlstringName
+  currExpString: CurrExpstringName
 --- !u!1 &7170776480896932949
 GameObject:
   m_ObjectHideFlags: 0
