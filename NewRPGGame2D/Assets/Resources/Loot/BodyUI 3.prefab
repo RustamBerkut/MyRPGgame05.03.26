@@ -91,6 +91,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
   numberOfItem: 3
   resours: 6
+  meleeAttack: 0
+  bowAttack: 0
+  mageAttack: 0
+  shield: 0
+  MP: 0
+  HP: 0
+  STR: 0
+  DEX: 0
+  INT: 0
+  CON: 3
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

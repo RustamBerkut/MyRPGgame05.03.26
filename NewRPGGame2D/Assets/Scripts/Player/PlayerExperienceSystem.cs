@@ -9,54 +9,73 @@ namespace PlayerBehaviour
         [SerializeField]
         private Slider expSlider;
         [SerializeField]
-        private TextMeshProUGUI expText;
-        [SerializeField]
-        private TextMeshProUGUI lvlText;
-
-        private int level = 1;
-        private int currentExp = 0;
-        private int expToNextLevel = 100;
-        
-        [SerializeField]
         private string lvlString;
         [SerializeField]
         private string currExpString;
+        [SerializeField]
+        private TextMeshProUGUI expText;
+        [SerializeField]
+        private TextMeshProUGUI lvlText;
+        
+        private int level = 1;
+        private float currentExp = 0;
+        private float expToNextLevel = 100;
+
+        private PlayerStats playerStats;
 
         private void Start()
         {
+            playerStats = GetComponent<PlayerStats>();
             if (!PlayerPrefs.HasKey(currExpString))
             {
-                OnExpUpdate(1, 0);
+                OnExpUpdate(0);
                 return;
             }
-
             OnLvlLoad();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Backspace))
+            {
+                OnExpUpdate(50);
+            }
+        }
         private void OnLvlLoad()
         {
             level = PlayerPrefs.GetInt(lvlString);
-            currentExp = PlayerPrefs.GetInt(currExpString);
-            OnExpUpdate(level, currentExp);
+            currentExp = PlayerPrefs.GetFloat(currExpString);
+            for (int i = 0; i < level - 1; i++)
+            {
+                expToNextLevel *= 1.3f;
+            }
+            expSlider.maxValue = (int)expToNextLevel;
+            expSlider.value = (int)currentExp;
+            expText.text = string.Format("{0} / {1}", (int)currentExp, (int)expToNextLevel);
+            lvlText.text = level.ToString();
         }
 
-        public void OnExpUpdate(int lvl, int exp)
+        public void OnExpUpdate(int exp)
         {
             currentExp += exp;
-            level += lvl;
-            lvlText.text = level.ToString();
-            expSlider.maxValue = expToNextLevel;
-            expSlider.value = currentExp;
+            if (currentExp >= expToNextLevel)
+            {
+                currentExp -= expToNextLevel;
+                OnLvlUp();
+            }
+            expSlider.maxValue = (int)expToNextLevel;
+            expSlider.value = (int)currentExp;
+            expText.text = string.Format("{0} / {1}", (int)currentExp, (int)expToNextLevel);
             PlayerPrefs.SetFloat(currExpString, currentExp);
-            expText.text = string.Format("{0} / {1}", currentExp, expToNextLevel);
         }
-        private void OnExpSetupInText()
-        {
-            expText.text = string.Format("{0} / {1}", currentExp, expToNextLevel);
-        }
+
         private void OnLvlUp()
         {
+            level ++;
+            expToNextLevel *= 1.3f;
+            lvlText.text = level.ToString();
             PlayerPrefs.SetInt(lvlString, level);
+            playerStats.OnSetupPlayerStatpoints();
         }
     }
 }

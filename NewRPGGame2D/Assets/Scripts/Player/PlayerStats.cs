@@ -34,6 +34,20 @@ namespace PlayerBehaviour
         private PlayerHealthSystem healthSystem;
         private PlayerManaSystem manaSystem;
 
+        private void OnEnable()
+        {
+            UIItem.UpdateItemSlotAction += ItemStatReading;
+        }
+        private void OnDisable()
+        {
+            UIItem.UpdateItemSlotAction += ItemStatReading;
+        }
+
+        private void ItemStatReading()
+        {
+            Debug.Log("Stat read");
+        }
+
         private void Start()
         {
             healthSystem = GetComponent<PlayerHealthSystem>();
@@ -46,36 +60,29 @@ namespace PlayerBehaviour
             if (!PlayerPrefs.HasKey(statString))
             {
                 OnStatsUpdate();
-                SetupStatsInText();
                 return;
             }
 
             // Установка характеристик
             OnStatsLoad();
-
             // Установка значений ХП МП
             OnStatsUpdate();
-
-            // Назначение тексту загруженных значений
-            SetupStatsInText();
         }
 
         private void OnStatsLoad()
         {
             statFreePoints = PlayerPrefs.GetInt(statString);
             STR = PlayerPrefs.GetInt(strString);
-            INT = PlayerPrefs.GetInt(intString);
             DEX = PlayerPrefs.GetInt(dexString);
+            INT = PlayerPrefs.GetInt(intString);
             CON = PlayerPrefs.GetInt(conString);
         }
         private void OnStatsUpdate()
         {
-            OnSaveStats();
+            SetupStatsInText();
 
             healthSystem.SetupMaxHp(CON);
             manaSystem.SetupMaxMp(INT);
-
-            
 
             MeleeDamage = 10 + (STR - 10) * 0.5f;
             MagicDamage = 15 * (1 + (INT - 10) * 0.05f);
@@ -84,7 +91,18 @@ namespace PlayerBehaviour
             AttackSpeed = 1.0f + (DEX - 10) * 0.02f;
             CritChance = 0.05f + (DEX - 10) * 0.003f;
         }
-        public void OnSaveStats()
+        
+        public void SetupStatsInText()
+        {
+            strText.text = STR.ToString();
+            dexText.text = DEX.ToString();
+            intText.text = INT.ToString();
+            conText.text = CON.ToString();
+            statText.text = statFreePoints.ToString();
+
+            OnSaveStats();
+        }
+        private void OnSaveStats()
         {
             PlayerPrefs.SetInt(statString, statFreePoints);
             PlayerPrefs.SetInt(strString, STR);
@@ -92,13 +110,48 @@ namespace PlayerBehaviour
             PlayerPrefs.SetInt(dexString, DEX);
             PlayerPrefs.SetInt(conString, CON);
         }
-        private void SetupStatsInText()
+
+        public void OnStatsSummary(int value)
         {
-            strText.text = STR.ToString();
-            dexText.text = DEX.ToString();
-            intText.text = INT.ToString();
-            conText.text = CON.ToString();
+            if (statFreePoints > 0)
+            {
+                statFreePoints--;
+                switch (value)
+                {
+                    case 1: STR++;
+                        break;
+                    case 2: DEX++;
+                        break;
+                    case 3: INT++;
+                        break;
+                    case 4: CON++;
+                        break;
+                }
+            }
+            healthSystem.SetupMaxHp(CON);
+            manaSystem.SetupMaxMp(INT);
+            SetupStatsInText();
+        }
+
+        public void OnSetupPlayerStatpoints()
+        {
+            statFreePoints += 5;
             statText.text = statFreePoints.ToString();
+            PlayerPrefs.SetInt(statString, statFreePoints);
+        }
+        public void OnStatPointClear()
+        {
+            int value = STR + DEX + INT + CON - 40;
+            STR = 10;
+            INT = 10;
+            DEX = 10;
+            CON = 10;
+
+            healthSystem.SetupMaxHp(CON);
+            manaSystem.SetupMaxMp(INT);
+            statFreePoints += value - 5;
+            OnSetupPlayerStatpoints();
+            SetupStatsInText();
         }
     }
 }
