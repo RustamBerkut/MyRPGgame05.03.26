@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,17 +8,13 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 {
     public int numberOfItem;
     public Resours resours;
-    public static Action UpdateItemSlotAction;
-
-    public float meleeAttack, bowAttack, 
-        mageAttack, shield, MP, HP,
-        STR, DEX, INT, CON;
+    public static Action UpdateItemStatAction;
+    public int STR, DEX, INT, CON, meleeAttack, bowAttack,
+        mageAttack, shield, MP, HP;
 
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;
     private Canvas mainCanvas;
-
-    
 
     private void Start()
     {
@@ -41,7 +39,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     {
         transform.localPosition = Vector3.zero;
         m_CanvasGroup.blocksRaycasts = true;
-        UpdateItemSlotAction?.Invoke();
+        UpdateItemStatAction?.Invoke();
     }
 }
 public enum Resours

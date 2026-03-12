@@ -9,19 +9,6 @@ namespace PlayerBehaviour
         public List<InventorySlot> UIslots;
         public List<GameObject> uiItems;
 
-        private void Start()
-        {
-
-        }
-        private void OnEnable()
-        {
-
-        }
-        private void OnDisable()
-        {
-
-        }
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.GetComponent<LootingItem>())

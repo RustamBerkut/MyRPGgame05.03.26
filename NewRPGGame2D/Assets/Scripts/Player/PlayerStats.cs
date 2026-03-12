@@ -1,5 +1,6 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace PlayerBehaviour
 {
@@ -36,11 +37,11 @@ namespace PlayerBehaviour
 
         private void OnEnable()
         {
-            UIItem.UpdateItemSlotAction += ItemStatReading;
+            UIItem.UpdateItemStatAction += ItemStatReading;
         }
         private void OnDisable()
         {
-            UIItem.UpdateItemSlotAction += ItemStatReading;
+            UIItem.UpdateItemStatAction -= ItemStatReading;
         }
 
         private void ItemStatReading()

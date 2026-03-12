@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,13 +11,13 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
     private void OnEnable()
     {
-        UIItem.UpdateItemSlotAction += OnUpdateSlot;
+        UIItem.UpdateItemStatAction += OnUpdateSlot;
     }
     private void OnDisable()
     {
-        UIItem.UpdateItemSlotAction -= OnUpdateSlot;
+        UIItem.UpdateItemStatAction -= OnUpdateSlot;
     }
-
+    
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
