@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace PlayerBehaviour
 {
@@ -32,6 +32,13 @@ namespace PlayerBehaviour
         public float AttackSpeed;
         public float CritChance;
 
+        public List<GameObject> equipmentSlot;
+
+        public int bonus_STR;
+        public int bonus_DEX;
+        public int bonus_INT;
+        public int bonus_CON;
+
         private PlayerHealthSystem healthSystem;
         private PlayerManaSystem manaSystem;
 
@@ -46,7 +53,27 @@ namespace PlayerBehaviour
 
         private void ItemStatReading()
         {
-            Debug.Log("Stat read");
+            bonus_STR = 0;
+            bonus_DEX = 0;
+            bonus_INT = 0;
+            bonus_CON = 0;
+
+            for (int i = 0; i < equipmentSlot.Count; i++)
+            {
+                if (equipmentSlot[i].GetComponentInChildren<UIItem>()) 
+                {
+                    int _bonus_STR = equipmentSlot[i].GetComponentInChildren<UIItem>().STR;
+                    int _bonus_DEX = equipmentSlot[i].GetComponentInChildren<UIItem>().DEX;
+                    int _bonus_INT = equipmentSlot[i].GetComponentInChildren<UIItem>().INT;
+                    int _bonus_CON = equipmentSlot[i].GetComponentInChildren<UIItem>().CON;
+
+                    bonus_STR += _bonus_STR;
+                    bonus_DEX += _bonus_DEX;
+                    bonus_INT += _bonus_INT;
+                    bonus_CON += _bonus_CON;
+                }
+                OnStatsUpdate();
+            }
         }
 
         private void Start()
@@ -82,15 +109,15 @@ namespace PlayerBehaviour
         {
             SetupStatsInText();
 
-            healthSystem.SetupMaxHp(CON);
-            manaSystem.SetupMaxMp(INT);
+            healthSystem.SetupMaxHp(CON + bonus_CON);
+            manaSystem.SetupMaxMp(INT + bonus_INT);
 
-            MeleeDamage = 10 + (STR - 10) * 0.5f;
-            MagicDamage = 15 * (1 + (INT - 10) * 0.05f);
-            RangeDamage = 10 + (DEX - 10) * 0.5f;
+            MeleeDamage = 10 + (STR - 10 + bonus_STR) * 0.5f;
+            MagicDamage = 15 * (1 + (INT - 10 + bonus_INT) * 0.05f);
+            RangeDamage = 10 + (DEX - 10 + bonus_DEX) * 0.5f;
 
-            AttackSpeed = 1.0f + (DEX - 10) * 0.02f;
-            CritChance = 0.05f + (DEX - 10) * 0.003f;
+            AttackSpeed = 1.0f + (DEX - 10 + bonus_DEX) * 0.02f;
+            CritChance = 0.05f + (DEX - 10 + bonus_DEX) * 0.003f;
         }
         
         public void SetupStatsInText()
@@ -129,8 +156,8 @@ namespace PlayerBehaviour
                         break;
                 }
             }
-            healthSystem.SetupMaxHp(CON);
-            manaSystem.SetupMaxMp(INT);
+            healthSystem.SetupMaxHp(CON + bonus_CON);
+            manaSystem.SetupMaxMp(INT + bonus_INT);
             SetupStatsInText();
         }
 
@@ -148,8 +175,8 @@ namespace PlayerBehaviour
             DEX = 10;
             CON = 10;
 
-            healthSystem.SetupMaxHp(CON);
-            manaSystem.SetupMaxMp(INT);
+            healthSystem.SetupMaxHp(CON + bonus_CON);
+            manaSystem.SetupMaxMp(INT + bonus_INT);
             statFreePoints += value - 5;
             OnSetupPlayerStatpoints();
             SetupStatsInText();
