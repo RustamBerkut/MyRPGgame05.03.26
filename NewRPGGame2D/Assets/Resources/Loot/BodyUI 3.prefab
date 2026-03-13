@@ -101,6 +101,7 @@ MonoBehaviour:
   shield: 0
   MP: 0
   HP: 0
+  itemName: BodyUI 3
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

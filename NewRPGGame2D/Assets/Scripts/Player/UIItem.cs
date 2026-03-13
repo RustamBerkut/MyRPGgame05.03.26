@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,6 +9,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public static Action UpdateItemStatAction;
     public int STR, DEX, INT, CON, meleeAttack, bowAttack,
         mageAttack, shield, MP, HP;
+    public string itemName;
 
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;
