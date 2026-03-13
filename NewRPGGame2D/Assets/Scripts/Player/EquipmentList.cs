@@ -18,5 +18,4 @@ public class EquipmentList : MonoBehaviour
         int num = value;
         spriteRenderer.sprite = listSprites[num];
     }
-
 }

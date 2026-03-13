@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.Progress;
 
 public class EquipmentSlot : MonoBehaviour, IDropHandler
 {
@@ -11,9 +9,12 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
     public string equipmentSlotName;
 
-    private void OnEnable()
+    private void Start()
     {
         OnLoadItemInSlot();
+    }
+    private void OnEnable()
+    {
         UIItem.UpdateItemStatAction += OnUpdateSlot;
     }
     private void OnDisable()

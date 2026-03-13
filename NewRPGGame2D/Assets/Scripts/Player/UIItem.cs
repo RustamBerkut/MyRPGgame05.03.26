@@ -20,6 +20,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         rectTransform = GetComponent<RectTransform>();
         m_CanvasGroup = GetComponent<CanvasGroup>();
         mainCanvas = GetComponentInParent<Canvas>();
+        UpdateItemStatAction?.Invoke();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
