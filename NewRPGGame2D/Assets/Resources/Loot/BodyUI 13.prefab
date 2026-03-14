@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7004320462451476135}
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
+  - component: {fileID: -2532245621040065857}
   m_Layer: 0
   m_Name: BodyUI 13
   m_TagString: Untagged
@@ -102,6 +103,8 @@ MonoBehaviour:
   MP: 0
   HP: 0
   itemName: BodyUI 13
+  icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
+  itemDescription: 
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -114,3 +117,16 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &-2532245621040065857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379141423519758778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []

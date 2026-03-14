@@ -31,6 +31,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             var otherSlotTransform = eventData.pointerDrag.transform;
             otherSlotTransform.SetParent(transform);
             otherSlotTransform.localPosition = Vector3.zero;
+            otherSlotTransform.localScale = Vector3.one;
         }
         else
         {
@@ -47,6 +48,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         var it = (GameObject)Instantiate(Resources.Load(value));
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
+        it.transform.localScale = Vector3.one;
     }
     public void OnSaveItemInSlot(string item)
     {

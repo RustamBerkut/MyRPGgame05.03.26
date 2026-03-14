@@ -43,6 +43,7 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
                 {
                     otherSlotTransform.SetParent(transform);
                     otherSlotTransform.localPosition = Vector3.zero;
+                    otherSlotTransform.localScale = Vector3.one;
                     foreach (var slot in equipmentSlotOnPlayer)
                     {
                         slot.GetComponent<EquipmentList>().SetupItemInSlot(number);
@@ -77,6 +78,7 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
         var it = (GameObject)Instantiate(Resources.Load(value));
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
+        it.transform.localScale = Vector3.one;
         int number = it.GetComponent<UIItem>().numberOfItem;
         foreach (var slot in equipmentSlotOnPlayer)
         {

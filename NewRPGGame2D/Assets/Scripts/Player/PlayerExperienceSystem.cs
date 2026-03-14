@@ -34,13 +34,6 @@ namespace PlayerBehaviour
             OnLvlLoad();
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Backspace))
-            {
-                OnExpUpdate(50);
-            }
-        }
         private void OnLvlLoad()
         {
             level = PlayerPrefs.GetInt(lvlString);

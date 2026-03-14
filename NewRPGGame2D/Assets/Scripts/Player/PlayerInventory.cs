@@ -28,7 +28,7 @@ namespace PlayerBehaviour
                 {
                     loot.transform.SetParent(UIslots[i].transform);
                     loot.transform.localPosition = Vector3.zero;
-                    //UIslots[i].GetComponent<InventorySlot>().OnSaveItemInSlot(itemsLoot);
+                    loot.transform.localScale = Vector3.one;
                     break;
                 }
                 else 
