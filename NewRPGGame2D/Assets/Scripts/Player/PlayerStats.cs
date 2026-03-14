@@ -34,10 +34,10 @@ namespace PlayerBehaviour
 
         public List<GameObject> equipmentSlot;
 
-        public int bonus_STR;
-        public int bonus_DEX;
-        public int bonus_INT;
-        public int bonus_CON;
+        private int bonus_STR;
+        private int bonus_DEX;
+        private int bonus_INT;
+        private int bonus_CON;
 
         private PlayerHealthSystem healthSystem;
         private PlayerManaSystem manaSystem;

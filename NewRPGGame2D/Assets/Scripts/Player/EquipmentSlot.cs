@@ -20,8 +20,16 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
     private void OnDisable()
     {
         UIItem.UpdateItemStatAction -= OnUpdateSlot;
+        if (transform.childCount != 0)
+        {
+            string value = gameObject.GetComponentInChildren<UIItem>().itemName;
+            OnSaveItemInSlot(value);
+        }
+        if (transform.childCount == 0)
+        {
+            OnClearItemSlot();
+        }
     }
-    
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
@@ -35,7 +43,6 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
                 {
                     otherSlotTransform.SetParent(transform);
                     otherSlotTransform.localPosition = Vector3.zero;
-                    OnSaveItemInSlot(otherSlotTransform.GetComponent<UIItem>().itemName);
                     foreach (var slot in equipmentSlotOnPlayer)
                     {
                         slot.GetComponent<EquipmentList>().SetupItemInSlot(number);
@@ -66,6 +73,7 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
         string value = PlayerPrefs.GetString(equipmentSlotName);
         value = string.Format("Loot/{0}", value);
+        Debug.Log(value);
         var it = (GameObject)Instantiate(Resources.Load(value));
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
