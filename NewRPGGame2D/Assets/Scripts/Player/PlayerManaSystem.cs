@@ -10,6 +10,8 @@ namespace PlayerBehaviour
         private Slider mpSlider;
         [SerializeField]
         private TextMeshProUGUI MPText;
+        [SerializeField]
+        private TextMeshProUGUI MPRegenText;
 
         private int MaxMP;
         private int currentMP;
@@ -40,6 +42,7 @@ namespace PlayerBehaviour
             mpSlider.maxValue = currentMP;
             mpSlider.value = currentMP;
             MPText.text = string.Format("{0} / {1}", currentMP, MaxMP);
+            OnPlayerManaRegen();
         }
         public void OnMageAttack(int mpCost)
         {
@@ -65,6 +68,7 @@ namespace PlayerBehaviour
         private void OnPlayerManaRegen()
         {
             MpRegen = 3 + (playerInt - 10);
+            MPRegenText.text = string.Format("Реген маны: {0}", MpRegen);
             timeRegen = 1;
             OnMpUpdate(MpRegen);
         }

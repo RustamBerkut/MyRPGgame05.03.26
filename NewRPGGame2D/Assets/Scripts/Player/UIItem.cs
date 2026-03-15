@@ -58,7 +58,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         };
         guiStyle.normal.background = icon;
         guiStyle.alignment = TextAnchor.MiddleCenter;
-        GUI.Box(new Rect(Screen.width / 2 - 550, Screen.height / 2 - 50, 300, 330), itemDescription, guiStyle);
+        GUI.Box(new Rect(Screen.width / 2 - 550, Screen.height / 2 - 50, 350, 320), itemDescription, guiStyle);
     }
     public void OnMouseEnterItem()
     {
@@ -81,5 +81,6 @@ public enum Resours
     Hand,
     Legs,
     HPpotion,
-    MPpotion
+    MPpotion,
+    Rune
 }

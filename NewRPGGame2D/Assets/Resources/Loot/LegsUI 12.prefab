@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7004320462451476135}
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
+  - component: {fileID: 7070474956726967169}
   m_Layer: 0
   m_Name: LegsUI 12
   m_TagString: Untagged
@@ -91,15 +92,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
   numberOfItem: 12
   resours: 8
+  STR: 0
+  DEX: 0
+  INT: 0
+  CON: 0
   meleeAttack: 0
   bowAttack: 0
   mageAttack: 0
   shield: 0
   MP: 0
   HP: 0
-  STR: 0
-  DEX: 0
-  INT: 0
+  itemName: 
+  icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
+  itemDescription: 
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -112,3 +117,16 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7070474956726967169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379141423519758778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates: []

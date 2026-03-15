@@ -10,7 +10,9 @@ namespace PlayerBehaviour
         private Slider hpSlider;
         [SerializeField]
         private TextMeshProUGUI HPText;
-        
+        [SerializeField]
+        private TextMeshProUGUI HPRegenText;
+
         private int MaxHP;
         private int currentHP;
         
@@ -40,6 +42,7 @@ namespace PlayerBehaviour
             hpSlider.maxValue = currentHP;
             hpSlider.value = currentHP;
             HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            OnPlayerHealthRegen();
         }
         public void OnDamage(int damage)
         {
@@ -65,6 +68,7 @@ namespace PlayerBehaviour
         private void OnPlayerHealthRegen()
         {
             HpRegen = 2 + (playerCon - 10);
+            HPRegenText.text = string.Format("Реген здоровья: {0} ", HpRegen);
             timeRegen = 10;
             OnHealth(HpRegen);
         }
