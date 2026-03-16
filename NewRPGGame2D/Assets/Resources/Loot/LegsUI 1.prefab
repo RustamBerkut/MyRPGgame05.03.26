@@ -102,7 +102,7 @@ MonoBehaviour:
   shield: 9
   MP: 0
   HP: 0
-  itemName: 
+  itemName: LegsUI 1
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
   itemDescription: "\u0421\u0430\u043F\u043E\u0433\u0438 \u0438\u0437 \u0448\u043A\u0443\u0440\u044B\n\n\u041D\u043E\u0433\u0438\n\u0417\u0430\u0449\u0438\u0442\u0430:
     +9\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C: +4\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
