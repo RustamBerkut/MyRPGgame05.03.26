@@ -106,20 +106,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
   listSprites:
   - {fileID: 1073284565128868512, guid: b4bf5105033e04d45baa948da8b503b0, type: 3}
-  - {fileID: 2863081914708520366, guid: 7c5a293137726445abd2b50a8922119b, type: 3}
+  - {fileID: 3763680570071632466, guid: ad98517497e964b00add5977d2257a7a, type: 3}
+  - {fileID: 1942513663190102962, guid: 91837876145ff43d4a8e8f457b708199, type: 3}
   - {fileID: 6707769398717036949, guid: 119a166f9da694dd4834e556f1c65f76, type: 3}
-  - {fileID: 6087586346340565349, guid: a0f407e4c5e1341129d8309f3c87e53c, type: 3}
-  - {fileID: 1280680924109167244, guid: e0f672d1760234cecaebc26bc4c22b6e, type: 3}
-  - {fileID: -1554369935797715747, guid: 1810f09d324df46289d58e432045bcd1, type: 3}
-  - {fileID: -2016631381429734677, guid: 6dc30e5993cb04a47a6845283a352d2e, type: 3}
-  - {fileID: 889668667309676848, guid: fbddd4306af2b47458c43097d5b91f87, type: 3}
-  - {fileID: -3380439360112706912, guid: 1416614edddf54e2bb98c61ab32dc586, type: 3}
-  - {fileID: -5502725330888511627, guid: 61f60bf66a0684be3b448f6e237a3f12, type: 3}
-  - {fileID: -5301234822971782531, guid: 49278b333c23b464fbe87f4618639aa0, type: 3}
+  - {fileID: 2263474349454975077, guid: dacd5b318f89e48bd97879d660685938, type: 3}
+  - {fileID: -8220607459341252921, guid: 20826ee5fbaa8418b93e6ece5f885b00, type: 3}
+  - {fileID: 7972047035149555109, guid: 5ed80003cb7f545ab87b7c0b79ad2eed, type: 3}
+  - {fileID: 3832911645102586382, guid: d1bc3ad920b0d41c5b5d8aff14f0dee9, type: 3}
+  - {fileID: 918163296319358687, guid: deb413cebdc864517b43b7beaa19d2a5, type: 3}
   - {fileID: -1496476315439836622, guid: 0aba1c3d9e6814991b93ff6a9540656b, type: 3}
-  - {fileID: 6580047532355526111, guid: 7837b3161c8b7477e9711cb259036797, type: 3}
-  - {fileID: 7551784250672351729, guid: cdf6ea08334f54b81b8e1bfb81a896c7, type: 3}
-  - {fileID: 8510608192026770805, guid: f5bfb7e5e8f8d482a8209d1f2f91e467, type: 3}
+  - {fileID: 1595887472439937909, guid: 42d85c8a42d3e427c972183183efd4f9, type: 3}
+  - {fileID: -8675011627427599730, guid: a05ebb241a0b14dec9a0d4bdd31301a3, type: 3}
+  - {fileID: -8662432971830130642, guid: 06c8d7c33ccef4cf39e374e33835e970, type: 3}
+  - {fileID: -3794662817809912853, guid: 7a18280193ba94224b27d6dedc9fa979, type: 3}
+  - {fileID: 2371925709717891883, guid: e58444fb66d4648758da6a91ccbd3fe9, type: 3}
+  - {fileID: -4607344544876785824, guid: 4f75ae73445284b5393c219fadb2dc65, type: 3}
 --- !u!1 &126966917872109501
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,20 +757,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
   listSprites:
   - {fileID: 1073284565128868512, guid: b4bf5105033e04d45baa948da8b503b0, type: 3}
-  - {fileID: 2863081914708520366, guid: 7c5a293137726445abd2b50a8922119b, type: 3}
+  - {fileID: 3763680570071632466, guid: ad98517497e964b00add5977d2257a7a, type: 3}
+  - {fileID: 1942513663190102962, guid: 91837876145ff43d4a8e8f457b708199, type: 3}
   - {fileID: 6707769398717036949, guid: 119a166f9da694dd4834e556f1c65f76, type: 3}
-  - {fileID: 6087586346340565349, guid: a0f407e4c5e1341129d8309f3c87e53c, type: 3}
-  - {fileID: 1280680924109167244, guid: e0f672d1760234cecaebc26bc4c22b6e, type: 3}
-  - {fileID: -1554369935797715747, guid: 1810f09d324df46289d58e432045bcd1, type: 3}
-  - {fileID: -2016631381429734677, guid: 6dc30e5993cb04a47a6845283a352d2e, type: 3}
-  - {fileID: 889668667309676848, guid: fbddd4306af2b47458c43097d5b91f87, type: 3}
-  - {fileID: -3380439360112706912, guid: 1416614edddf54e2bb98c61ab32dc586, type: 3}
-  - {fileID: -5502725330888511627, guid: 61f60bf66a0684be3b448f6e237a3f12, type: 3}
-  - {fileID: -5301234822971782531, guid: 49278b333c23b464fbe87f4618639aa0, type: 3}
+  - {fileID: 2263474349454975077, guid: dacd5b318f89e48bd97879d660685938, type: 3}
+  - {fileID: -8220607459341252921, guid: 20826ee5fbaa8418b93e6ece5f885b00, type: 3}
+  - {fileID: 7972047035149555109, guid: 5ed80003cb7f545ab87b7c0b79ad2eed, type: 3}
+  - {fileID: 3832911645102586382, guid: d1bc3ad920b0d41c5b5d8aff14f0dee9, type: 3}
+  - {fileID: 918163296319358687, guid: deb413cebdc864517b43b7beaa19d2a5, type: 3}
   - {fileID: -1496476315439836622, guid: 0aba1c3d9e6814991b93ff6a9540656b, type: 3}
-  - {fileID: 6580047532355526111, guid: 7837b3161c8b7477e9711cb259036797, type: 3}
-  - {fileID: 7551784250672351729, guid: cdf6ea08334f54b81b8e1bfb81a896c7, type: 3}
-  - {fileID: 8510608192026770805, guid: f5bfb7e5e8f8d482a8209d1f2f91e467, type: 3}
+  - {fileID: 1595887472439937909, guid: 42d85c8a42d3e427c972183183efd4f9, type: 3}
+  - {fileID: -8675011627427599730, guid: a05ebb241a0b14dec9a0d4bdd31301a3, type: 3}
+  - {fileID: -8662432971830130642, guid: 06c8d7c33ccef4cf39e374e33835e970, type: 3}
+  - {fileID: -3794662817809912853, guid: 7a18280193ba94224b27d6dedc9fa979, type: 3}
+  - {fileID: 2371925709717891883, guid: e58444fb66d4648758da6a91ccbd3fe9, type: 3}
+  - {fileID: -4607344544876785824, guid: 4f75ae73445284b5393c219fadb2dc65, type: 3}
 --- !u!1 &455347688938574267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,7 +2684,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2792606791867966216, guid: 470cfb1e4f7865c40b83d403037c90c9, type: 3}
+  m_Sprite: {fileID: 3018618961690428772, guid: dacd5b318f89e48bd97879d660685938, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14462,7 +14464,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4632621208693672672}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc98a3cbbbffd9143afa02ab707650d7, type: 3}
   m_Name: 
@@ -14709,13 +14711,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5493607061108465531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc98a3cbbbffd9143afa02ab707650d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentSlot
   resours: 07000000
-  equipmentSlotOnPlayer: []
+  equipmentSlotOnPlayer:
+  - {fileID: 384881966339015594}
+  - {fileID: 11223404496674942}
   equipmentSlotName: HandName
 --- !u!1001 &6935002831496262387
 PrefabInstance:
