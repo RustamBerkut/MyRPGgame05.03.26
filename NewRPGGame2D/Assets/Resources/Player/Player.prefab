@@ -1556,7 +1556,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2195160100919966353, guid: bad3d4b622236534ea4a272ac08fc158, type: 3}
   m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.6313726}
@@ -6827,8 +6827,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 1.9999999}
+  m_Offset: {x: 0, y: -0.7}
+  m_Size: {x: 0.75, y: 0.5}
   m_Direction: 0
 --- !u!114 &932647093842543525
 MonoBehaviour:
