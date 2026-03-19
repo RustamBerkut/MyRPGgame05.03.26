@@ -25,7 +25,7 @@ namespace PlayerBehaviour
         {
             moveVector = _context.ReadValue<Vector2>();
         }
-        void FixedUpdate()
+        void Update()
         {
             MovementLogic();
         }
