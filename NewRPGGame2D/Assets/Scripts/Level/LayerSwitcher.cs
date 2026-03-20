@@ -7,7 +7,7 @@ public class LayerSwitcher : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sortingOrder = 2;
+        spriteRenderer.sortingOrder = 6;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +21,7 @@ public class LayerSwitcher : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            spriteRenderer.sortingOrder = 2;
+            spriteRenderer.sortingOrder = 6;
         }
     }
 }
