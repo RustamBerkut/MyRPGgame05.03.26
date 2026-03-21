@@ -12,10 +12,6 @@ namespace PlayerBehaviour
         [SerializeField]
         private GameObject noWeaponCanvas;
 
-        private void Start()
-        {
-            animator = GetComponent<Animator>();
-        }
         public void OnPlayerAttack()
         {
             if (equipmnetSlot.transform.childCount == 0)
@@ -61,7 +57,7 @@ namespace PlayerBehaviour
         }
         private void OnSwordAttack()
         {
-            Debug.Log("SwordAttack");
+            animator.CrossFade("SwordAttackAnim", 0.1f);
         }
         private void OnBowAttack()
         {
