@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -15,6 +16,18 @@ namespace PlayerBehaviour
 
         public float  _meleeDamage, _magicDamage, _rangeDamage, _attackSpeed, _critChance, _castSpeed;
 
+        [SerializeField]
+        private TextMeshProUGUI meleeDamageText;
+        [SerializeField]
+        private TextMeshProUGUI magicDamageText;
+        [SerializeField]
+        private TextMeshProUGUI rangeDamageText;
+        [SerializeField]
+        private TextMeshProUGUI attackSpeedText;
+        [SerializeField]
+        private TextMeshProUGUI critChanceText;
+        [SerializeField]
+        private TextMeshProUGUI castSpeedText;
         public void OnAttackStatSetup(float melee, float magic, float range, float speed, 
             float crit, float cast)
         {
@@ -25,6 +38,13 @@ namespace PlayerBehaviour
             _attackSpeed = speed;
             _critChance = crit;
             _castSpeed = cast;
+
+            meleeDamageText.text = string.Format("Ближний бой: {0:0}", _meleeDamage);
+            magicDamageText.text = string.Format("Сила магии: {0:0}", _magicDamage);
+            rangeDamageText.text = string.Format("Стрельба: {0:0}", _rangeDamage);
+            attackSpeedText.text = string.Format("Скорость атаки: {0:0}", _attackSpeed);
+            critChanceText.text = string.Format("Шанс крита: {0:0}", _critChance);
+            castSpeedText.text = string.Format("Скорость каста: {0:0}", _castSpeed);
         }
 
         public void OnPlayerAttack()

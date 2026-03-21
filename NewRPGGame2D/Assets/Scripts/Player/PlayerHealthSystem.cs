@@ -12,6 +12,8 @@ namespace PlayerBehaviour
         private TextMeshProUGUI HPText;
         [SerializeField]
         private TextMeshProUGUI HPRegenText;
+        [SerializeField]
+        private TextMeshProUGUI ShieldText;
 
         private int MaxHP;
         private int currentHP;
@@ -20,6 +22,7 @@ namespace PlayerBehaviour
         private int playerCon = 10;
         private float timeRegen = 10;
         public float timeAfterAttack = 10;
+        public float playerShield = 0;
         
         private void Update()
         {
@@ -34,10 +37,10 @@ namespace PlayerBehaviour
             }
         }
 
-        public void SetupMaxHp(int CON)
+        public void SetupMaxHp(int CON, int _health)
         {
             playerCon = CON;
-            MaxHP = 100 + (CON - 10) * 5;
+            MaxHP = 100 + (CON - 10) * 5 + _health;
             currentHP = MaxHP;
             hpSlider.maxValue = currentHP;
             hpSlider.value = currentHP;

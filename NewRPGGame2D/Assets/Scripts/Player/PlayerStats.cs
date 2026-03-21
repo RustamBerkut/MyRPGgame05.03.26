@@ -39,12 +39,18 @@ namespace PlayerBehaviour
         private int bonus_DEX;
         private int bonus_INT;
         private int bonus_CON;
+
         private int bonus_meleeDamage;
         private int bonus_MagicDamage;
         private int bonus_RangeDamage;
+
         private int bonus_AttackSpeed;
         private int bonus_CritChance;
         private int bonus_CastSpeed;
+
+        private int bonus_shield;
+        private int bonus_hp;
+        private int bonus_mp;
 
         private PlayerHealthSystem healthSystem;
         private PlayerManaSystem manaSystem;
@@ -65,12 +71,18 @@ namespace PlayerBehaviour
             bonus_DEX = 0;
             bonus_INT = 0;
             bonus_CON = 0;
+
             bonus_meleeDamage = 0;
             bonus_MagicDamage = 0;
             bonus_RangeDamage = 0;
+
             bonus_AttackSpeed = 0;
             bonus_CritChance = 0;
             bonus_CastSpeed = 0;
+
+            bonus_shield = 0;
+            bonus_hp = 0;
+            bonus_mp = 0;
 
             for (int i = 0; i < equipmentSlot.Count; i++)
             {
@@ -89,6 +101,10 @@ namespace PlayerBehaviour
                     int _bonus_critChance = equipmentSlot[i].GetComponentInChildren<UIItem>().critChanse;
                     int _bonus_castspeed = equipmentSlot[i].GetComponentInChildren<UIItem>().castSpeed;
 
+                    int _bonus_shield = equipmentSlot[i].GetComponentInChildren<UIItem>().shield;
+                    int _bonus_hp = equipmentSlot[i].GetComponentInChildren<UIItem>().HP;
+                    int _bonus_mp = equipmentSlot[i].GetComponentInChildren<UIItem>().MP;
+
                     bonus_STR += _bonus_STR;
                     bonus_DEX += _bonus_DEX;
                     bonus_INT += _bonus_INT;
@@ -101,6 +117,10 @@ namespace PlayerBehaviour
                     bonus_AttackSpeed += _bonus_attackSpeed;
                     bonus_CritChance += _bonus_critChance;
                     bonus_CastSpeed += _bonus_castspeed;
+
+                    bonus_shield += _bonus_shield;
+                    bonus_hp += _bonus_hp;
+                    bonus_mp += _bonus_mp;
                 }
                 OnStatsUpdate();
             }
@@ -140,16 +160,16 @@ namespace PlayerBehaviour
         {
             SetupStatsInText();
 
-            healthSystem.SetupMaxHp(CON + bonus_CON);
-            manaSystem.SetupMaxMp(INT + bonus_INT);
+            healthSystem.SetupMaxHp(CON + bonus_CON, bonus_hp);
+            manaSystem.SetupMaxMp(INT + bonus_INT, bonus_mp);
 
-            MeleeDamage = 10 + (STR - 10 + bonus_STR + bonus_meleeDamage) * 0.5f;
-            MagicDamage = 15 * (1 + (INT - 10 + bonus_INT + bonus_MagicDamage) * 0.05f);
-            RangeDamage = 10 + (DEX - 10 + bonus_DEX + bonus_RangeDamage) * 0.5f;
+            MeleeDamage = 10 + (STR - 10 + bonus_STR) * 0.5f + bonus_meleeDamage;
+            MagicDamage = 15 * (1 + (INT - 10 + bonus_INT) * 0.05f) + bonus_MagicDamage;
+            RangeDamage = 10 + (DEX - 10 + bonus_DEX) * 0.5f + bonus_RangeDamage;
 
-            AttackSpeed = 1.0f + (DEX - 10 + bonus_DEX + bonus_AttackSpeed) * 0.02f;
-            CritChance = 0.05f + (DEX - 10 + bonus_DEX + bonus_CritChance) * 0.003f;
-            CastSpeed = 1.0f + (INT - 10 + bonus_INT + bonus_CastSpeed) * 0.02f;
+            AttackSpeed = 1.0f + (DEX - 10 + bonus_DEX) * 0.02f + bonus_AttackSpeed;
+            CritChance = 0.05f + (DEX - 10 + bonus_DEX) * 0.003f + bonus_CritChance;
+            CastSpeed = 1.0f + (INT - 10 + bonus_INT) * 0.02f + bonus_CastSpeed;
 
             playerAttack.OnAttackStatSetup(MeleeDamage, MagicDamage, RangeDamage, 
                 AttackSpeed, CritChance, CastSpeed);
@@ -191,9 +211,7 @@ namespace PlayerBehaviour
                         break;
                 }
             }
-            healthSystem.SetupMaxHp(CON + bonus_CON);
-            manaSystem.SetupMaxMp(INT + bonus_INT);
-            SetupStatsInText();
+            OnStatsUpdate();
         }
 
         public void OnSetupPlayerStatpoints()
@@ -210,8 +228,7 @@ namespace PlayerBehaviour
             DEX = 10;
             CON = 10;
 
-            healthSystem.SetupMaxHp(CON + bonus_CON);
-            manaSystem.SetupMaxMp(INT + bonus_INT);
+            OnStatsUpdate();
             statFreePoints += value - 5;
             OnSetupPlayerStatpoints();
             SetupStatsInText();

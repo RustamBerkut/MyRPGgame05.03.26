@@ -34,10 +34,10 @@ namespace PlayerBehaviour
             }
         }
 
-        public void SetupMaxMp(int INT)
+        public void SetupMaxMp(int INT, int _mana)
         {
             playerInt = INT;
-            MaxMP = 50 + (INT - 10) * 3;
+            MaxMP = 50 + (INT - 10) * 3 + _mana;
             currentMP = MaxMP;
             mpSlider.maxValue = currentMP;
             mpSlider.value = currentMP;
