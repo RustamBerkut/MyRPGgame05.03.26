@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 namespace PlayerBehaviour
 {
@@ -11,6 +12,20 @@ namespace PlayerBehaviour
         private Animator animator;
         [SerializeField]
         private GameObject noWeaponCanvas;
+
+        public float  _meleeDamage, _magicDamage, _rangeDamage, _attackSpeed, _critChance, _castSpeed;
+
+        public void OnAttackStatSetup(float melee, float magic, float range, float speed, 
+            float crit, float cast)
+        {
+            _meleeDamage = melee;
+            _magicDamage = magic;
+            _rangeDamage = range;
+
+            _attackSpeed = speed;
+            _critChance = crit;
+            _castSpeed = cast;
+        }
 
         public void OnPlayerAttack()
         {
@@ -24,7 +39,7 @@ namespace PlayerBehaviour
             switch (resours)
             {
                 case Resours.Sword:
-                    OnSwordAttack();
+                    StartCoroutine(nameof(OnSwordAttack));
                     break;
                 case Resours.Bow:
                     OnBowAttack();
@@ -55,9 +70,12 @@ namespace PlayerBehaviour
                     break;
             }
         }
-        private void OnSwordAttack()
+        IEnumerator OnSwordAttack()
         {
-            animator.CrossFade("SwordAttackAnim", 0.1f);
+            animator.speed = 0.5f;
+            animator.SetBool("Sword", true);
+            yield return new WaitForSeconds(0.3f);
+            animator.SetBool("Sword", false);
         }
         private void OnBowAttack()
         {

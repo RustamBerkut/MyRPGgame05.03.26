@@ -25,12 +25,13 @@ namespace PlayerBehaviour
         [SerializeField]
         private string statString;
 
-        public float MeleeDamage;
-        public float MagicDamage;
-        public float RangeDamage;
+        private float MeleeDamage;
+        private float MagicDamage;
+        private float RangeDamage;
 
-        public float AttackSpeed;
-        public float CritChance;
+        private float AttackSpeed;
+        private float CritChance;
+        private float CastSpeed;
 
         public List<GameObject> equipmentSlot;
 
@@ -38,9 +39,16 @@ namespace PlayerBehaviour
         private int bonus_DEX;
         private int bonus_INT;
         private int bonus_CON;
+        private int bonus_meleeDamage;
+        private int bonus_MagicDamage;
+        private int bonus_RangeDamage;
+        private int bonus_AttackSpeed;
+        private int bonus_CritChance;
+        private int bonus_CastSpeed;
 
         private PlayerHealthSystem healthSystem;
         private PlayerManaSystem manaSystem;
+        private PlayerAttack playerAttack;
 
         private void OnEnable()
         {
@@ -57,6 +65,12 @@ namespace PlayerBehaviour
             bonus_DEX = 0;
             bonus_INT = 0;
             bonus_CON = 0;
+            bonus_meleeDamage = 0;
+            bonus_MagicDamage = 0;
+            bonus_RangeDamage = 0;
+            bonus_AttackSpeed = 0;
+            bonus_CritChance = 0;
+            bonus_CastSpeed = 0;
 
             for (int i = 0; i < equipmentSlot.Count; i++)
             {
@@ -67,10 +81,26 @@ namespace PlayerBehaviour
                     int _bonus_INT = equipmentSlot[i].GetComponentInChildren<UIItem>().INT;
                     int _bonus_CON = equipmentSlot[i].GetComponentInChildren<UIItem>().CON;
 
+                    int _bonus_melee = equipmentSlot[i].GetComponentInChildren<UIItem>().meleeAttack;
+                    int _bonus_magic = equipmentSlot[i].GetComponentInChildren<UIItem>().mageAttack;
+                    int _bonus_range = equipmentSlot[i].GetComponentInChildren<UIItem>().bowAttack;
+
+                    int _bonus_attackSpeed = equipmentSlot[i].GetComponentInChildren<UIItem>().attackSpeed;
+                    int _bonus_critChance = equipmentSlot[i].GetComponentInChildren<UIItem>().critChanse;
+                    int _bonus_castspeed = equipmentSlot[i].GetComponentInChildren<UIItem>().castSpeed;
+
                     bonus_STR += _bonus_STR;
                     bonus_DEX += _bonus_DEX;
                     bonus_INT += _bonus_INT;
                     bonus_CON += _bonus_CON;
+
+                    bonus_meleeDamage += _bonus_melee;
+                    bonus_MagicDamage += _bonus_magic;
+                    bonus_RangeDamage += _bonus_range;
+
+                    bonus_AttackSpeed += _bonus_attackSpeed;
+                    bonus_CritChance += _bonus_critChance;
+                    bonus_CastSpeed += _bonus_castspeed;
                 }
                 OnStatsUpdate();
             }
@@ -80,6 +110,7 @@ namespace PlayerBehaviour
         {
             healthSystem = GetComponent<PlayerHealthSystem>();
             manaSystem = GetComponent<PlayerManaSystem>();
+            playerAttack = GetComponent<PlayerAttack>();
             OnLoadingStats();
         }
 
@@ -112,12 +143,16 @@ namespace PlayerBehaviour
             healthSystem.SetupMaxHp(CON + bonus_CON);
             manaSystem.SetupMaxMp(INT + bonus_INT);
 
-            MeleeDamage = 10 + (STR - 10 + bonus_STR) * 0.5f;
-            MagicDamage = 15 * (1 + (INT - 10 + bonus_INT) * 0.05f);
-            RangeDamage = 10 + (DEX - 10 + bonus_DEX) * 0.5f;
+            MeleeDamage = 10 + (STR - 10 + bonus_STR + bonus_meleeDamage) * 0.5f;
+            MagicDamage = 15 * (1 + (INT - 10 + bonus_INT + bonus_MagicDamage) * 0.05f);
+            RangeDamage = 10 + (DEX - 10 + bonus_DEX + bonus_RangeDamage) * 0.5f;
 
-            AttackSpeed = 1.0f + (DEX - 10 + bonus_DEX) * 0.02f;
-            CritChance = 0.05f + (DEX - 10 + bonus_DEX) * 0.003f;
+            AttackSpeed = 1.0f + (DEX - 10 + bonus_DEX + bonus_AttackSpeed) * 0.02f;
+            CritChance = 0.05f + (DEX - 10 + bonus_DEX + bonus_CritChance) * 0.003f;
+            CastSpeed = 1.0f + (INT - 10 + bonus_INT + bonus_CastSpeed) * 0.02f;
+
+            playerAttack.OnAttackStatSetup(MeleeDamage, MagicDamage, RangeDamage, 
+                AttackSpeed, CritChance, CastSpeed);
         }
         
         public void SetupStatsInText()
