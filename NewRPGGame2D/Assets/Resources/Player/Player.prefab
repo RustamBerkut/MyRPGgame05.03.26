@@ -891,7 +891,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9149227756833143863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2801549463599860403}
+        m_TargetAssemblyTypeName: PlayerBehaviour.PlayerAttack, Assembly-CSharp
+        m_MethodName: OnPlayerAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &652964788446358775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3437,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345624761990681072}
+  - component: {fileID: 411453250310667556}
+  - component: {fileID: 7639848532769337148}
   m_Layer: 0
   m_Name: WeaponPoint
   m_TagString: Untagged
@@ -3447,6 +3461,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2753556295695776245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55.186}
+--- !u!212 &411453250310667556
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045726245814897471}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 102622864, guid: 10d50abb8562b384ea57d3080088f3f3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3, y: 3}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!114 &7639848532769337148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045726245814897471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3b45a0733505743bda9e6f367a2ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentList
+  listSprites:
+  - {fileID: 102622864, guid: 10d50abb8562b384ea57d3080088f3f3, type: 3}
+  - {fileID: 21300000, guid: 30e47371660a44f038c174865e5af8d3, type: 3}
+  - {fileID: 21300000, guid: b8a3f9debf9a740ebba84d95c6700721, type: 3}
+  - {fileID: 21300000, guid: a65be32c958034377978891516dc581d, type: 3}
+  - {fileID: 21300000, guid: ffef52aa2bdb04c1394af5d4599ed210, type: 3}
 --- !u!1 &4231292989677511976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,7 +4148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f852989c6bc182348b3d5372d22f9e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelfDestroer
-  timerToDeath: 3
+  timerToDeath: 2
 --- !u!1 &5086143891198505702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,7 +7208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee2a8f04884b1643a046151fc65b3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  attackHandPoint: {fileID: 4045726245814897471}
+  equipmnetSlot: {fileID: 1287889535746667095}
+  animator: {fileID: 0}
+  noWeaponCanvas: {fileID: 5584039263891330600, guid: 8c1c685c9e2dd6f40b44449c2747c9f4, type: 3}
 --- !u!114 &5823068465996970283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7220,8 +7313,8 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FalloffIntensity: 0.3
+  m_Color: {r: 0.9339623, g: 0.63097876, b: 0.39208794, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -9411,7 +9504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287889535746667095}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc98a3cbbbffd9143afa02ab707650d7, type: 3}
   m_Name: 
