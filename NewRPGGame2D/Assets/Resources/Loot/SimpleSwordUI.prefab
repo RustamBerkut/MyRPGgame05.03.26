@@ -92,19 +92,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
   numberOfItem: 1
   resours: 0
-  STR: 12
-  DEX: 12
-  INT: 2
-  CON: 12
-  meleeAttack: 3
-  bowAttack: 12
-  mageAttack: 12
+  STR: 0
+  DEX: 0
+  INT: 0
+  CON: 0
+  meleeAttack: 0
+  bowAttack: 0
+  mageAttack: 0
   attackSpeed: 0
-  critChanse: 12
-  castSpeed: 12
-  shield: 12
-  MP: 12
-  HP: 123
+  critChanse: 0
+  castSpeed: 0
+  shield: 0
+  MP: 0
+  HP: 0
   itemName: SimpleSwordUI
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
   itemDescription: 

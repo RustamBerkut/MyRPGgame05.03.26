@@ -9,7 +9,8 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public Resours resours;
     public static Action UpdateItemStatAction;
     public int STR, DEX, INT, CON, meleeAttack, bowAttack,
-        mageAttack, attackSpeed, critChanse, castSpeed, shield, MP, HP;
+        mageAttack, shield, MP, HP;
+    public float attackSpeed, critChanse, castSpeed;
     public string itemName;
     public Texture2D icon;
 

@@ -44,9 +44,9 @@ namespace PlayerBehaviour
         private int bonus_MagicDamage;
         private int bonus_RangeDamage;
 
-        private int bonus_AttackSpeed;
-        private int bonus_CritChance;
-        private int bonus_CastSpeed;
+        private float bonus_AttackSpeed;
+        private float bonus_CritChance;
+        private float bonus_CastSpeed;
 
         private int bonus_shield;
         private int bonus_hp;
@@ -97,9 +97,9 @@ namespace PlayerBehaviour
                     int _bonus_magic = equipmentSlot[i].GetComponentInChildren<UIItem>().mageAttack;
                     int _bonus_range = equipmentSlot[i].GetComponentInChildren<UIItem>().bowAttack;
 
-                    int _bonus_attackSpeed = equipmentSlot[i].GetComponentInChildren<UIItem>().attackSpeed;
-                    int _bonus_critChance = equipmentSlot[i].GetComponentInChildren<UIItem>().critChanse;
-                    int _bonus_castspeed = equipmentSlot[i].GetComponentInChildren<UIItem>().castSpeed;
+                    float _bonus_attackSpeed = equipmentSlot[i].GetComponentInChildren<UIItem>().attackSpeed;
+                    float _bonus_critChance = equipmentSlot[i].GetComponentInChildren<UIItem>().critChanse;
+                    float _bonus_castspeed = equipmentSlot[i].GetComponentInChildren<UIItem>().castSpeed;
 
                     int _bonus_shield = equipmentSlot[i].GetComponentInChildren<UIItem>().shield;
                     int _bonus_hp = equipmentSlot[i].GetComponentInChildren<UIItem>().HP;

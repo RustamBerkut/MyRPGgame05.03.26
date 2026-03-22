@@ -18,7 +18,9 @@ namespace PlayerBehaviour
         private void Start()
         {
             swordBoxCollider.enabled = false;
+            dualBoxCollider.enabled = false;
             trailSword.SetActive(false);
+            trailDual.SetActive(false);
         }
 
         public void OnSwordDamage()

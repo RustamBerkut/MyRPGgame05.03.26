@@ -68,7 +68,7 @@ namespace PlayerBehaviour
                     OnBowAttack();
                     break;
                 case Resours.Dual:
-                    OnDualAttack();
+                    StartCoroutine(nameof(OnDualAttack));
                     break;
                 case Resours.Mage:
                     OnMageAttack();
@@ -105,9 +105,13 @@ namespace PlayerBehaviour
         {
             Debug.Log("BowAttack");
         }
-        private void OnDualAttack()
+        IEnumerator OnDualAttack()
         {
-            Debug.Log("DualAttack");
+            attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_meleeDamage;
+            animator.speed = _attackSpeed;
+            animator.SetBool("Dual", true);
+            yield return new WaitForSeconds(0.3f);
+            animator.SetBool("Dual", false);
         }
         private void OnMageAttack() 
         {
