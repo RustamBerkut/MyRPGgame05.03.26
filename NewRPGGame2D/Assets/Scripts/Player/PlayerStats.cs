@@ -162,6 +162,7 @@ namespace PlayerBehaviour
 
             healthSystem.SetupMaxHp(CON + bonus_CON, bonus_hp);
             manaSystem.SetupMaxMp(INT + bonus_INT, bonus_mp);
+            healthSystem.OnShieldSetup(bonus_shield);
 
             MeleeDamage = 10 + (STR - 10 + bonus_STR) * 0.5f + bonus_meleeDamage;
             MagicDamage = 15 * (1 + (INT - 10 + bonus_INT) * 0.05f) + bonus_MagicDamage;
@@ -171,8 +172,10 @@ namespace PlayerBehaviour
             CritChance = 0.05f + (DEX - 10 + bonus_DEX) * 0.003f + bonus_CritChance;
             CastSpeed = 1.0f + (INT - 10 + bonus_INT) * 0.02f + bonus_CastSpeed;
 
+
             playerAttack.OnAttackStatSetup(MeleeDamage, MagicDamage, RangeDamage, 
                 AttackSpeed, CritChance, CastSpeed);
+            
         }
         
         public void SetupStatsInText()

@@ -869,7 +869,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 18
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1073284565128868512, guid: b4bf5105033e04d45baa948da8b503b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2832,7 +2832,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3018618961690428772, guid: dacd5b318f89e48bd97879d660685938, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5778,7 +5778,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2792606791867966216, guid: 470cfb1e4f7865c40b83d403037c90c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7451,7 +7451,6 @@ MonoBehaviour:
   HPRegenText: {fileID: 9028140775283942459}
   ShieldText: {fileID: 71091728197361167}
   timeAfterAttack: 10
-  playerShield: 0
 --- !u!114 &7742933401332416461
 MonoBehaviour:
   m_ObjectHideFlags: 0

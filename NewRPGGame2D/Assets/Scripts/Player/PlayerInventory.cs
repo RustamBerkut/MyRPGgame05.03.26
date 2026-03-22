@@ -33,7 +33,7 @@ namespace PlayerBehaviour
                 }
                 else 
                 {
-                    Debug.Log("Ytn mesta");
+                    Debug.Log("net mesta");
                 }
             }
         }

@@ -22,7 +22,8 @@ namespace PlayerBehaviour
         private int playerCon = 10;
         private float timeRegen = 10;
         public float timeAfterAttack = 10;
-        public float playerShield = 0;
+
+        private float playerShield;
         
         private void Update()
         {
@@ -47,9 +48,16 @@ namespace PlayerBehaviour
             HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
             OnPlayerHealthRegen();
         }
+        public void OnShieldSetup(int _shield)
+        {
+            playerShield = _shield;
+            playerShield /= (playerShield + 150);
+            ShieldText.text = string.Format("Броня: {0:0}", _shield);
+        }
         public void OnDamage(int damage)
         {
-            currentHP -= damage;
+            float dam = damage * (1 - playerShield);
+            currentHP -= (int)dam;
             hpSlider.value = currentHP;
             timeAfterAttack = 10;
             HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
