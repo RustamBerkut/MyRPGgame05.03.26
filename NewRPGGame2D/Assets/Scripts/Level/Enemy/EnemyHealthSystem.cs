@@ -11,6 +11,7 @@ public class EnemyHealthSystem : MonoBehaviour
     private TextMeshProUGUI HPText;
 
     public int MaxHP;
+    public GameObject fxHit;
 
     private int currentHP;
 
@@ -31,7 +32,14 @@ public class EnemyHealthSystem : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerDamager>())
         {
             int damage = collision.gameObject.GetComponent<PlayerDamager>().playerDamage;
+            Instantiate(fxHit, transform.position, transform.rotation);
             OnDamage(damage);
+        }
+        if (collision.gameObject.GetComponent<PlayerRangeDamage>())
+        {
+            int damage = collision.gameObject.GetComponent<PlayerRangeDamage>().rangeDamage;
+            OnDamage(damage);
+            collision.GetComponent<PlayerRangeDamage>().OnSelfDeath();
         }
     }
 

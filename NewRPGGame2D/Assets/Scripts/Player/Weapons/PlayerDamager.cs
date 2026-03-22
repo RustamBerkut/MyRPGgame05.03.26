@@ -14,6 +14,11 @@ namespace PlayerBehaviour
         private BoxCollider2D dualBoxCollider;
         [SerializeField]
         private GameObject trailDual;
+        [SerializeField]
+        private Transform rangeBarrel;
+
+        [SerializeField]
+        private GameObject _arrow;
 
         private void Start()
         {
@@ -42,6 +47,16 @@ namespace PlayerBehaviour
         {
             dualBoxCollider.enabled = false;
             trailDual.SetActive(false);
+        }
+        public void OnBowDamage()
+        {
+            GameObject arrow = Instantiate(_arrow, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+            arrow.GetComponent<Rigidbody2D>().AddForce(arrow.transform.right * - 500);
+        }
+        public void OnMageDamage()
+        {
+            GameObject arrow = Instantiate(_arrow, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+            arrow.GetComponent<Rigidbody2D>().AddForce(arrow.transform.right * -500);
         }
     }
 }

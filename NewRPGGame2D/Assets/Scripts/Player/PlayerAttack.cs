@@ -65,13 +65,13 @@ namespace PlayerBehaviour
                     StartCoroutine(nameof(OnSwordAttack));
                     break;
                 case Resours.Bow:
-                    OnBowAttack();
+                    StartCoroutine(nameof(OnBowAttack));
                     break;
                 case Resours.Dual:
                     StartCoroutine(nameof(OnDualAttack));
                     break;
                 case Resours.Mage:
-                    OnMageAttack();
+                    StartCoroutine(nameof(OnMageAttack));
                     break;
                 case Resours.Helmet:
                     break;
@@ -101,9 +101,12 @@ namespace PlayerBehaviour
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Sword", false);
         }
-        private void OnBowAttack()
+        IEnumerator OnBowAttack()
         {
-            Debug.Log("BowAttack");
+            animator.speed = _attackSpeed;
+            animator.SetBool("Bow", true);
+            yield return new WaitForSeconds(0.3f);
+            animator.SetBool("Bow", false);
         }
         IEnumerator OnDualAttack()
         {
@@ -113,9 +116,12 @@ namespace PlayerBehaviour
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Dual", false);
         }
-        private void OnMageAttack() 
+        IEnumerator OnMageAttack() 
         {
-            Debug.Log("MageAttack");
+            animator.speed = _castSpeed;
+            animator.SetBool("Mage", true);
+            yield return new WaitForSeconds(0.3f);
+            animator.SetBool("Mage", false);
         }
     }
 }

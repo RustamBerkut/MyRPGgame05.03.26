@@ -102,6 +102,9 @@ MonoBehaviour:
   shield: 0
   MP: 0
   HP: 0
+  attackSpeed: 0
+  critChanse: 0
+  castSpeed: 0
   itemName: SimpleBowUI
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
   itemDescription: 

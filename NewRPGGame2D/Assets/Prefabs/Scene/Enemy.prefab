@@ -375,6 +375,7 @@ MonoBehaviour:
   hpSlider: {fileID: 7593135954624654639}
   HPText: {fileID: 1069940661859999856}
   MaxHP: 20
+  fxHit: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
 --- !u!70 &7253361658641065851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -410,7 +411,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 1.34, y: 2}
   m_Direction: 0
 --- !u!1 &7076951602002956860
 GameObject:
