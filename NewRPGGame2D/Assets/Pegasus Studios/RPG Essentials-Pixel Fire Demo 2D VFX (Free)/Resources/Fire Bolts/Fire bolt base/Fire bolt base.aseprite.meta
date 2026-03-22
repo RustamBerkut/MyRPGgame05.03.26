@@ -80,7 +80,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -110,7 +110,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638870775605285224
+  platformSettingsDirtyTick: 639098097732971815
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -513,18 +513,942 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 49, y: 118}
-  spriteSheetImportData: []
-  tileSetImportData: []
+  spriteSheetImportData:
+  - name: Fire bolt base_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 8
+      y: 114
+      width: 5
+      height: 6
+    spriteID: ba3162665bbd5344686664b1caed6a0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 113
+      width: 7
+      height: 7
+    spriteID: 4304ee12a025b994da5b7c7ce8691544
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 118
+      width: 4
+      height: 4
+    spriteID: 1c4ba504e3b773241b12a72ec4435ff1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 86
+      width: 14
+      height: 21
+    spriteID: 16b9e8d3d7d212145b532ec1690206be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 80
+      width: 8
+      height: 25
+    spriteID: 5967041c1043166439eeb87e5ec54226
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 103
+      width: 25
+      height: 7
+    spriteID: 7125bd9041dda9b4c82f87222719b888
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 88
+      width: 27
+      height: 7
+    spriteID: b00f1b3b608e5cf43bcc38eda2ebb24d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 14
+      height: 10
+    spriteID: 7990f1bee41870f43aa97dd124481149
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 31
+      y: 61
+      width: 6
+      height: 11
+    spriteID: 3cd48d3c15ed83e43b998aafb6c0c31b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 72
+      width: 25
+      height: 8
+    spriteID: 0a62d23030c979f48be658922dae5965
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 5
+      y: 58
+      width: 13
+      height: 7
+    spriteID: 7728621c25998d54a95ae6a393bf42cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 51
+      width: 8
+      height: 9
+    spriteID: f91901cf214e28c4ab2af2ef9a033e41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 56
+      width: 25
+      height: 8
+    spriteID: 76cc06b17566986479c2eff192ecdf6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 50
+      width: 7
+      height: 16
+    spriteID: 71475d4387d10bc459fa35526385f40f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 7
+      y: 46
+      width: 15
+      height: 11
+    spriteID: 8ee9c728f82629044a530dbc9e1b1306
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 31
+      y: 31
+      width: 10
+      height: 15
+    spriteID: 5ca04766f5ea4404ba1f54d4b455bbef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 42
+      width: 5
+      height: 4
+    spriteID: b018182a011217a4b952831b3a304443
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 40
+      width: 21
+      height: 8
+    spriteID: a24c30f76d225c34394daab36b537769
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 11
+      y: 33
+      width: 6
+      height: 5
+    spriteID: 992dc9c9f7c6e354b8341d9c13580a33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 19
+      width: 7
+      height: 23
+    spriteID: 827fb6e5f2fa0974e954482453b51714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7
+      width: 18
+      height: 24
+    spriteID: 9bacd7d458a946e4fa33ecd3a39121f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 21
+      width: 20
+      height: 11
+    spriteID: 47bb9d6ffc0fd8741842c79d6e1af253
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 6
+      y: 4
+      width: 6
+      height: 5
+    spriteID: 31d3828707296f949bb3e47c070b91fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 4
+      width: 11
+      height: 16
+    spriteID: 6808906790b5d6345b587c479f5c7ea4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 4
+      width: 31
+      height: 9
+    spriteID: 8b21768f802054d48bed5c32914469e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fire bolt base_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 4
+      width: 25
+      height: 7
+    spriteID: 87295659f27abc645a7b00b58a6fe7c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  tileSetImportData:
+  - name: Frame_0
+    originalName: 
+    pivot: {x: 6.571429, y: 2.2857144}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 113
+      width: 7
+      height: 7
+    spriteID: b0a10116af483ee4fb5feb5479f60197
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 113}
+  - name: Frame_1
+    originalName: 
+    pivot: {x: 6.571429, y: 1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 50
+      width: 7
+      height: 16
+    spriteID: 0b7e844ad9671294eaaaeab430c1fc84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 50}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 6.571429, y: 0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 19
+      width: 7
+      height: 23
+    spriteID: 96863196bf295244da2ad513fde24687
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 19}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 5.75, y: 0.64}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 80
+      width: 8
+      height: 25
+    spriteID: 8d42d28df1ceaeb4c8b228648a5ac318
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 80}
+  - name: Frame_4
+    originalName: 
+    pivot: {x: 5.75, y: 0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 42
+      width: 8
+      height: 30
+    spriteID: ed72ebfe0d67b8141a136a2442211f04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 42}
+  - name: Frame_5
+    originalName: 
+    pivot: {x: 3.2857144, y: 0.47058824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 86
+      width: 14
+      height: 34
+    spriteID: afdf97033cb5e2948906e296b3feb047
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 86}
+  - name: Frame_6
+    originalName: 
+    pivot: {x: 2.3, y: 1.4545455}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 21
+      width: 20
+      height: 11
+    spriteID: a1417538c1407fe4190894e58e6ed08e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 21}
+  - name: Frame_7
+    originalName: 
+    pivot: {x: 1.84, y: 2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 56
+      width: 25
+      height: 8
+    spriteID: e5a357bc58e859145b35a908583d4a8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 56}
+  - name: Frame_8
+    originalName: 
+    pivot: {x: 1.7037038, y: 2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 40
+      width: 27
+      height: 8
+    spriteID: a08f9363e99c470498ed40b594404006
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 40}
+  - name: Frame_9
+    originalName: 
+    pivot: {x: 1.7037038, y: 2.2857144}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 88
+      width: 27
+      height: 7
+    spriteID: 59b0bdd186b1f0d4ab6e567949bb7237
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 88}
+  - name: Frame_10
+    originalName: 
+    pivot: {x: 1.84, y: 2.2857144}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 103
+      width: 25
+      height: 7
+    spriteID: 627fbf737a420464f8670be891ed4e2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 103}
+  - name: Frame_11
+    originalName: 
+    pivot: {x: 1.483871, y: 1.7777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 4
+      width: 31
+      height: 9
+    spriteID: d5103f090ba10fb4c9f1c87bb6544761
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 4}
+  - name: Frame_12
+    originalName: 
+    pivot: {x: 1.84, y: 2.2857144}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 4
+      width: 25
+      height: 7
+    spriteID: 9cf13603e05800040959471320af0189
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 4}
+  - name: Frame_13
+    originalName: 
+    pivot: {x: 1.84, y: 2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 72
+      width: 25
+      height: 8
+    spriteID: 419032cf278015c43bdda76dfe450f89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 72}
+  - name: Frame_14
+    originalName: 
+    pivot: {x: 2.5555556, y: 0.47058824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 18
+      height: 34
+    spriteID: ab5526025ac955f4d8e227d8a3d5d2c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Frame_15
+    originalName: 
+    pivot: {x: 2.5555556, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 18
+      height: 32
+    spriteID: 87c7e61b6333a9546bd4e919b75fb88b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 46}
+  - name: Frame_16
+    originalName: 
+    pivot: {x: 4.181818, y: 0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 4
+      width: 11
+      height: 30
+    spriteID: 9228cfdbfe645ea4d88306561ff3c6a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 4}
+  - name: Frame_17
+    originalName: 
+    pivot: {x: 11.5, y: 4}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 118
+      width: 4
+      height: 4
+    spriteID: 911820772cb2016499b75f64eb128e76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 118}
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3696047946
+      value0: 3445569066
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Fire bolt base
-    layerFlags: 0
+    name: fire bolt base
+    layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
@@ -536,7 +1460,7 @@ ScriptedImporter:
         y: 12
         width: 7
         height: 7
-      spriteId: fdd167357622ab84fa53bd0f0d2ae40d
+      spriteId: b0a10116af483ee4fb5feb5479f60197
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -545,7 +1469,7 @@ ScriptedImporter:
         y: 8
         width: 7
         height: 16
-      spriteId: f50104859aea2fe4ebeed41caff36bbe
+      spriteId: 0b7e844ad9671294eaaaeab430c1fc84
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -554,7 +1478,7 @@ ScriptedImporter:
         y: 5
         width: 7
         height: 23
-      spriteId: 4668d81c59604314e966213cfa6bec4c
+      spriteId: 96863196bf295244da2ad513fde24687
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -563,7 +1487,7 @@ ScriptedImporter:
         y: 3
         width: 8
         height: 25
-      spriteId: 9dca668abe3901946adc3695312bf0fa
+      spriteId: 8d42d28df1ceaeb4c8b228648a5ac318
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -572,7 +1496,7 @@ ScriptedImporter:
         y: 1
         width: 8
         height: 30
-      spriteId: d97fe627cbd4ade4fbbef041d0da4d36
+      spriteId: ed72ebfe0d67b8141a136a2442211f04
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -581,7 +1505,7 @@ ScriptedImporter:
         y: -1
         width: 14
         height: 34
-      spriteId: 8ce5b5f087edc2748b7d45e9b8790c23
+      spriteId: afdf97033cb5e2948906e296b3feb047
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -590,7 +1514,7 @@ ScriptedImporter:
         y: 9
         width: 20
         height: 11
-      spriteId: a341fe3bf87120b47aa1954334cac245
+      spriteId: a1417538c1407fe4190894e58e6ed08e
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -599,7 +1523,7 @@ ScriptedImporter:
         y: 11
         width: 25
         height: 8
-      spriteId: aeed3e698e8419042be9375afeb919b9
+      spriteId: e5a357bc58e859145b35a908583d4a8a
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -608,7 +1532,7 @@ ScriptedImporter:
         y: 11
         width: 27
         height: 8
-      spriteId: 5ff78595dce31d44eaab7be442004c52
+      spriteId: a08f9363e99c470498ed40b594404006
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -617,7 +1541,7 @@ ScriptedImporter:
         y: 11
         width: 27
         height: 7
-      spriteId: 6dfe617d961365f4b8e17ca6bfb5c23c
+      spriteId: 59b0bdd186b1f0d4ab6e567949bb7237
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -626,7 +1550,7 @@ ScriptedImporter:
         y: 12
         width: 25
         height: 7
-      spriteId: 660ab7c29073a7e468342507d7e918f0
+      spriteId: 627fbf737a420464f8670be891ed4e2d
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -635,7 +1559,7 @@ ScriptedImporter:
         y: 10
         width: 31
         height: 9
-      spriteId: f30910c7c460f8d4a8e4cb05bc95eee6
+      spriteId: d5103f090ba10fb4c9f1c87bb6544761
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -644,7 +1568,7 @@ ScriptedImporter:
         y: 10
         width: 25
         height: 7
-      spriteId: 9b7697e026fcf5f4bb0b62c021192468
+      spriteId: 9cf13603e05800040959471320af0189
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -653,7 +1577,7 @@ ScriptedImporter:
         y: 9
         width: 25
         height: 8
-      spriteId: c7ea99da88e7e534fbe478333dc06f41
+      spriteId: 419032cf278015c43bdda76dfe450f89
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -662,7 +1586,7 @@ ScriptedImporter:
         y: -1
         width: 18
         height: 34
-      spriteId: 7fd26b8f52f7d564bb3b382c6809bb7c
+      spriteId: ab5526025ac955f4d8e227d8a3d5d2c1
     - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -671,7 +1595,7 @@ ScriptedImporter:
         y: -1
         width: 18
         height: 32
-      spriteId: 68fa98013470ae14584984e77534aa99
+      spriteId: 87c7e61b6333a9546bd4e919b75fb88b
     - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -680,7 +1604,7 @@ ScriptedImporter:
         y: 2
         width: 11
         height: 30
-      spriteId: 935c155734464654e9321133af17a52b
+      spriteId: 9228cfdbfe645ea4d88306561ff3c6a6
     - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -689,7 +1613,7 @@ ScriptedImporter:
         y: 11
         width: 4
         height: 4
-      spriteId: 6d332e5f8757f934883a99b69e57d5be
+      spriteId: 911820772cb2016499b75f64eb128e76
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -733,6 +1657,30 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 16384

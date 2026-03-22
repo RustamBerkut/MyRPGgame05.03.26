@@ -19,6 +19,8 @@ namespace PlayerBehaviour
 
         [SerializeField]
         private GameObject _arrow;
+        [SerializeField]
+        private GameObject _charge;
 
         private void Start()
         {
@@ -55,7 +57,7 @@ namespace PlayerBehaviour
         }
         public void OnMageDamage()
         {
-            GameObject arrow = Instantiate(_arrow, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+            GameObject arrow = Instantiate(_charge, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
             arrow.GetComponent<Rigidbody2D>().AddForce(arrow.transform.right * -500);
         }
     }
