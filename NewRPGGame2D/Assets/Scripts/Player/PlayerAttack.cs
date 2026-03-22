@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace PlayerBehaviour
 {
@@ -97,7 +96,7 @@ namespace PlayerBehaviour
         IEnumerator OnSwordAttack()
         {
             attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_meleeDamage;
-            animator.speed = 0.5f;
+            animator.speed = _attackSpeed;
             animator.SetBool("Sword", true);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Sword", false);

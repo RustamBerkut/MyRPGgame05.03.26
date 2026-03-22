@@ -99,7 +99,7 @@ MonoBehaviour:
   meleeAttack: 3
   bowAttack: 12
   mageAttack: 12
-  attackSpeed: 12
+  attackSpeed: 0
   critChanse: 12
   castSpeed: 12
   shield: 12
