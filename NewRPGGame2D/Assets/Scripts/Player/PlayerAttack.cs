@@ -10,6 +10,8 @@ namespace PlayerBehaviour
         [SerializeField]
         private GameObject equipmnetSlot;
         [SerializeField]
+        private GameObject attackSlot;
+        [SerializeField]
         private Animator animator;
         [SerializeField]
         private GameObject noWeaponCanvas;
@@ -45,6 +47,8 @@ namespace PlayerBehaviour
             attackSpeedText.text = string.Format("Скорость атаки: {0:0}", _attackSpeed);
             critChanceText.text = string.Format("Шанс крита: {0:0}", _critChance);
             castSpeedText.text = string.Format("Скорость каста: {0:0}", _castSpeed);
+
+            attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_meleeDamage;
         }
 
         public void OnPlayerAttack()
@@ -92,6 +96,7 @@ namespace PlayerBehaviour
         }
         IEnumerator OnSwordAttack()
         {
+            attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_meleeDamage;
             animator.speed = 0.5f;
             animator.SetBool("Sword", true);
             yield return new WaitForSeconds(0.3f);
