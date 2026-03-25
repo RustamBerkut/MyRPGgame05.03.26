@@ -8,13 +8,16 @@ public class StartStory : MonoBehaviour
     public Image backImage;
     public List<Sprite> backgroundImages;
     public AudioSource audioSource;
-    public TextMeshProUGUI TextMeshProUGUI;
+    public TextMeshProUGUI TextMeshProUGUIs;
+    [TextArea]
+    public List<string>  stringTextMeshProUGUIs;
 
     private float change;
     private int value;
     private void Start()
     {
         backImage.sprite = backgroundImages[value];
+        TextMeshProUGUIs.text = stringTextMeshProUGUIs[value];
     }
 
     private void Update()
@@ -35,6 +38,7 @@ public class StartStory : MonoBehaviour
             backImage.enabled = false;
             Destroy(gameObject);
         }
+        TextMeshProUGUIs.text = stringTextMeshProUGUIs[value];
         backImage.sprite = backgroundImages[value];
     }
 
