@@ -31508,6 +31508,7 @@ GameObject:
   - component: {fileID: 1501779060}
   - component: {fileID: 1501779059}
   - component: {fileID: 1501779058}
+  - component: {fileID: 1501779062}
   m_Layer: 5
   m_Name: LevelStory
   m_TagString: Untagged
@@ -31576,7 +31577,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 35
   m_TargetDisplay: 0
 --- !u!224 &1501779061
 RectTransform:
@@ -31598,6 +31599,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1501779062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501779057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4821547d828384fb6917a24a11614c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartStory
+  backImage: {fileID: 1652179716}
+  backgroundImages:
+  - {fileID: -1670669414952162930, guid: b04402cc501149d4493f1d18fb4be4cc, type: 3}
+  - {fileID: 4443714562347759535, guid: 5a9951c2ec66c414d976883408b11c29, type: 3}
+  - {fileID: -5420694969011523690, guid: a271b5b0e18ecc84f829bb488c9e8a55, type: 3}
+  - {fileID: -5420694969011523690, guid: a271b5b0e18ecc84f829bb488c9e8a55, type: 3}
+  audioSource: {fileID: 0}
+  TextMeshProUGUI: {fileID: 0}
 --- !u!4 &1511060555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6210945134095137308, guid: 65bd5c4b0d7d42a4e886ac8553911106, type: 3}
@@ -32206,10 +32227,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1501779061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652179716
 MonoBehaviour:
@@ -32231,7 +32252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1670669414952162930, guid: b04402cc501149d4493f1d18fb4be4cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
