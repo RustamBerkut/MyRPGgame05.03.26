@@ -32718,6 +32718,7 @@ GameObject:
   - component: {fileID: 1342959164}
   - component: {fileID: 1342959163}
   - component: {fileID: 1342959165}
+  - component: {fileID: 1342959166}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -32835,6 +32836,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1342959166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342959162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b182006d317ed0d408b6ce5e0a5ef728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTeleporter
 --- !u!4 &1353345456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6210945134095137308, guid: 65bd5c4b0d7d42a4e886ac8553911106, type: 3}
