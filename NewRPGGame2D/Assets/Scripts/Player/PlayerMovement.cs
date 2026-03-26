@@ -5,11 +5,11 @@ namespace PlayerBehaviour
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public float Speed = 5f;
+        public float Speed;
 
         [SerializeField]
         private Transform attackHandTransform;
-
+        private float _speed;
         private Rigidbody2D _rb;
         private Vector2 moveVector;
         private Animator _animator;
@@ -17,6 +17,7 @@ namespace PlayerBehaviour
 
         void Start()
         {
+            _speed = Speed;
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
@@ -34,7 +35,7 @@ namespace PlayerBehaviour
             Vector3 move = new(moveVector.x, moveVector.y, 0);
             move.Normalize();
             
-            _rb.MovePosition(_rb.position + Speed * Time.deltaTime * moveVector);
+            _rb.MovePosition(_rb.position + _speed * Time.deltaTime * moveVector);
 
             float anim = Mathf.Abs(moveVector.y) + Mathf.Abs(moveVector.x); ;
             _animator.SetFloat("Speed", anim);

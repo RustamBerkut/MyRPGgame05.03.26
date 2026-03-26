@@ -32848,6 +32848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b182006d317ed0d408b6ce5e0a5ef728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerTeleporter
+  levelNumber: 2
+  fxTeleport: {fileID: 0}
 --- !u!4 &1353345456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6210945134095137308, guid: 65bd5c4b0d7d42a4e886ac8553911106, type: 3}
@@ -33202,7 +33204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1501779058
 MonoBehaviour:
   m_ObjectHideFlags: 0
