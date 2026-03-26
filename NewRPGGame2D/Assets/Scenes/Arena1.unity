@@ -34011,7 +34011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   Target: {fileID: 0}
   Offset: {x: 0, y: 0, z: -7}
-  Velocity: 3
+  Velocity: 5
   MinDistance: 0
 --- !u!114 &1010451601
 MonoBehaviour:
