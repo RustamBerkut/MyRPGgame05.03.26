@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +15,15 @@ namespace PlayerBehaviour
         private Vector2 moveVector;
         private Animator _animator;
         private AudioSource audioSource;
+        private bool _isEnemyOver;
+
+        private List<GameObject> enemyList = new();
+        public GameObject currentEnemy;
 
         void Start()
         {
             _speed = Speed;
+            _isEnemyOver = false;
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
@@ -42,25 +48,67 @@ namespace PlayerBehaviour
 
             if (moveVector.x < 0)
             {
-                Quaternion rot = transform.rotation;
-                rot.y = 0;
-                transform.rotation = rot;
-
-                Vector3 dir = (Vector3.up * -moveVector.x + Vector3.left * -moveVector.y);
-                attackHandTransform.localRotation = Quaternion.LookRotation(Vector3.forward, dir);
+                OnPlayerRotate(0, -1, 180);
             }
             else if (moveVector.x > 0)
             {
-                Quaternion rot = transform.rotation;
-                rot.y = 180;
-                transform.rotation = rot;
-                Vector3 dir = (Vector3.up * moveVector.x + Vector3.left * -moveVector.y);
-                attackHandTransform.localRotation = Quaternion.LookRotation(Vector3.forward, dir);
+                OnPlayerRotate(180, 1, 0);
             }
 
-            
-
             //audioSource.volume = anim;
+        }
+        private void OnPlayerRotate(int rots, int vec, int vector)
+        {
+            Quaternion rot = transform.rotation;
+            rot.y = rots;
+            transform.rotation = rot;
+           
+            if (enemyList.Count != 0) 
+            {
+                OnClosestEnemySearch(enemyList);
+                Vector3 mousePosition = currentEnemy.transform.position;
+
+                Vector2 direction = mousePosition - transform.position;
+                float angle = Vector2.SignedAngle(Vector2.right, direction);
+                attackHandTransform.transform.localEulerAngles = new Vector3(0, 0, -vec * angle + vector);
+                return;
+            }
+            Vector3 dir = (moveVector.x * vec * Vector3.up + Vector3.left * -moveVector.y);
+            attackHandTransform.localRotation = Quaternion.LookRotation(Vector3.forward, dir);
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.GetComponent<EnemyHealthSystem>())
+            {
+                enemyList.Add(collision.gameObject);
+            }
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.GetComponent<EnemyHealthSystem>())
+            {
+                enemyList.Remove(collision.gameObject);
+            }
+        }
+        private void OnClosestEnemySearch(List<GameObject> enemies)
+        {
+            GameObject closestEnemy = null;
+            var distance = Mathf.Infinity;
+            var playerPos = transform.position;
+
+            foreach (var enemy in enemies)
+            {
+                var diff = enemy.transform.position - playerPos;
+                var currDistance = diff.sqrMagnitude;
+
+                if (currDistance < distance)
+                {
+                    closestEnemy = enemy;
+                    distance = currDistance;
+                }
+            }
+            currentEnemy = closestEnemy;
+            
         }
     }
 }
