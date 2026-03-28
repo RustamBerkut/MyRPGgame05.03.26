@@ -11,11 +11,11 @@ public class EnemyHealthSystem : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI HPText;
 
-    public int MaxHP;
+    public float MaxHP;
     public GameObject fxHit;
-    public int enemyExp;
+    public float enemyExp;
 
-    public static Action<int, GameObject> EnemyDeadAction;
+    public static Action<float, GameObject> EnemyDeadAction;
 
     private int currentHP;
 
@@ -26,7 +26,7 @@ public class EnemyHealthSystem : MonoBehaviour
     }
     public void SetupMaxHp()
     {
-        currentHP = MaxHP;
+        currentHP = (int)MaxHP;
         hpSlider.maxValue = currentHP;
         hpSlider.value = currentHP;
         HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);

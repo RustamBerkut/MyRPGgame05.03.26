@@ -1,4 +1,4 @@
-
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +9,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _enemy3;
     [SerializeField] private GameObject _enemy4;
     [SerializeField] private GameObject _enemy5;
+    [SerializeField] private GameObject _enemyElite1;
+    [SerializeField] private GameObject _enemyElite2;
+    [SerializeField] private GameObject _enemyElite3;
+    [SerializeField] private GameObject _enemyElite4;
+    [SerializeField] private GameObject _enemyElite5;
     [SerializeField] private GameObject _enemyBoss;
 
     [SerializeField] private GameObject _spawnPoints1, _spawnPoints2, _spawnPoints3, _spawnPoints4;
@@ -42,8 +47,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-
-
         if (!_isWaveReady)
         {
             _waveTimer -= Time.deltaTime;
@@ -59,7 +62,6 @@ public class EnemySpawner : MonoBehaviour
             _timeCounterProUGUI.text = string.Format("Осталось врагов {0:0}", _enemyCurrentList);
             if (_enemyCurrentList == 0)
             {
-
                 _isWaveReady = false;
             }
         }
@@ -67,7 +69,6 @@ public class EnemySpawner : MonoBehaviour
         if (_waveTimer < 0 & _isWaveReady)
         {
              OnEnemySpawn();
-            
         }
     }
 
@@ -76,27 +77,37 @@ public class EnemySpawner : MonoBehaviour
         _waveTimer = 15;
         _waveCounter++;
         _waveCounterProUGUI.text = string.Format("Волна: {0}", _waveCounter);
+        _waveMultiply *= _waveMultiply;
+
         switch (_waveCounter)
         {
             case 1:
-                Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
                 _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
                 _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
                 _enemyCurrentList++;
-                Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
                 _enemyCurrentList++;
                 
                 break;
             case 2:
-                Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
+                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
                 _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
+                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
                 _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
+                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
                 _enemyCurrentList++;
-                Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
+                enemy = Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
+                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
                 _enemyCurrentList++;
                 break;
             case 3:
@@ -147,7 +158,7 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
     }
-    private void OnEnemyDeath(int exp, GameObject enemyGO)
+    private void OnEnemyDeath(float exp, GameObject enemyGO)
     {
         Debug.Log(enemyGO);
         _enemyCurrentList--;
