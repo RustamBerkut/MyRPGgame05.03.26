@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using PlayerBehaviour;
+using System;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
@@ -12,8 +13,12 @@ public class EnemyHealthSystem : MonoBehaviour
 
     public int MaxHP;
     public GameObject fxHit;
+    public int enemyExp;
+
+    public static Action<int, GameObject> EnemyDeadAction;
 
     private int currentHP;
+
 
     private void Start()
     {
@@ -55,6 +60,7 @@ public class EnemyHealthSystem : MonoBehaviour
     }
     private void OnEnemyDead()
     {
+        EnemyDeadAction?.Invoke(enemyExp, gameObject);
         Destroy(gameObject);
     }
 }

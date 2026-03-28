@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4471926186088451390}
   - component: {fileID: 7593135954624654639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 6984551844476401595}
   - component: {fileID: 3485730157730606060}
   - component: {fileID: 3098214248803895034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FillImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 3821262260264630866}
   - component: {fileID: 5888373800217214103}
   - component: {fileID: 8208878929119531233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 4511788843855339695}
   - component: {fileID: 7021385773570108003}
   - component: {fileID: 7253361658641065851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,6 +376,7 @@ MonoBehaviour:
   HPText: {fileID: 1069940661859999856}
   MaxHP: 20
   fxHit: {fileID: 1967835574231978638, guid: ac7fa8e3ccf90ff468600f1ac49579d0, type: 3}
+  enemyExp: 0
 --- !u!70 &7253361658641065851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -424,7 +425,7 @@ GameObject:
   - component: {fileID: 114648780476096097}
   - component: {fileID: 818860574866066303}
   - component: {fileID: 1069940661859999856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
