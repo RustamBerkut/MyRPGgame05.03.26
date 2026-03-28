@@ -15,7 +15,6 @@ namespace PlayerBehaviour
         private Vector2 moveVector;
         private Animator _animator;
         private AudioSource audioSource;
-        private bool _isEnemyOver;
 
         private List<GameObject> enemyList = new();
         public GameObject currentEnemy;
@@ -23,7 +22,6 @@ namespace PlayerBehaviour
         void Start()
         {
             _speed = Speed;
-            _isEnemyOver = false;
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
