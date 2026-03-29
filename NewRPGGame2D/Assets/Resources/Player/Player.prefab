@@ -7396,7 +7396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929d12f454428b1429f9b76d01dc493d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour.PlayerMovement
-  Speed: 3
+  Speed: 5
   attackHandTransform: {fileID: 8424381345537238049}
   currentEnemy: {fileID: 0}
 --- !u!114 &6120975455236736438

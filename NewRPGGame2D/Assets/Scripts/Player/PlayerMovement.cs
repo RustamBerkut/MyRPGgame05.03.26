@@ -19,7 +19,7 @@ namespace PlayerBehaviour
         private List<GameObject> enemyList = new();
         public GameObject currentEnemy;
 
-        void Start()
+        private void Start()
         {
             _speed = Speed;
             _rb = GetComponent<Rigidbody2D>();
