@@ -54,11 +54,13 @@ namespace PlayerBehaviour
         {
             GameObject arrow = Instantiate(_arrow, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
             arrow.GetComponent<Rigidbody2D>().AddForce(arrow.transform.right * - 500);
+            arrow.GetComponent<PlayerRangeDamage>().rangeDamage = playerDamage;
         }
         public void OnMageDamage()
         {
             GameObject arrow = Instantiate(_charge, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
             arrow.GetComponent<Rigidbody2D>().AddForce(arrow.transform.right * -500);
+            arrow.GetComponent<PlayerRangeDamage>().rangeDamage = playerDamage;
         }
     }
 }

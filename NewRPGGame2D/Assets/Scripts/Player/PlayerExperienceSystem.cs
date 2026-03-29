@@ -23,12 +23,21 @@ namespace PlayerBehaviour
 
         private PlayerStats playerStats;
 
+        private void OnEnable()
+        {
+            EnemyHealthSystem.EnemyDeadAction += OnExpUpdate;
+        }
+        private void OnDisable()
+        {
+            EnemyHealthSystem.EnemyDeadAction -= OnExpUpdate;
+        }
+
         private void Start()
         {
             playerStats = GetComponent<PlayerStats>();
             if (!PlayerPrefs.HasKey(currExpString))
             {
-                OnExpUpdate(0);
+                OnExpUpdate(0, null);
                 return;
             }
             OnLvlLoad();
@@ -44,11 +53,11 @@ namespace PlayerBehaviour
             }
             expSlider.maxValue = (int)expToNextLevel;
             expSlider.value = (int)currentExp;
-            expText.text = string.Format("{0} / {1}", (int)currentExp, (int)expToNextLevel);
+            expText.text = string.Format("{0:0} / {1:0}", (int)currentExp, (int)expToNextLevel);
             lvlText.text = level.ToString();
         }
 
-        public void OnExpUpdate(int exp)
+        public void OnExpUpdate(float exp, GameObject enemy)
         {
             currentExp += exp;
             if (currentExp >= expToNextLevel)
@@ -58,7 +67,7 @@ namespace PlayerBehaviour
             }
             expSlider.maxValue = (int)expToNextLevel;
             expSlider.value = (int)currentExp;
-            expText.text = string.Format("{0} / {1}", (int)currentExp, (int)expToNextLevel);
+            expText.text = string.Format("{0:0} / {1:0}", (int)currentExp, (int)expToNextLevel);
             PlayerPrefs.SetFloat(currExpString, currentExp);
         }
 

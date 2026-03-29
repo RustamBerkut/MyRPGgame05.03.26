@@ -103,6 +103,7 @@ namespace PlayerBehaviour
         }
         IEnumerator OnBowAttack()
         {
+            attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_rangeDamage;
             animator.speed = _attackSpeed;
             animator.SetBool("Bow", true);
             yield return new WaitForSeconds(0.3f);
@@ -118,6 +119,7 @@ namespace PlayerBehaviour
         }
         IEnumerator OnMageAttack() 
         {
+            attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_magicDamage;
             animator.speed = _castSpeed;
             animator.SetBool("Mage", true);
             yield return new WaitForSeconds(0.3f);

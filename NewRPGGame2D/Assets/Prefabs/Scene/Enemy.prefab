@@ -376,7 +376,7 @@ MonoBehaviour:
   HPText: {fileID: 1069940661859999856}
   MaxHP: 20
   fxHit: {fileID: 1967835574231978638, guid: ac7fa8e3ccf90ff468600f1ac49579d0, type: 3}
-  enemyExp: 0
+  enemyExp: 10
 --- !u!70 &7253361658641065851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
