@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using PlayerBehaviour;
 using System;
+using Unity.Mathematics;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class EnemyHealthSystem : MonoBehaviour
     private Slider hpSlider;
     [SerializeField]
     private TextMeshProUGUI HPText;
+    [SerializeField]
+    private GameObject enemyDamageCanvas;
+    [SerializeField]
+    private GameObject goldCoin;
 
     public float MaxHP;
     public GameObject fxHit;
     public float enemyExp;
+    public float critChanse;
+    public int goldFromEnemy;
 
     public static Action<float, GameObject> EnemyDeadAction;
 
-    private int currentHP;
+    private float currentHP;
 
 
     private void Start()
@@ -50,8 +57,15 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private void OnDamage(int damage)
     {
-        currentHP -= damage;
+        float randomDamage = UnityEngine.Random.Range(damage * 0.7f, damage * 1.3f);
+
+        currentHP -= randomDamage;
         hpSlider.value = currentHP;
+
+        
+        GameObject can = Instantiate(enemyDamageCanvas, transform.position + new Vector3(0, 1, 0), transform.rotation);
+        can.GetComponentInChildren<TextMeshProUGUI>().text = string.Format("{0:0}", randomDamage);
+
         HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
         if (currentHP <= 0)
         {

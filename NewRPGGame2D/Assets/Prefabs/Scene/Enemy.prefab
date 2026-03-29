@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthSystem
   hpSlider: {fileID: 7593135954624654639}
   HPText: {fileID: 1069940661859999856}
+  enemyDamageCanvas: {fileID: 4954054450945871838, guid: c993739d008b23b4091464d8a4fe095c, type: 3}
   MaxHP: 20
   fxHit: {fileID: 1967835574231978638, guid: ac7fa8e3ccf90ff468600f1ac49579d0, type: 3}
   enemyExp: 10
