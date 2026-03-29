@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -16,9 +17,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _enemyElite5;
     [SerializeField] private GameObject _enemyBoss;
 
-    [SerializeField] private GameObject _spawnPoints1, _spawnPoints2, _spawnPoints3, _spawnPoints4;
+    [SerializeField] private List<GameObject> _spawnPoints;
 
-    private float _waveMultiply = 1.15f;
+    private float _waveMultiply = 1f;
     private byte _waveCounter;
     private float _waveTimer = 15;
     private float _timeBetweenWave = 30;
@@ -74,89 +75,461 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnEnemySpawn()
     {
-        _waveTimer = 15;
-        _waveCounter++;
-        _waveCounterProUGUI.text = string.Format("Волна: {0}", _waveCounter);
-        _waveMultiply *= _waveMultiply;
-
+        OnWaveCounterUpdate();
+        
         switch (_waveCounter)
         {
             case 1:
-                GameObject enemy = Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                
+                Wave1Spawn();
                 break;
             case 2:
-                enemy = Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
-                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
-                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
-                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
-                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
-                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
-                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
-                _enemyCurrentList++;
-                enemy = Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
-                enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
-                enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
-                _enemyCurrentList++;
+                Wave2Spawn();
                 break;
             case 3:
-                Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
+                Wave3Spawn();
                 break;
             case 4:
-                Instantiate(_enemy1, _spawnPoints1.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints2.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy1, _spawnPoints3.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
-                Instantiate(_enemy2, _spawnPoints4.transform.position, Quaternion.identity);
-                _enemyCurrentList++;
+                Wave4Spawn();
                 break;
             case 5:
-                Instantiate(_enemy5);
-                _enemyCurrentList++;
+                Wave5Spawn();
                 break;
             case 6:
-                Instantiate(_enemy1);
-                _enemyCurrentList++;
+                Wave6Spawn();
                 break;
             case 7:
-                Instantiate(_enemy2);
-                _enemyCurrentList++;
+                Wave7Spawn();
                 break;
             case 8:
-                Instantiate(_enemy3);
-                _enemyCurrentList++;
+                Wave8Spawn();
                 break;
             case 9:
-                Instantiate(_enemy4);
-                _enemyCurrentList++;
+                Wave9Spawn();
                 break;
             case 10:
-                Instantiate(_enemy5);
-                _enemyCurrentList++;
+                Wave10Spawn();
+                break;
+            case 11:
+                Destroy(gameObject);
                 break;
             default:
                 break;
         }
+    }
+    private void Wave1Spawn()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            _enemyCurrentList++;
+        }
+        Instantiate(_enemy2, _spawnPoints[3].transform.position, Quaternion.identity);
+        _enemyCurrentList++;
+    }
+    private void Wave2Spawn()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject enemy1 = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy1.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy1.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject enemy2 = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy2.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy2.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave3Spawn()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 2; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave4Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 2; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 1; i < 2; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave5Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 1; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 1; i < 2; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave6Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave7Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave8Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave9Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void Wave10Spawn()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy = Instantiate(_enemy5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite1, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite2, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite3, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite4, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyElite5, _spawnPoints[i].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+        for (int i = 0; i < 1; i++)
+        {
+            GameObject enemy = Instantiate(_enemyBoss, _spawnPoints[i+2].transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyHealthSystem>().MaxHP *= _waveMultiply;
+            enemy.GetComponent<EnemyHealthSystem>().enemyExp *= _waveMultiply;
+            _enemyCurrentList++;
+        }
+    }
+    private void OnWaveCounterUpdate()
+    {
+        _waveTimer = 15;
+        _waveCounter++;
+        _waveCounterProUGUI.text = string.Format("Волна: {0}", _waveCounter);
+        _waveMultiply *= 1.15f;
     }
     private void OnEnemyDeath(float exp, GameObject enemyGO)
     {

@@ -29,7 +29,7 @@ public class EnemyHealthSystem : MonoBehaviour
         currentHP = (int)MaxHP;
         hpSlider.maxValue = currentHP;
         hpSlider.value = currentHP;
-        HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+        HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,7 +52,7 @@ public class EnemyHealthSystem : MonoBehaviour
     {
         currentHP -= damage;
         hpSlider.value = currentHP;
-        HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+        HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
         if (currentHP <= 0)
         {
             OnEnemyDead();
