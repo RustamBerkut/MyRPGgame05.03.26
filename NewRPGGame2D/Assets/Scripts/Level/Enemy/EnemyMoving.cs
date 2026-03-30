@@ -97,7 +97,7 @@ public class EnemyMoving : MonoBehaviour
     }
     private void OnMeleeAttack()
     {
-
+        animator.CrossFade("EnemyAttack", 0.1f);
     }
     private void OnRangeAttack()
     {

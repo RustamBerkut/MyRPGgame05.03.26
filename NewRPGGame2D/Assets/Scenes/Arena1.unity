@@ -15994,10 +15994,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1301871291}
     m_Modifications:
-    - target: {fileID: 1430041317741390611, guid: c0b0f2ccc8a239b4db5ac8864aba6a47, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 57fc431b73c4d924c8af387d4d2ac6e2, type: 2}
     - target: {fileID: 3718997638922380122, guid: c0b0f2ccc8a239b4db5ac8864aba6a47, type: 3}
       propertyPath: m_Name
       value: TorchPrefab
@@ -16041,14 +16037,6 @@ PrefabInstance:
     - target: {fileID: 6210945134095137308, guid: c0b0f2ccc8a239b4db5ac8864aba6a47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864908544538814139, guid: c0b0f2ccc8a239b4db5ac8864aba6a47, type: 3}
-      propertyPath: m_Intensity
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864908544538814139, guid: c0b0f2ccc8a239b4db5ac8864aba6a47, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
