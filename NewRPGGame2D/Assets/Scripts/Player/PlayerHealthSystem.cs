@@ -37,6 +37,14 @@ namespace PlayerBehaviour
                 }
             }
         }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.GetComponent<EnemyDamage>())
+            {
+                int dam = collision.gameObject.GetComponent<EnemyDamage>().EnemyDamager;
+                OnDamage(dam);
+            }
+        }
 
         public void SetupMaxHp(int CON, int _health)
         {
@@ -45,7 +53,7 @@ namespace PlayerBehaviour
             currentHP = MaxHP;
             hpSlider.maxValue = currentHP;
             hpSlider.value = currentHP;
-            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
             OnPlayerHealthRegen();
         }
         public void OnShieldSetup(int _shield)
@@ -60,7 +68,7 @@ namespace PlayerBehaviour
             currentHP -= (int)dam;
             hpSlider.value = currentHP;
             timeAfterAttack = 10;
-            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
             if (currentHP <= 0)
             {
                 OnPlayerDead();
@@ -73,13 +81,13 @@ namespace PlayerBehaviour
             {
                 currentHP = MaxHP;
             }
-            HPText.text = string.Format("{0} / {1}", currentHP, MaxHP);
+            HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
             hpSlider.value = currentHP;
         }
         private void OnPlayerHealthRegen()
         {
             HpRegen = 2 + (playerCon - 10);
-            HPRegenText.text = string.Format("Реген здоровья: {0} ", HpRegen);
+            HPRegenText.text = string.Format("Реген здоровья: {0:0} ", HpRegen);
             timeRegen = 10;
             OnHealth(HpRegen);
         }

@@ -1,14 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour
 {
+    public float timerForAttack;
 
     public GameObject enemyBody;
-    public float timerForAttack;
     public Animator animator;
-    
+
+    public GameObject meleeBoxCollider;
     public GameObject rangeMissle;
     public Transform rangeBarrel;
+
     public float _speed;
     public float _bodyScaller;
 
@@ -98,14 +101,23 @@ public class EnemyMoving : MonoBehaviour
     private void OnMeleeAttack()
     {
         animator.CrossFade("EnemyAttack", 0.1f);
+        StartCoroutine(nameof(OnMeleeAttackCoroutine));
+    }
+    IEnumerator OnMeleeAttackCoroutine()
+    {
+        meleeBoxCollider.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        meleeBoxCollider.SetActive(false);
     }
     private void OnRangeAttack()
     {
         GameObject missle = Instantiate(rangeMissle, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+        animator.CrossFade("EnemyAttack", 0.1f);
     }
     private void OnMageAttack()
     {
         GameObject missle = Instantiate(rangeMissle, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+        animator.CrossFade("EnemyAttack", 0.1f);
     }
 }
 public enum EnemyAttackStyle

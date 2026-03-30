@@ -64,7 +64,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
         
         GameObject can = Instantiate(enemyDamageCanvas, transform.position + new Vector3(0, 1, 0), transform.rotation);
-        can.GetComponentInChildren<TextMeshProUGUI>().text = string.Format("{0:0}", randomDamage);
+        can.GetComponentInChildren<TextMeshProUGUI>().text = string.Format("{0:0}", (int)randomDamage);
 
         HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
         if (currentHP <= 0)
@@ -74,6 +74,7 @@ public class EnemyHealthSystem : MonoBehaviour
     }
     private void OnEnemyDead()
     {
+        Instantiate(goldCoin, transform.position, transform.rotation);
         EnemyDeadAction?.Invoke(enemyExp, gameObject);
         Destroy(gameObject);
     }
