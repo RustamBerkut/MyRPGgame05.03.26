@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ec24e4ddfe3ded84495eefe4576cc9fe, type: 2}
+    - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
+      propertyPath: _bodyScaller
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6124804338818246182, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_Name
       value: Bat1lvl

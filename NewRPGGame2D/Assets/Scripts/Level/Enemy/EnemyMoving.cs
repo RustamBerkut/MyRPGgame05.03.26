@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour
 {
-    private GameObject playerPosition;
 
+    public GameObject enemyBody;
     public float timerForAttack;
+    public Animator animator;
     
     public GameObject rangeMissle;
     public Transform rangeBarrel;
     public float _speed;
+    public float _bodyScaller;
 
     public EnemyAttackStyle enemyAttackStyle;
 
     private float attackDelay;
     private float _enemySpeed;
     private float attackDistance;
+    private GameObject playerPosition;
 
     private void Start()
     {
@@ -54,7 +57,14 @@ public class EnemyMoving : MonoBehaviour
     
     private void OnPlayerMoving()
     {
-        transform.position = Vector2.MoveTowards(transform.position, playerPosition.transform.position, _enemySpeed);
+        Vector3 playerPos = playerPosition.transform.position;
+        Vector3 enemyPos = gameObject.transform.position;
+        if (playerPos.x < enemyPos.x) // игрок находится слева от врага  
+            enemyBody.transform.localScale = new Vector3(-_bodyScaller, _bodyScaller, _bodyScaller); // поворачиваем врага влево  
+        else // игрок находится справа от врага  
+            enemyBody.transform.localScale = new Vector3(_bodyScaller, _bodyScaller, _bodyScaller); // поворачиваем врага вправо  
+
+        transform.position = Vector2.MoveTowards(enemyPos, playerPos, _enemySpeed);
         float dis = Vector2.Distance(transform.position, playerPosition.transform.position);
         dis = Mathf.Abs(dis);
         if (dis <= attackDistance)

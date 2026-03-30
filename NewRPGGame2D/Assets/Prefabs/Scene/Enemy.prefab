@@ -358,7 +358,7 @@ Animator:
   m_GameObject: {fileID: 5285117003367798544}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2048d1c5cddcd9141bf4bcc84f57acca, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -776,10 +776,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47759865f8dd924aaea65c8fd7a4e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMoving
+  enemyBody: {fileID: 5285117003367798544}
   timerForAttack: 1
+  animator: {fileID: 4641767848602489957}
   rangeMissle: {fileID: 0}
   rangeBarrel: {fileID: 5218561193422408970}
   _speed: 0.03
+  _bodyScaller: 1
   enemyAttackStyle: 0
 --- !u!1 &7076951602002956860
 GameObject:
