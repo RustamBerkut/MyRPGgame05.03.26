@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static Action<bool> ArenaFinishAction;
+
     [SerializeField] private GameObject _enemy1;
     [SerializeField] private GameObject _enemy2;
     [SerializeField] private GameObject _enemy3;
@@ -22,7 +24,6 @@ public class EnemySpawner : MonoBehaviour
     private float _waveMultiply = 1f;
     private byte _waveCounter;
     private float _waveTimer = 15;
-    private float _timeBetweenWave = 30;
     private bool _isWaveReady;
 
     [SerializeField]
@@ -110,7 +111,8 @@ public class EnemySpawner : MonoBehaviour
                 Wave10Spawn();
                 break;
             case 11:
-                Destroy(gameObject);
+                ArenaFinishAction?.Invoke(true);
+                Destroy(this);
                 break;
             default:
                 break;

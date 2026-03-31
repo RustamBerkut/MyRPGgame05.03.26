@@ -8,13 +8,11 @@ public class CoinCollect : MonoBehaviour
     private float goldInCoin;
     public GameObject fxCoinCollect;
     public TextMeshProUGUI proUGUI;
-
     private void Start()
     {
         goldInCoin = UnityEngine.Random.Range(0, 30);
         proUGUI.text = string.Format("{0:0}", (int)goldInCoin);
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -22,7 +20,6 @@ public class CoinCollect : MonoBehaviour
             OnCoinCollect();
         }
     }
-
     private void OnCoinCollect()
     {
         Instantiate(fxCoinCollect, transform.position, transform.rotation);
