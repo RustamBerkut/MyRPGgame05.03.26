@@ -93,21 +93,23 @@ MonoBehaviour:
   numberOfItem: 7
   resours: 1
   STR: 0
-  DEX: 0
-  INT: 0
-  CON: 0
+  DEX: 18
+  INT: 6
+  CON: 10
   meleeAttack: 0
-  bowAttack: 0
+  bowAttack: 100
   mageAttack: 0
   shield: 0
   MP: 0
   HP: 0
-  attackSpeed: 0.3
+  attackSpeed: 1.2
   critChanse: 0
   castSpeed: 0
   itemName: SimpleBowUI 3
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  itemDescription: 
+  itemDescription: "\u0422\u0435\u043D\u0435\u0432\u043E\u0439 \u043B\u0443\u043A\n\n\u041E\u0440\u0443\u0436\u0438\u0435\n\u0423\u0440\u043E\u043D:
+    100\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C: +18\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
+    +10\n\u0418\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442: +6"
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

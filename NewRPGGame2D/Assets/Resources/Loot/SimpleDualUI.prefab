@@ -92,22 +92,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
   numberOfItem: 3
   resours: 2
-  STR: 0
+  STR: 2
   DEX: 0
   INT: 0
-  CON: 0
-  meleeAttack: 0
+  CON: 2
+  meleeAttack: 16
   bowAttack: 0
   mageAttack: 0
   shield: 0
   MP: 0
   HP: 0
-  attackSpeed: 0.3
+  attackSpeed: 0.6
   critChanse: 0
   castSpeed: 0
   itemName: SimpleDualUI
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  itemDescription: 
+  itemDescription: "\u041E\u0441\u0442\u0440\u0430\u044F \u043F\u0430\u043B\u043A\u0430\n\n\u041E\u0440\u0443\u0436\u0438\u0435\n\u0423\u0440\u043E\u043D:
+    16\n\u0421\u0438\u043B\u0430: +2\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
+    +2"
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

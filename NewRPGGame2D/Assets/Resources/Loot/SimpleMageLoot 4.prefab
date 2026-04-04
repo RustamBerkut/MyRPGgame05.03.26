@@ -26,9 +26,9 @@ Transform:
   m_GameObject: {fileID: 1488843197436605158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.143, z: 0}
+  m_LocalPosition: {x: 0.005, y: -0.061, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8838548259671366955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 544688315ba36c541a2e41ed5d483092, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d146494dac5544c8bbfd426f29a9110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8137766353783028493}
   - component: {fileID: 9197921466249065847}
   m_Layer: 0
-  m_Name: SimpleBowLoot 4
+  m_Name: SimpleMageLoot 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,4 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87f75bd34be86147acd6eca4cf8a486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LootingItem
-  UIItem: {fileID: 1379141423519758778, guid: f935a4c910d9797408d009080640f79e, type: 3}
+  UIItem: {fileID: 1379141423519758778, guid: 9dfb479799a472e4b935986bf203ff77, type: 3}
