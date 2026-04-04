@@ -101,7 +101,7 @@ MonoBehaviour:
   mageAttack: 0
   shield: 0
   MP: 0
-  HP: 0
+  HP: 60
   attackSpeed: 1.2
   critChanse: 0
   castSpeed: 0

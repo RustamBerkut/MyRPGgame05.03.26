@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1488843197436605158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: -0.159, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 2066d9f4f749a3e4ea6ed3aa9328525c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 920510d3994f1469f8f88fd76b9f7277, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8137766353783028493}
   - component: {fileID: 9197921466249065847}
   m_Layer: 0
-  m_Name: SimpleMageLoot 4
+  m_Name: SimpleSwordLoot 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,4 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87f75bd34be86147acd6eca4cf8a486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LootingItem
-  UIItem: {fileID: 1379141423519758778, guid: 9dfb479799a472e4b935986bf203ff77, type: 3}
+  UIItem: {fileID: 1379141423519758778, guid: 6d5e10e59a431cb44b2e80ac89101897, type: 3}

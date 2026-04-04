@@ -103,7 +103,7 @@ MonoBehaviour:
   MP: 0
   HP: 0
   attackSpeed: 2
-  critChanse: 0
+  critChanse: 30
   castSpeed: 0
   itemName: SimpleBowUI 4
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
