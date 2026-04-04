@@ -1,16 +1,44 @@
+using TMPro;
 using UnityEngine;
 
-public class PlayerMoneySystem : MonoBehaviour
+namespace PlayerBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class PlayerMoneySystem : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private string moneyName;
+        [SerializeField]
+        private TextMeshProUGUI proUGUI;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private int currentMoney;
+
+        private void Start()
+        {
+            OnLoadMoney();
+        }
+
+        private void OnEnable()
+        {
+            CoinCollect.ActionCoinCollect += OnUpdateMoney;
+        }
+        private void OnDisable()
+        {
+            CoinCollect.ActionCoinCollect -= OnUpdateMoney;
+        }
+        private void OnUpdateMoney(int money)
+        {
+            currentMoney += money;
+            OnSaveMoney();
+        }
+        private void OnLoadMoney()
+        {
+            currentMoney = PlayerPrefs.GetInt(moneyName);
+            proUGUI.text = currentMoney.ToString();
+        }
+        private void OnSaveMoney()
+        {
+            PlayerPrefs.SetInt(moneyName, currentMoney);
+            proUGUI.text = currentMoney.ToString();
+        }
     }
 }

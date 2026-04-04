@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 namespace PlayerBehaviour
 {
@@ -14,6 +15,10 @@ namespace PlayerBehaviour
         private TextMeshProUGUI HPRegenText;
         [SerializeField]
         private TextMeshProUGUI ShieldText;
+        [SerializeField]
+        private GameObject hitFX;
+
+        public static Action<bool> OnPlayerDeadAction;
 
         private int MaxHP;
         private int currentHP;
@@ -68,6 +73,7 @@ namespace PlayerBehaviour
             currentHP -= (int)dam;
             hpSlider.value = currentHP;
             timeAfterAttack = 10;
+            Instantiate(hitFX, transform.position, transform.rotation);
             HPText.text = string.Format("{0:0} / {1:0}", currentHP, MaxHP);
             if (currentHP <= 0)
             {
@@ -93,7 +99,8 @@ namespace PlayerBehaviour
         }
         private void OnPlayerDead()
         {
-            Debug.Log("Player dead");
+            OnPlayerDeadAction?.Invoke(false);
+            Destroy(gameObject);
         }
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
-    public static Action<float> ActionCoinCollect;
-    private float goldInCoin;
+    public static Action<int> ActionCoinCollect;
+    private int goldInCoin;
     public GameObject fxCoinCollect;
     public TextMeshProUGUI proUGUI;
     private void Start()
     {
         goldInCoin = UnityEngine.Random.Range(0, 30);
-        proUGUI.text = string.Format("{0:0}", (int)goldInCoin);
+        proUGUI.text = string.Format("{0:0}", goldInCoin);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

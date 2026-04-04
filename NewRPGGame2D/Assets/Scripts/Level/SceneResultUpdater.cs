@@ -1,3 +1,4 @@
+using PlayerBehaviour;
 using TMPro;
 using UnityEngine;
 
@@ -25,12 +26,14 @@ public class SceneResultUpdater : MonoBehaviour
         EnemyHealthSystem.EnemyDeadAction += OnEnemyResult;
         CoinCollect.ActionCoinCollect += OnGoldResult;
         EnemySpawner.ArenaFinishAction += OnSceneResult;
+        PlayerHealthSystem.OnPlayerDeadAction += OnSceneResult;
     }
     private void OnDisable()
     {
         EnemyHealthSystem.EnemyDeadAction -= OnEnemyResult;
         CoinCollect.ActionCoinCollect -= OnGoldResult;
         EnemySpawner.ArenaFinishAction -= OnSceneResult;
+        PlayerHealthSystem.OnPlayerDeadAction -= OnSceneResult;
     }
     private void Update()
     {
@@ -56,7 +59,7 @@ public class SceneResultUpdater : MonoBehaviour
     {
         enemyCounter ++;
     }
-    private void OnGoldResult(float gold)
+    private void OnGoldResult(int gold)
     {
         goldCounter += gold;
     }

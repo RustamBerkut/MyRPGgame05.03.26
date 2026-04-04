@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 7583897646704229761}
   - component: {fileID: 5788824226764641511}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: GoldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3dc4ba7eadcab14479b45b2d508cb667, type: 2}
   m_sharedMaterial: {fileID: -1505847773160947198, guid: 3dc4ba7eadcab14479b45b2d508cb667, type: 2}
@@ -4191,6 +4191,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 30e47371660a44f038c174865e5af8d3, type: 3}
   - {fileID: 21300000, guid: b8a3f9debf9a740ebba84d95c6700721, type: 3}
   - {fileID: 21300000, guid: a65be32c958034377978891516dc581d, type: 3}
+  - {fileID: 21300000, guid: ffef52aa2bdb04c1394af5d4599ed210, type: 3}
+  - {fileID: 21300000, guid: 1242d9257f164482a9504def032942ed, type: 3}
+  - {fileID: 21300000, guid: b703d7727b08947219074023baf91225, type: 3}
+  - {fileID: 21300000, guid: 3fce61441a9114f3ba09e2c496de7ca8, type: 3}
   - {fileID: 21300000, guid: ffef52aa2bdb04c1394af5d4599ed210, type: 3}
 --- !u!1 &4231292989677511976
 GameObject:
@@ -7585,6 +7589,7 @@ GameObject:
   - component: {fileID: 6981136953897711616}
   - component: {fileID: 7742933401332416461}
   - component: {fileID: 7396069750015250830}
+  - component: {fileID: 7513708585326853133}
   - component: {fileID: 9152908482740489294}
   m_Layer: 8
   m_Name: Player
@@ -8058,6 +8063,7 @@ MonoBehaviour:
   HPText: {fileID: 5550901110276965767}
   HPRegenText: {fileID: 9028140775283942459}
   ShieldText: {fileID: 71091728197361167}
+  hitFX: {fileID: 1967835574231978638, guid: df15fc113a587af43a6253ee16e4e6bc, type: 3}
   timeAfterAttack: 10
 --- !u!114 &7742933401332416461
 MonoBehaviour:
@@ -8092,6 +8098,20 @@ MonoBehaviour:
   currExpString: CurrExpstringName
   expText: {fileID: 5461385741678797504}
   lvlText: {fileID: 7066526268247183242}
+--- !u!114 &7513708585326853133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132015569861268908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec2ec456c76afd4e8709349b03a0a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMoneySystem
+  moneyName: PlayerMoneyName
+  proUGUI: {fileID: 5788824226764641511}
 --- !u!114 &9152908482740489294
 MonoBehaviour:
   m_ObjectHideFlags: 0
