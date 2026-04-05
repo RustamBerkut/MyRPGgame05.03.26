@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 4760557707675981348}
   - component: {fileID: 4128755813067971280}
   m_Layer: 3
-  m_Name: Text (TMP)
+  m_Name: EnemyName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +758,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
   enemyBody: {fileID: 5285117003367798544}
   animator: {fileID: 4641767848602489957}
   meleeBoxCollider: {fileID: 7535408325358553253}
-  rangeMissle: {fileID: 0}
+  rangeMissle: {fileID: 8872360437890709276, guid: 34483a56786e6464f92906597f52d76d, type: 3}
   rangeBarrel: {fileID: 5218561193422408970}
   _speed: 0.03
   _bodyScaller: 1

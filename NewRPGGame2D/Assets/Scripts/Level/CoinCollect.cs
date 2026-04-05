@@ -10,7 +10,7 @@ public class CoinCollect : MonoBehaviour
     public TextMeshProUGUI proUGUI;
     private void Start()
     {
-        goldInCoin = UnityEngine.Random.Range(0, 30);
+        goldInCoin = UnityEngine.Random.Range(1, 50);
         proUGUI.text = string.Format("{0:0}", goldInCoin);
     }
     private void OnTriggerEnter2D(Collider2D collision)

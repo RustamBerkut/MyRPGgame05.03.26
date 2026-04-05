@@ -20,8 +20,8 @@ namespace PlayerBehaviour
 
         public static Action<bool> OnPlayerDeadAction;
 
-        private int MaxHP;
-        private int currentHP;
+        private float MaxHP;
+        private float currentHP;
         
         private int HpRegen;
         private int playerCon = 10;
@@ -70,7 +70,7 @@ namespace PlayerBehaviour
         public void OnDamage(int damage)
         {
             float dam = damage * (1 - playerShield);
-            currentHP -= (int)dam;
+            currentHP -= dam;Debug.Log(currentHP);
             hpSlider.value = currentHP;
             timeAfterAttack = 10;
             Instantiate(hitFX, transform.position, transform.rotation);

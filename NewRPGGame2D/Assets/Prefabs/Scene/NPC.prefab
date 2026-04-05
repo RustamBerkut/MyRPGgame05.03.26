@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2346350784370059952}
   - component: {fileID: 8961807496215675871}
   - component: {fileID: 8809786196527711116}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2710747225598297773}
   - component: {fileID: 338764211308701481}
   - component: {fileID: 897704837258689030}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 3391593088711748505}
   - component: {fileID: 7571252339977700930}
   - component: {fileID: 4673149012832541666}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 6317762072453041842}
   - component: {fileID: 5013368613133193159}
   - component: {fileID: 3454123342470861808}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 8962579691924162508}
   - component: {fileID: 3878324279385505683}
   - component: {fileID: 3695354360946201588}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

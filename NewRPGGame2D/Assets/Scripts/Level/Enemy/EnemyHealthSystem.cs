@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using TMPro;
 using PlayerBehaviour;
 using System;
-using Unity.Mathematics;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
@@ -20,7 +19,6 @@ public class EnemyHealthSystem : MonoBehaviour
     public GameObject fxHit;
     public float enemyExp;
     public float critChanse;
-    public int goldFromEnemy;
 
     public static Action<float, GameObject> EnemyDeadAction;
 
@@ -61,8 +59,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
         currentHP -= randomDamage;
         hpSlider.value = currentHP;
-
-        
+                       
         GameObject can = Instantiate(enemyDamageCanvas, transform.position + new Vector3(0, 1, 0), transform.rotation);
         can.GetComponentInChildren<TextMeshProUGUI>().text = string.Format("{0:0}", (int)randomDamage);
 
