@@ -6582,10 +6582,10 @@ GameObject:
   - component: {fileID: 9072571071005089041}
   - component: {fileID: 62669995000840658}
   - component: {fileID: 8806636155565897838}
-  - component: {fileID: 2542862654066134696}
+  - component: {fileID: 7076920333461229757}
   m_Layer: 0
   m_Name: InventoryButton
-  m_TagString: Untagged
+  m_TagString: PlayerInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6692,8 +6692,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2542862654066134696}
-        m_TargetAssemblyTypeName: ItemActivatedByButton, Assembly-CSharp
+      - m_Target: {fileID: 7076920333461229757}
+        m_TargetAssemblyTypeName: InventoryButton, Assembly-CSharp
         m_MethodName: OnActivated
         m_Mode: 1
         m_Arguments:
@@ -6704,7 +6704,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2542862654066134696
+--- !u!114 &7076920333461229757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6713,9 +6713,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6277243186379290806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd2de07d7872a54bab30dea1553bab8, type: 3}
+  m_Script: {fileID: 11500000, guid: a70f34aae7e8b2c42b56e80794b3a544, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemActivatedByButton
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryButton
   activatedGO: {fileID: 1737271946028098128}
 --- !u!1 &6290519370985182558
 GameObject:
@@ -8122,7 +8122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec2ec456c76afd4e8709349b03a0a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMoneySystem
-  moneyName: PlayerMoneyName
   proUGUI: {fileID: 5788824226764641511}
 --- !u!114 &9152908482740489294
 MonoBehaviour:

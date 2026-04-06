@@ -5,8 +5,7 @@ namespace PlayerBehaviour
 {
     public class PlayerMoneySystem : MonoBehaviour
     {
-        [SerializeField]
-        private string moneyName;
+        private readonly string moneyName = "PlayerMoneyName";
         [SerializeField]
         private TextMeshProUGUI proUGUI;
 
@@ -20,10 +19,12 @@ namespace PlayerBehaviour
         private void OnEnable()
         {
             CoinCollect.ActionCoinCollect += OnUpdateMoney;
+            ShopSlot.MoneyForBuyingAction += OnUpdateMoney; 
         }
         private void OnDisable()
         {
             CoinCollect.ActionCoinCollect -= OnUpdateMoney;
+            ShopSlot.MoneyForBuyingAction -= OnUpdateMoney;
         }
         private void OnUpdateMoney(int money)
         {
