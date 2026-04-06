@@ -13,6 +13,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public float attackSpeed, critChanse, castSpeed;
     public string itemName;
     public Texture2D icon;
+    public int ammoCost;
 
     [TextArea]
     [SerializeField]

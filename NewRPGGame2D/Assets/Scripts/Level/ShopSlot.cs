@@ -1,10 +1,8 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class ShopSlot : MonoBehaviour
 {
-    [SerializeField]
     private int ammoCost;
     public static Action<int> MoneyForBuyingAction;
 
@@ -30,10 +28,11 @@ public class ShopSlot : MonoBehaviour
     public void OnBuyAmmo()
     {
         OnGetPlayerMoney();
+        OnSetupAmmoSlotInInventory();
 
         if (ammoCost <= moneyPlayer)
         {
-            OnSetupAmmoSlotInInventory();
+            
             MoneyForBuyingAction?.Invoke(ammoCost * -1);
         }
     }
@@ -41,6 +40,6 @@ public class ShopSlot : MonoBehaviour
     private void OnSetupAmmoSlotInInventory()
     {
         var slot = GetComponentInChildren<UIItem>();
+        ammoCost = slot.ammoCost;
     }
-
 }
