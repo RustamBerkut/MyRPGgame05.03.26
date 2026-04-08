@@ -20,11 +20,13 @@ namespace PlayerBehaviour
         {
             CoinCollect.ActionCoinCollect += OnUpdateMoney;
             ShopSlot.MoneyForBuyingAction += OnUpdateMoney; 
+            ItemSellBuying.OnItemSellAction += OnUpdateMoney;
         }
         private void OnDisable()
         {
             CoinCollect.ActionCoinCollect -= OnUpdateMoney;
             ShopSlot.MoneyForBuyingAction -= OnUpdateMoney;
+            ItemSellBuying.OnItemSellAction -= OnUpdateMoney;
         }
         private void OnUpdateMoney(int money)
         {

@@ -35,10 +35,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 95, y: 95}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6896123217156972784
 CanvasRenderer:
@@ -102,8 +102,12 @@ MonoBehaviour:
   shield: 0
   MP: 0
   HP: 0
+  attackSpeed: 0
+  critChanse: 0
+  castSpeed: 0
   itemName: BodyUI 19
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
+  ammoCost: 0
   itemDescription: 
 --- !u!225 &7144676007898529027
 CanvasGroup:
