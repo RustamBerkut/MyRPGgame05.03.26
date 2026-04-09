@@ -4,15 +4,14 @@ using UnityEngine;
 public class ShopPanelActivated : MonoBehaviour
 {
     [SerializeField]
-    private GameObject questCanvas;
+    private GameObject shopCanvas;
 
     private bool _isActive;
     private GameObject buttonInv;
 
     private void Start()
     {
-        questCanvas.SetActive(false);
-        buttonInv = GameObject.FindGameObjectWithTag("PlayerInventory");
+        shopCanvas.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +20,6 @@ public class ShopPanelActivated : MonoBehaviour
         {
             _isActive = true;
             OnQuestPanelActivated(_isActive);
-            buttonInv.GetComponent<InventoryButton>().activatedGO.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,11 +28,10 @@ public class ShopPanelActivated : MonoBehaviour
         {
             _isActive = false;
             OnQuestPanelActivated(_isActive);
-            buttonInv.GetComponent<InventoryButton>().activatedGO.SetActive(false);
         }
     }
     private void OnQuestPanelActivated(bool active)
     {
-        questCanvas.SetActive(active);
+        shopCanvas.SetActive(active);
     }
 }

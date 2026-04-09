@@ -16,8 +16,7 @@ public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public int ammoCost;
 
     [TextArea]
-    [SerializeField]
-    private string itemDescription;
+    public string itemDescription;
 
     private CanvasGroup m_CanvasGroup;
     private RectTransform rectTransform;

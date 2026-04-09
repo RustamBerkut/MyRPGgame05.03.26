@@ -16,10 +16,16 @@ public class ShopSlot : MonoBehaviour
     private readonly string moneyName = "PlayerMoneyName";
     private int moneyPlayer;
 
+    private string itemCost;
+    public Texture2D icon;
+    private bool isDescr = false;
+    private string itemDescription;
 
     private void Start()
     {
         image.sprite = iItem.GetComponent<Image>().sprite;
+        itemDescription = iItem.itemDescription;
+        itemCost = iItem.ammoCost.ToString();
         OnGetPlayerMoney();
     }
     private void OnEnable()
@@ -52,12 +58,7 @@ public class ShopSlot : MonoBehaviour
         var slot = GetComponentInChildren<UIItem>();
         ammoCost = slot.ammoCost;
     }
-    [TextArea]
-    [SerializeField]
-    private string itemDescription;
-    private string itemCost;
-    public Texture2D icon;
-    private bool isDescr = false;
+
 
     void OnGUI()
     {
@@ -68,7 +69,7 @@ public class ShopSlot : MonoBehaviour
         };
         guiStyle.normal.background = icon;
         guiStyle.alignment = TextAnchor.MiddleCenter;
-        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2 - 450, 500, 500), itemDescription, guiStyle);
+        GUI.Box(new Rect(0, 0, 500, 500), itemDescription, guiStyle);
     }
     public void OnMouseEnterItem()
     {
