@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a344a45ef687c414087cc779499b62a4
+guid: 17a6dd89c80aac24e91a41baafb87262
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7821539493039393801
-    second: gLIpcpoMLxFTBXFqV1oBOJJPYVAox7wwsG9Tq38JxuuCnBRyLwLIKMa-K73_3pbnt2nQCTS5LraONWqgBYNwD6j8_0
+      213: 5394614817403052167
+    second: chechout_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gLIpcpoMLxFTBXFqV1oBOJJPYVAox7wwsG9Tq38JxuuCnBRyLwLIKMa-K73_3pbnt2nQCTS5LraONWqgBYNwD6j8_0
+      name: chechout_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 626
-        height: 626
+        width: 325
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90c4d478ab0bb8c60800000000000000
-      internalID: 7821539493039393801
+      spriteID: 7802e5338958dda40800000000000000
+      internalID: 5394614817403052167
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gLIpcpoMLxFTBXFqV1oBOJJPYVAox7wwsG9Tq38JxuuCnBRyLwLIKMa-K73_3pbnt2nQCTS5LraONWqgBYNwD6j8_0: 7821539493039393801
+      chechout_0: 5394614817403052167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
