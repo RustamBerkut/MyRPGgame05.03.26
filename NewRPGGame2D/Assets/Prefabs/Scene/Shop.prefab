@@ -174,7 +174,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -104, y: 0}
-  m_SizeDelta: {x: 427.5199, y: 390.6813}
+  m_SizeDelta: {x: 470.0065, y: 578.4502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3373437362052679371
 CanvasRenderer:
@@ -463,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -106}
-  m_SizeDelta: {x: 160, y: 38.007}
+  m_AnchoredPosition: {x: 0, y: -183.6589}
+  m_SizeDelta: {x: 160, y: 48.6892}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &645568115344020534
 CanvasRenderer:
@@ -547,7 +547,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1918348641837438662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8677589300935118585}
+        m_TargetAssemblyTypeName: BuyButton, Assembly-CSharp
+        m_MethodName: OnBuyAmmo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8677589300935118585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02d9ff91d981441ac18b919e638c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuyButton
+  noMoneycanvas: {fileID: 0}
 --- !u!1 &3243674594753224539
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5634766, y: -9.254196}
+  m_AnchoredPosition: {x: 1.5634766, y: -9.25415}
   m_SizeDelta: {x: -96.9397, y: -147.7615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8018323137165956362
@@ -1213,8 +1226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 310, y: 0}
-  m_SizeDelta: {x: 332.3344, y: 390.6813}
+  m_AnchoredPosition: {x: 351.143, y: 0}
+  m_SizeDelta: {x: 365.3615, y: 578.4502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2610383484575341399
 CanvasRenderer:
@@ -1292,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165.2901, y: -121.4599}
+  m_AnchoredPosition: {x: 186.5334, y: -215.34435}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &553637830321458384
