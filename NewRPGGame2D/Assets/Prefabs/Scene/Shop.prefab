@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9174569854745442158}
   - component: {fileID: 6949309103562986478}
   m_Layer: 9
-  m_Name: Text (TMP) (1)
+  m_Name: DescrText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 3373437362052679371}
   - component: {fileID: 4349825296393010574}
   m_Layer: 9
-  m_Name: Table
+  m_Name: BuyTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,9 +171,9 @@ RectTransform:
   - {fileID: 3766763686600599015}
   m_Father: {fileID: 3637102218382549739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -677, y: -4}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -104, y: 0}
   m_SizeDelta: {x: 427.5199, y: 390.6813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3373437362052679371
@@ -560,7 +560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02d9ff91d981441ac18b919e638c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuyButton
-  spawnAmmo: {fileID: 0}
 --- !u!1 &3243674594753224539
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5635071, y: -9.254196}
+  m_AnchoredPosition: {x: 1.5634766, y: -9.254196}
   m_SizeDelta: {x: -96.9397, y: -147.7615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8018323137165956362
@@ -1212,9 +1211,9 @@ RectTransform:
   - {fileID: 2011432398783260149}
   m_Father: {fileID: 3637102218382549739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -254.06116, y: -4}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 310, y: 0}
   m_SizeDelta: {x: 332.3344, y: 390.6813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2610383484575341399
@@ -1291,10 +1290,10 @@ RectTransform:
   - {fileID: 1233824996316907993}
   m_Father: {fileID: 3766763686600599015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165.2901, y: -121.4599}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &553637830321458384
 CanvasRenderer:
@@ -1380,7 +1379,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7022212343816494544}
         m_TargetAssemblyTypeName: ShopSlot, Assembly-CSharp
-        m_MethodName: OnBuyAmmo
+        m_MethodName: OnSetupItemInDescription
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1405,6 +1404,7 @@ MonoBehaviour:
   iItem: {fileID: 7994445971856274515, guid: c22a4b314927b18488b20645f3127803, type: 3}
   image: {fileID: 6794558663353855051}
   buyButton: {fileID: 8677589300935118585}
+  descrMeshProUGUI: {fileID: 6949309103562986478}
 --- !u!114 &3711717486445629987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,7 +1440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3637102218382549739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1497,12 +1497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

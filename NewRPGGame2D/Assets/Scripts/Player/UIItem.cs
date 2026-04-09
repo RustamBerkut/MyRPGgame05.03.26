@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class UIItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public LootingItem LootingItem;
     public int numberOfItem;
     public Resours resours;
     public static Action UpdateItemStatAction;
