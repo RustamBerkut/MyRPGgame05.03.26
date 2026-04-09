@@ -572,7 +572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02d9ff91d981441ac18b919e638c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuyButton
-  noMoneycanvas: {fileID: 0}
+  noMoneycanvas: {fileID: 5584039263891330600, guid: 15902a0ddd82cd54c9eec4e236d495da, type: 3}
+  noCapacityCanvas: {fileID: 5584039263891330600, guid: 43e7ea52a857466499164868b1b07f36, type: 3}
+  UIItems: []
 --- !u!1 &3243674594753224539
 GameObject:
   m_ObjectHideFlags: 0
