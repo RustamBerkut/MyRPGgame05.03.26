@@ -108,7 +108,7 @@ MonoBehaviour:
   castSpeed: 0
   itemName: BodyUI 10
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  ammoCost: 0
+  ammoCost: 770
   itemDescription: "\u0411\u0440\u043E\u043D\u044F \u041A\u043E\u0440\u043D\u0435\u0439\n\n\u0422\u043E\u0440\u0441\n\u0417\u0430\u0449\u0438\u0442\u0430:
     +30\n\u0418\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442: +12\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C:
     +9\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
