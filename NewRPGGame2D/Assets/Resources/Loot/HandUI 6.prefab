@@ -94,13 +94,13 @@ MonoBehaviour:
   numberOfItem: 6
   resours: 7
   STR: 0
-  DEX: 0
+  DEX: 2
   INT: 0
-  CON: 0
+  CON: 1
   meleeAttack: 0
   bowAttack: 0
   mageAttack: 0
-  shield: 0
+  shield: 5
   MP: 0
   HP: 0
   attackSpeed: 0
@@ -108,8 +108,11 @@ MonoBehaviour:
   castSpeed: 0
   itemName: HandUI 6
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  ammoCost: 0
-  itemDescription: 
+  ammoCost: 110
+  itemDescription: "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0438\u0437
+    \u0448\u043A\u0443\u0440\n\n\u0420\u0443\u043A\u0438\n\u0417\u0430\u0449\u0438\u0442\u0430:
+    +5\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C: +2\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
+    +1"
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

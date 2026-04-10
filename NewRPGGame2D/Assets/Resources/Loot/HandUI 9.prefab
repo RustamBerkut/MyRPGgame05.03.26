@@ -93,14 +93,14 @@ MonoBehaviour:
   LootingItem: {fileID: 9197921466249065847, guid: 8c70dc3e1f4297d47944c55b3eec06c3, type: 3}
   numberOfItem: 9
   resours: 7
-  STR: 0
-  DEX: 0
+  STR: 2
+  DEX: 8
   INT: 0
-  CON: 0
+  CON: 4
   meleeAttack: 0
   bowAttack: 0
   mageAttack: 0
-  shield: 0
+  shield: 25
   MP: 0
   HP: 0
   attackSpeed: 0
@@ -108,8 +108,10 @@ MonoBehaviour:
   castSpeed: 0
   itemName: HandUI 9
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  ammoCost: 0
-  itemDescription: 
+  ammoCost: 2500
+  itemDescription: "\u041A\u043E\u0433\u0442\u0438 \u0410\u043B\u044C\u0444\u044B\n\n\u0420\u0443\u043A\u0438\n\u0417\u0430\u0449\u0438\u0442\u0430:
+    +25\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C: +8\n\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C:
+    +4\n\u0421\u0438\u043B\u0430: +2"
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0

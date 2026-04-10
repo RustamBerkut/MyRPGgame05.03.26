@@ -108,7 +108,7 @@ MonoBehaviour:
   castSpeed: 0
   itemName: LegsUI 12
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  ammoCost: 0
+  ammoCost: 120
   itemDescription: "\u041E\u043D\u0443\u0447\u0438 (\u043E\u0431\u043C\u043E\u0442\u043A\u0438)\n\n\u041D\u043E\u0433\u0438\n\u0417\u0430\u0449\u0438\u0442\u0430:
     +2\n\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C: +2\n\u0418\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442:
     +2"
