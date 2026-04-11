@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PlayerBehaviour
 {
@@ -16,7 +17,7 @@ namespace PlayerBehaviour
         private GameObject noWeaponCanvas;
 
         public float  _meleeDamage, _magicDamage, _rangeDamage, _attackSpeed, _critChance, _castSpeed;
-
+        private bool _isAttacking = false;
         [SerializeField]
         private TextMeshProUGUI meleeDamageText;
         [SerializeField]
@@ -49,7 +50,17 @@ namespace PlayerBehaviour
 
             attackSlot.GetComponent<PlayerDamager>().playerDamage = (int)_meleeDamage;
         }
-
+        public void OnTestButton(InputAction.CallbackContext _context)
+        {
+            _isAttacking = _context.ReadValueAsButton();
+        }
+        private void Update()
+        {
+            if (_isAttacking)
+            {
+                OnPlayerAttack();
+            }
+        }
         public void OnPlayerAttack()
         {
             if (equipmnetSlot.transform.childCount == 0)

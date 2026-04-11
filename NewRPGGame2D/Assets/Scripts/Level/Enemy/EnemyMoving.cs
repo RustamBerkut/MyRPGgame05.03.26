@@ -22,6 +22,7 @@ public class EnemyMoving : MonoBehaviour
     private float attackDistance;
     private GameObject playerPosition;
 
+    private Vector3 playerPos;
     private void Start()
     {
         OnPlayerSetupInMove();
@@ -60,7 +61,7 @@ public class EnemyMoving : MonoBehaviour
     
     private void OnPlayerMoving()
     {
-        Vector3 playerPos = playerPosition.transform.position;
+        playerPos = playerPosition.transform.position;
         Vector3 enemyPos = gameObject.transform.position;
         if (playerPos.x < enemyPos.x) // игрок находится слева от врага  
             enemyBody.transform.localScale = new Vector3(-_bodyScaller, _bodyScaller, _bodyScaller); // поворачиваем врага влево  
@@ -112,6 +113,13 @@ public class EnemyMoving : MonoBehaviour
     private void OnRangeAttack()
     {
         GameObject missle = Instantiate(rangeMissle, rangeBarrel.transform.position, rangeBarrel.transform.rotation);
+        Rigidbody2D rb  = missle.GetComponent<Rigidbody2D>();
+
+        Vector3 diference = playerPosition.transform.position - missle.transform.position;
+        float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
+        missle.transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
+
+        rb.linearVelocity= missle.transform.right * 10;
         animator.CrossFade("EnemyAttack", 0.1f);
     }
     private void OnMageAttack()
