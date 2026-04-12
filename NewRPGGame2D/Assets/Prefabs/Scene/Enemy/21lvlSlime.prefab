@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124804338818246182, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_Name
-      value: Slime2lvl
+      value: 21lvlSlime
       objectReference: {fileID: 0}
     - target: {fileID: 6378377645859732852, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_Controller
@@ -233,4 +233,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cdc7b361d294e4c833773f43990b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  enemyDamager: 4
+  enemyDamager: 5

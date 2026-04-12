@@ -241,4 +241,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cdc7b361d294e4c833773f43990b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  enemyDamager: 5
+  enemyDamager: 15

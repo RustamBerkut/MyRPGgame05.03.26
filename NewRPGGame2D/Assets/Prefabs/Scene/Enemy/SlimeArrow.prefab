@@ -348,7 +348,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 0.41}
+  m_Size: {x: 2, y: 0.41}
   m_Direction: 0
 --- !u!50 &5086202529665553180
 Rigidbody2D:
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cdc7b361d294e4c833773f43990b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
-  enemyDamager: 15
+  enemyDamager: 30
 --- !u!114 &634653318553993016
 MonoBehaviour:
   m_ObjectHideFlags: 0

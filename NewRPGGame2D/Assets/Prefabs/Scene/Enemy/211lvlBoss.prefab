@@ -181,6 +181,10 @@ PrefabInstance:
       value: -0.007
       objectReference: {fileID: 0}
     - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
+      propertyPath: _speed
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: rangeMissle
       value: 
       objectReference: {fileID: 8872360437890709276, guid: ece28edc69f6353429d11ff51a42ce86, type: 3}

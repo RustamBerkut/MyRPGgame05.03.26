@@ -93,23 +93,23 @@ MonoBehaviour:
   LootingItem: {fileID: 9197921466249065847, guid: 2d77d69e88aadce429c0b948568d3e73, type: 3}
   numberOfItem: 10
   resours: 4
-  STR: 0
-  DEX: 0
-  INT: 0
-  CON: 0
-  meleeAttack: 0
-  bowAttack: 0
-  mageAttack: 0
-  shield: 0
-  MP: 0
-  HP: 0
-  attackSpeed: 0
+  STR: 30
+  DEX: 30
+  INT: 30
+  CON: 30
+  meleeAttack: 30
+  bowAttack: 30
+  mageAttack: 30
+  shield: 30
+  MP: 30
+  HP: 30
+  attackSpeed: 3
   critChanse: 0
-  castSpeed: 0
+  castSpeed: 3
   itemName: HelmetUI10
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
-  ammoCost: 0
-  itemDescription: 
+  ammoCost: 15000
+  itemDescription: "\u0414\u0430\u043D\u043D\u044B\u0435 \u0441\u043A\u0440\u044B\u0442\u044B"
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0
