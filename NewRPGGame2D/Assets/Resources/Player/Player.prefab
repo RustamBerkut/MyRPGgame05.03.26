@@ -1826,7 +1826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4109031147616235552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14619,9 +14619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb81f3b6fcacff241bb7816ee2af988d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillSlot
-  resours: 
+  resours: 0b000000
   equipmentSlotOnPlayer: []
-  equipmentSlotName: 
+  equipmentSlotName: SkillSlotThree
   skillButton: {fileID: 0}
 --- !u!224 &8449913601136116840 stripped
 RectTransform:
@@ -15160,7 +15160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.x
@@ -15168,15 +15168,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15208,11 +15208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 119.72946
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -91.1257
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16038,9 +16038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb81f3b6fcacff241bb7816ee2af988d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillSlot
-  resours: 
+  resours: 0b000000
   equipmentSlotOnPlayer: []
-  equipmentSlotName: 
+  equipmentSlotName: SkillSlotTwo
   skillButton: {fileID: 0}
 --- !u!1001 &5767839387631715721
 PrefabInstance:
@@ -16439,7 +16439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.x
@@ -16447,15 +16447,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16487,11 +16487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 394.72946
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.1257
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18201,7 +18201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.x
@@ -18209,15 +18209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18249,11 +18249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 119.72946
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -32.1257
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18714,7 +18714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.x
@@ -18722,15 +18722,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18762,11 +18762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 394.72946
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -91.1257
       objectReference: {fileID: 0}
     - target: {fileID: 1447904849457270114, guid: 05e173c3e8889434e8eeb86027f420fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19085,9 +19085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb81f3b6fcacff241bb7816ee2af988d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillSlot
-  resours: 
+  resours: 0b000000
   equipmentSlotOnPlayer: []
-  equipmentSlotName: 
+  equipmentSlotName: SkillSlotOne
   skillButton: {fileID: 5478785837548624910}
 --- !u!1001 &9173732421793714497
 PrefabInstance:
