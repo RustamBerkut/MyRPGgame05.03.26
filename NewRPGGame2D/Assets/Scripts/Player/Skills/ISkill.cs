@@ -1,5 +1,4 @@
-
-interface ISkill
+public interface ISkill
 {
     void OnSkillUse()
     {

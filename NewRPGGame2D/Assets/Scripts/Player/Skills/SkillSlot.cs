@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SkillSlot : MonoBehaviour, IDropHandler
 {
@@ -8,7 +9,7 @@ public class SkillSlot : MonoBehaviour, IDropHandler
     public List<GameObject> equipmentSlotOnPlayer;
 
     public string equipmentSlotName;
-    public SkillButton skillButton;
+    public GameObject skillButton;
 
     private void Start()
     {
@@ -45,10 +46,8 @@ public class SkillSlot : MonoBehaviour, IDropHandler
                     otherSlotTransform.SetParent(transform);
                     otherSlotTransform.localPosition = Vector3.zero;
                     otherSlotTransform.localScale = Vector3.one;
-                    foreach (var slot in equipmentSlotOnPlayer)
-                    {
-                        slot.GetComponent<EquipmentList>().SetupItemInSlot(number);
-                    }
+                    skillButton.GetComponent<Image>().sprite = otherSlotTransform.GetComponent<Image>().sprite;
+                    skillButton.GetComponent<SkillButton>().skillGO = otherSlotTransform.gameObject;
                 }
                 else Debug.Log("net + {0}");
             }
@@ -62,11 +61,9 @@ public class SkillSlot : MonoBehaviour, IDropHandler
     {
         if (transform.childCount == 0)
         {
-            foreach (var slot in equipmentSlotOnPlayer)
-            {
-                slot.GetComponent<EquipmentList>().SetupItemInSlot(0);
-                OnClearItemSlot();
-            }
+            skillButton.GetComponent<Image>().sprite = null;
+            skillButton.GetComponent<SkillButton>().skillGO = null;
+            OnClearItemSlot();
         }
     }
     private void OnLoadItemInSlot()
@@ -75,16 +72,13 @@ public class SkillSlot : MonoBehaviour, IDropHandler
 
         string value = PlayerPrefs.GetString(equipmentSlotName);
         value = string.Format("Loot/{0}", value);
-        Debug.Log(value);
         var it = (GameObject)Instantiate(Resources.Load(value));
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
         it.transform.localScale = Vector3.one;
         int number = it.GetComponent<UIItem>().numberOfItem;
-        foreach (var slot in equipmentSlotOnPlayer)
-        {
-            slot.GetComponent<EquipmentList>().SetupItemInSlot(number);
-        }
+        skillButton.GetComponent<Image>().sprite = it.GetComponent<Image>().sprite;
+        skillButton.GetComponent<SkillButton>().skillGO = it.gameObject;
     }
     private void OnSaveItemInSlot(string item)
     {

@@ -2,15 +2,9 @@ using UnityEngine;
 
 public class SkillButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject skillGO;
+    public void OnSkillCast()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        skillGO.GetComponent<ISkill>().OnSkillUse();
     }
 }
