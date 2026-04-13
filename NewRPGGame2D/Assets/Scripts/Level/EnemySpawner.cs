@@ -120,7 +120,7 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Wave1Spawn()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             Instantiate(_enemy1, _spawnPoints[i].transform.position, Quaternion.identity);
             _enemyCurrentList++;
