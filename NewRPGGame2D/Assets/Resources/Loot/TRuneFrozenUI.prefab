@@ -181,6 +181,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FrozenSkill
   player: {fileID: 0}
-  skillRadius: {x: 5, y: 5}
+  skillRadius: 10
   skillDamage: 0
   objectsInsideArea: []

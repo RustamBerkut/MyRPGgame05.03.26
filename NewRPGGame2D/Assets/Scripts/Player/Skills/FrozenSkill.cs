@@ -5,7 +5,7 @@ public class FrozenSkill : MonoBehaviour, ISkill
     [SerializeField]  
     private GameObject player;
     [SerializeField]
-    private Vector2 skillRadius;
+    private float skillRadius;
     [SerializeField]
     private int skillDamage;
     [SerializeField] 
@@ -18,10 +18,11 @@ public class FrozenSkill : MonoBehaviour, ISkill
     }
     private void OnFrozen()
     {
-        objectsInsideArea = Physics2D.OverlapAreaAll(player.transform.position, skillRadius);
+        objectsInsideArea = Physics2D.OverlapCircleAll(player.transform.position, skillRadius);
         foreach (var item in objectsInsideArea)
         {
-            Debug.Log(item.name);
+            Debug.Log("You damage the enemy");
         }
     }
+
 }

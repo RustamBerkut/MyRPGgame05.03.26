@@ -70,7 +70,7 @@ namespace PlayerBehaviour
         public void OnDamage(int damage)
         {
             float dam = damage * (1 - playerShield);
-            currentHP -= dam;Debug.Log(currentHP);
+            currentHP -= dam;
             hpSlider.value = currentHP;
             timeAfterAttack = 10;
             Instantiate(hitFX, transform.position, transform.rotation);

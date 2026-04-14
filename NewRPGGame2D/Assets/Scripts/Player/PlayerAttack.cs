@@ -30,6 +30,8 @@ namespace PlayerBehaviour
         private TextMeshProUGUI critChanceText;
         [SerializeField]
         private TextMeshProUGUI castSpeedText;
+        [SerializeField]
+        private float timeForAttack;
         public void OnAttackStatSetup(float melee, float magic, float range, float speed, 
             float crit, float cast)
         {
@@ -56,7 +58,8 @@ namespace PlayerBehaviour
         }
         private void Update()
         {
-            if (_isAttacking)
+            timeForAttack -= Time.deltaTime;
+            if (_isAttacking & timeForAttack <= 0)
             {
                 OnPlayerAttack();
             }
@@ -111,6 +114,7 @@ namespace PlayerBehaviour
             animator.SetBool("Sword", true);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Sword", false);
+            timeForAttack = (1 / _attackSpeed);
         }
         IEnumerator OnBowAttack()
         {
@@ -119,6 +123,7 @@ namespace PlayerBehaviour
             animator.SetBool("Bow", true);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Bow", false);
+            timeForAttack = (1 / _attackSpeed);
         }
         IEnumerator OnDualAttack()
         {
@@ -127,6 +132,7 @@ namespace PlayerBehaviour
             animator.SetBool("Dual", true);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Dual", false);
+            timeForAttack = (1 / _attackSpeed);
         }
         IEnumerator OnMageAttack() 
         {
@@ -135,6 +141,7 @@ namespace PlayerBehaviour
             animator.SetBool("Mage", true);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("Mage", false);
+            timeForAttack = (1 / _castSpeed);
         }
     }
 }

@@ -51,7 +51,7 @@ public class EnemyMoving : MonoBehaviour
     {
         attackDelay = timerForAttack;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (playerPosition == null) return;
         attackDelay -= Time.deltaTime;
@@ -68,7 +68,7 @@ public class EnemyMoving : MonoBehaviour
         else // игрок находится справа от врага  
             enemyBody.transform.localScale = new Vector3(_bodyScaller, _bodyScaller, _bodyScaller); // поворачиваем врага вправо  
 
-        transform.position = Vector2.MoveTowards(enemyPos, playerPos, _enemySpeed);
+        transform.position = Vector2.MoveTowards(enemyPos, playerPos, _enemySpeed * Time.fixedDeltaTime);
         float dis = Vector2.Distance(transform.position, playerPosition.transform.position);
         dis = Mathf.Abs(dis);
         if (dis <= attackDistance)

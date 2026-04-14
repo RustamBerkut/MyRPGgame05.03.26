@@ -133850,6 +133850,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestPanelActivated
   questCanvas: {fileID: 1463818657}
+--- !u!1001 &1510856369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.0920463
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5416193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838548259671366955, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935536952533790403, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+      propertyPath: m_Name
+      value: TRuneFrozen
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
 --- !u!1 &1514413523
 GameObject:
   m_ObjectHideFlags: 0
@@ -204472,3 +204529,4 @@ SceneRoots:
   - {fileID: 1479878438}
   - {fileID: 777614104}
   - {fileID: 566297923}
+  - {fileID: 1510856369}

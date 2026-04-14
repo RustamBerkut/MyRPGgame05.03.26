@@ -74,7 +74,7 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
         string value = PlayerPrefs.GetString(equipmentSlotName);
         value = string.Format("Loot/{0}", value);
-        Debug.Log(value);
+
         var it = (GameObject)Instantiate(Resources.Load(value));
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
