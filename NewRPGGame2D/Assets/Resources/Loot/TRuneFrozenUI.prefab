@@ -180,3 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200472b06e7c4c441b911a433178441e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FrozenSkill
+  player: {fileID: 0}
+  skillRadius: {x: 5, y: 5}
+  skillDamage: 0
+  objectsInsideArea: []

@@ -14967,7 +14967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1656708595757167913, guid: d67e6bdb00a9a9640ae5f9f2c5780821, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1698700158240735490, guid: d67e6bdb00a9a9640ae5f9f2c5780821, type: 3}
       propertyPath: m_Type
@@ -15085,7 +15085,7 @@ MonoBehaviour:
   resours: 0b000000
   equipmentSlotOnPlayer: []
   equipmentSlotName: SkillSlotThree
-  skillButton: {fileID: 0}
+  skillButton: {fileID: 8859577517712353131}
 --- !u!224 &8449913601136116840 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5500166682564592942, guid: d67e6bdb00a9a9640ae5f9f2c5780821, type: 3}
@@ -16385,7 +16385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1656708595757167913, guid: d67e6bdb00a9a9640ae5f9f2c5780821, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1698700158240735490, guid: d67e6bdb00a9a9640ae5f9f2c5780821, type: 3}
       propertyPath: m_Type
