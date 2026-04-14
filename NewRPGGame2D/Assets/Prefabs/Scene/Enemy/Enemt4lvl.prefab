@@ -223,6 +223,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6124804338818246182, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7143619561660930614}
+    - targetCorrespondingSourceObject: {fileID: 6124804338818246182, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2517416406366870132}
     - targetCorrespondingSourceObject: {fileID: 7535408325358553253, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2691635089026641280}
@@ -277,3 +280,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-2517416406366870132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468049922297539676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee12ba158c5590e4e9be240d68663884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrozenEnemySkill

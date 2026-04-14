@@ -21,8 +21,10 @@ public class FrozenSkill : MonoBehaviour, ISkill
         objectsInsideArea = Physics2D.OverlapCircleAll(player.transform.position, skillRadius);
         foreach (var item in objectsInsideArea)
         {
-            
+            if (item.GetComponent<FrozenEnemySkill>())
+            {
+                item.GetComponent<FrozenEnemySkill>().OnFreezeSkillUse();
+            }
         }
     }
-
 }
