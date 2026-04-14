@@ -21,7 +21,7 @@ public class FrozenSkill : MonoBehaviour, ISkill
         objectsInsideArea = Physics2D.OverlapCircleAll(player.transform.position, skillRadius);
         foreach (var item in objectsInsideArea)
         {
-            Debug.Log("You damage the enemy");
+            
         }
     }
 
