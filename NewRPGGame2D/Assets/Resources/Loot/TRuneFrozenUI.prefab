@@ -181,6 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FrozenSkill
   player: {fileID: 0}
-  skillRadius: 10
+  skillRadius: 3
   skillDamage: 0
   objectsInsideArea: []
+  iceFX: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  skillLevel: 1

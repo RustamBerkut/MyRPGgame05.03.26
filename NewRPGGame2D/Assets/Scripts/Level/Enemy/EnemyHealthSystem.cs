@@ -53,7 +53,7 @@ public class EnemyHealthSystem : MonoBehaviour
         }
     }
 
-    private void OnDamage(int damage)
+    public void OnDamage(int damage)
     {
         float randomDamage = UnityEngine.Random.Range(damage * 0.7f, damage * 1.3f);
 
