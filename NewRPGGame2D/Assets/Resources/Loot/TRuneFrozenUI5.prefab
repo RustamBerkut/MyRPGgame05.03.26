@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1240432601889289737}
   - component: {fileID: 6483201574901642692}
   m_Layer: 0
-  m_Name: TRuneFrozenUI
+  m_Name: TRuneFrozenUI5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 285278978, guid: 53ec66ab76c605c4aa00b782ec5aacff, type: 3}
+  m_Sprite: {fileID: 706727825, guid: 53ec66ab76c605c4aa00b782ec5aacff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -107,7 +107,7 @@ MonoBehaviour:
   attackSpeed: 1
   critChanse: 0
   castSpeed: 0
-  itemName: TRuneFrozenUI
+  itemName: TRuneFrozenUI5
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
   ammoCost: 100
   itemDescription: Frozen
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FrozenSkill
   player: {fileID: 0}
-  skillRadius: 2
-  skillDamage: 5
+  skillRadius: 6
+  skillDamage: 25
   objectsInsideArea: []
   iceFX: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
-  skillLevel: 1
+  skillLevel: 5

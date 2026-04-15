@@ -23,7 +23,7 @@ public class FrozenSkill : MonoBehaviour, ISkill
     private void OnFrozen()
     {
         GameObject fx = Instantiate(iceFX, player.transform.position, Quaternion.identity);
-        fx.transform.localScale = new Vector3(skillLevel * 0.5f, skillLevel * 0.5f, 1);
+        fx.transform.localScale = new Vector3(skillLevel * 0.3f, skillLevel * 0.3f, 1);
         objectsInsideArea = Physics2D.OverlapCircleAll(player.transform.position, skillRadius);
         foreach (var item in objectsInsideArea)
         {
