@@ -2,23 +2,28 @@ using UnityEngine;
 
 public class FrozenSkill : MonoBehaviour, ISkill
 {
-    [SerializeField]  
-    private GameObject player;
+    public float coolDownTime;
+
     [SerializeField]
-    private float skillRadius;
+    private float        skillRadius;
     [SerializeField]
-    private int skillDamage;
-    [SerializeField] 
+    private int          skillDamage;
+    [SerializeField]
+    private GameObject   iceFX;
+    [SerializeField]
+    private int          skillLevel;
+
+    private GameObject   player;
     private Collider2D[] objectsInsideArea;
-    [SerializeField]
-    private GameObject iceFX;
-    [SerializeField]
-    private int skillLevel;
 
     public void OnSkillUse()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         OnFrozen();
+    }
+    public void OnSetupCD()
+    {
+
     }
     private void OnFrozen()
     {

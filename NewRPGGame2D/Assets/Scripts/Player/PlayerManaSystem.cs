@@ -14,11 +14,11 @@ namespace PlayerBehaviour
         private TextMeshProUGUI MPRegenText;
 
         private int MaxMP;
-        private int currentMP;
+        public int currentMP;
 
         private int MpRegen;
         private int playerInt = 10;
-        private float timeRegen = 1;
+        private float timeRegen = 5;
         public float timeAfterAttack = 10;
 
         private void Update()
@@ -69,12 +69,13 @@ namespace PlayerBehaviour
         {
             MpRegen = 3 + (playerInt - 10);
             MPRegenText.text = string.Format("Реген маны: {0}", MpRegen);
-            timeRegen = 1;
+            timeRegen = 5;
             OnMpUpdate(MpRegen);
         }
         private void OnPlayerDead()
         {
             Debug.Log("Player dead");
         }
+        
     }
 }

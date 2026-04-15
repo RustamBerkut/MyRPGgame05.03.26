@@ -4,4 +4,8 @@ public interface ISkill
     {
 
     }
+    void OnSetupCD()
+    {
+
+    }
 }
