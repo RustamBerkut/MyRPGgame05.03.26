@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FrozenSkill : MonoBehaviour, ISkill
 {
-    public float coolDownTime;
+    public float         coolDownTime;
 
     [SerializeField]
     private float        skillRadius;
@@ -16,14 +16,10 @@ public class FrozenSkill : MonoBehaviour, ISkill
     private GameObject   player;
     private Collider2D[] objectsInsideArea;
 
-    public void OnSkillUse()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         OnFrozen();
-    }
-    public void OnSetupCD()
-    {
-
     }
     private void OnFrozen()
     {
@@ -38,5 +34,6 @@ public class FrozenSkill : MonoBehaviour, ISkill
                 item.GetComponent<EnemyHealthSystem>().OnDamage(skillDamage);
             }
         }
+        Destroy(gameObject);
     }
 }

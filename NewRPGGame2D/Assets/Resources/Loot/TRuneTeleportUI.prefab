@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
   - component: {fileID: 1240432601889289737}
-  - component: {fileID: -5065366227627446592}
+  - component: {fileID: 933841902657090104}
   m_Layer: 0
   m_Name: TRuneTeleportUI
   m_TagString: Untagged
@@ -168,7 +168,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &-5065366227627446592
+--- !u!114 &933841902657090104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,6 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379141423519758778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32be9d99ac850f54c9d95358103adaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b930402406fe4741bbaadd7116175d1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TeleportSkill
+  m_EditorClassIdentifier: Assembly-CSharp::SkillCanvasActivated
+  coolDownTime: 0
+  skillRadius: 0
+  skillDamage: 0
+  teleportFX: {fileID: 0}
+  skillLevel: 0
+  skillCanvas: {fileID: 6597243197483209165, guid: eebec56c6fea86349a68cfc6090dc917, type: 3}
