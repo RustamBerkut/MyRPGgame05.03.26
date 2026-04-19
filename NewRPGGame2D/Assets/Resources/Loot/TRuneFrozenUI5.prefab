@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
   - component: {fileID: 1240432601889289737}
-  - component: {fileID: 6483201574901642692}
+  - component: {fileID: 26293417602444870}
   m_Layer: 0
   m_Name: TRuneFrozenUI5
   m_TagString: Untagged
@@ -168,7 +168,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6483201574901642692
+--- !u!114 &26293417602444870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,12 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379141423519758778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200472b06e7c4c441b911a433178441e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b930402406fe4741bbaadd7116175d1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FrozenSkill
-  player: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SkillCanvasActivated
+  coolDownTime: 11
+  skillManaCost: 80
   skillRadius: 6
   skillDamage: 25
-  objectsInsideArea: []
-  iceFX: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
   skillLevel: 5
+  skillCanvas: {fileID: 6597243197483209165, guid: b8b3f944b68cb194798a5def7d705bec, type: 3}

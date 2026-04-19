@@ -38,7 +38,6 @@ public class SkillSlot : MonoBehaviour, IDropHandler
         {
             var otherSlotTransform = eventData.pointerDrag.transform;
             Resours res = otherSlotTransform.GetComponent<UIItem>().resours;
-            int number = otherSlotTransform.GetComponent<UIItem>().numberOfItem;
             foreach (var item in resours)
             {
                 if (item == res)
@@ -76,7 +75,7 @@ public class SkillSlot : MonoBehaviour, IDropHandler
         it.transform.SetParent(transform);
         it.transform.localPosition = Vector3.zero;
         it.transform.localScale = Vector3.one;
-        int number = it.GetComponent<UIItem>().numberOfItem;
+        
         skillButton.GetComponent<Image>().sprite = it.GetComponent<Image>().sprite;
         skillButton.GetComponent<SkillButton>().skillGO = it.gameObject;
     }

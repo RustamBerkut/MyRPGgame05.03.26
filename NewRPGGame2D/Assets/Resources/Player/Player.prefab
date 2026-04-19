@@ -2366,7 +2366,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2114299863683473202
 CanvasRenderer:
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
+  m_Color: {r: 0.39263988, g: 1, b: 0, a: 0.12156863}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3920,9 +3920,8 @@ MonoBehaviour:
   skillGO: {fileID: 2208755494417324987, guid: 8219e432a196b3746af3ee3bf05654db, type: 3}
   slider: {fileID: 8981041295184012768}
   coolDownSkillMax: 15
-  coolDownSkillCurrent: 0
+  noManaCanvas: {fileID: 5584039263891330600, guid: 76f94a7f3e919164993aa672bea5f8d1, type: 3}
   playerManaSystem: {fileID: 7742933401332416461}
-  skillManaCost: 15
 --- !u!1 &3748249033218262754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7531,7 +7530,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4334333539512637335
 CanvasRenderer:
@@ -7554,7 +7553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
+  m_Color: {r: 0.39263988, g: 1, b: 0, a: 0.12156863}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7794,9 +7793,8 @@ MonoBehaviour:
   skillGO: {fileID: 2208755494417324987, guid: f5403c0706e96c8409a434bb03b4556e, type: 3}
   slider: {fileID: 417046486020148367}
   coolDownSkillMax: 15
-  coolDownSkillCurrent: 0
+  noManaCanvas: {fileID: 5584039263891330600, guid: 76f94a7f3e919164993aa672bea5f8d1, type: 3}
   playerManaSystem: {fileID: 7742933401332416461}
-  skillManaCost: 45
 --- !u!1 &6155759393812060924
 GameObject:
   m_ObjectHideFlags: 0
@@ -8945,7 +8943,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4742542268110689540
 CanvasRenderer:
@@ -8968,7 +8966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
+  m_Color: {r: 0.39263988, g: 1, b: 0, a: 0.12156863}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11656,9 +11654,8 @@ MonoBehaviour:
   skillGO: {fileID: 2208755494417324987, guid: f5403c0706e96c8409a434bb03b4556e, type: 3}
   slider: {fileID: 1008980347513312761}
   coolDownSkillMax: 15
-  coolDownSkillCurrent: 0
+  noManaCanvas: {fileID: 5584039263891330600, guid: 76f94a7f3e919164993aa672bea5f8d1, type: 3}
   playerManaSystem: {fileID: 7742933401332416461}
-  skillManaCost: 25
 --- !u!1 &8915586147097761532
 GameObject:
   m_ObjectHideFlags: 0

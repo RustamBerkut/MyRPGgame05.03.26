@@ -180,9 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b930402406fe4741bbaadd7116175d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillCanvasActivated
-  coolDownTime: 0
-  skillRadius: 0
-  skillDamage: 0
+  coolDownTime: 15
+  skillManaCost: 30
+  skillRadius: 2
+  skillDamage: 10
   teleportFX: {fileID: 0}
-  skillLevel: 0
+  skillLevel: 1
   skillCanvas: {fileID: 6597243197483209165, guid: b8b3f944b68cb194798a5def7d705bec, type: 3}

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7994445971856274515}
   - component: {fileID: 7144676007898529027}
   - component: {fileID: 1240432601889289737}
-  - component: {fileID: -2960731317739891050}
+  - component: {fileID: 933841902657090104}
   m_Layer: 0
-  m_Name: TRuneFrozenUI6
+  m_Name: TRuneFireRainUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -591577611, guid: 53ec66ab76c605c4aa00b782ec5aacff, type: 3}
+  m_Sprite: {fileID: 5417115612752762048, guid: 53ec66ab76c605c4aa00b782ec5aacff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712b934be74363d49932a8b945152404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIItem
-  LootingItem: {fileID: 9197921466249065847, guid: d18ef6b80f590bd4293911f54f574fd0, type: 3}
+  LootingItem: {fileID: 9197921466249065847, guid: 55382ebfe3daa7e4eb17e52b0487b271, type: 3}
   numberOfItem: 1
   resours: 11
   STR: 1
@@ -107,10 +107,10 @@ MonoBehaviour:
   attackSpeed: 1
   critChanse: 0
   castSpeed: 0
-  itemName: TRuneFrozenUI6
+  itemName: TRuneFireRainUI
   icon: {fileID: 2800000, guid: c241e847af767d148b898393a975bb22, type: 3}
   ammoCost: 100
-  itemDescription: Frozen
+  itemDescription: Teleport
 --- !u!225 &7144676007898529027
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &-2960731317739891050
+--- !u!114 &933841902657090104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b930402406fe4741bbaadd7116175d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillCanvasActivated
-  coolDownTime: 10
-  skillManaCost: 120
-  skillRadius: 7
+  coolDownTime: 16
+  skillManaCost: 50
+  skillRadius: 2
   skillDamage: 30
-  skillLevel: 6
-  skillCanvas: {fileID: 6597243197483209165, guid: b8b3f944b68cb194798a5def7d705bec, type: 3}
+  skillLevel: 1
+  skillCanvas: {fileID: 6597243197483209165, guid: a0e467436bd4ab44aa1d57b29e715af4, type: 3}

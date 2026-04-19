@@ -33,7 +33,6 @@ namespace PlayerBehaviour
                 }
             }
         }
-
         public void SetupMaxMp(int INT, int _mana)
         {
             playerInt = INT;

@@ -2,25 +2,16 @@ using UnityEngine;
 
 public class FrozenSkill : MonoBehaviour, ISkill
 {
-    public float         coolDownTime;
-
-    [SerializeField]
-    private float        skillRadius;
-    [SerializeField]
-    private int          skillDamage;
     [SerializeField]
     private GameObject   iceFX;
-    [SerializeField]
+
     private int          skillLevel;
+    private float        skillRadius;
+    private int          skillDamage;
 
     private GameObject   player;
     private Collider2D[] objectsInsideArea;
 
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        OnFrozen();
-    }
     private void OnFrozen()
     {
         GameObject fx = Instantiate(iceFX, player.transform.position, Quaternion.identity);
@@ -35,5 +26,13 @@ public class FrozenSkill : MonoBehaviour, ISkill
             }
         }
         Destroy(gameObject);
+    }
+    public void OnSetupSkillInfo(float radius, int damage, int level)
+    {
+        skillRadius = radius;
+        skillDamage = damage;
+        skillLevel = level;
+        player = GameObject.FindGameObjectWithTag("Player");
+        OnFrozen();
     }
 }

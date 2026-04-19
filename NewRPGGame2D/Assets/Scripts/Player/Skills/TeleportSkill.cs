@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TeleportSkill : MonoBehaviour
+public class TeleportSkill : MonoBehaviour, ISkill
 {
     [SerializeField]
     private GameObject teleportFX;
@@ -10,7 +10,6 @@ public class TeleportSkill : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
     private void Update()
     {
@@ -18,14 +17,17 @@ public class TeleportSkill : MonoBehaviour
         {
             OnPlayerTeleport();
         }
-
     }
     private void OnPlayerTeleport()
     {
         Instantiate(teleportFX, player.transform.position, Quaternion.identity);
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        player.transform.position = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
+        player.transform.position = (Vector2)mouseWorldPosition;
         Destroy(gameObject);
+    }
+    public void OnSetupSkillInfo(float radius, int damage, int level)
+    {
+
     }
 }

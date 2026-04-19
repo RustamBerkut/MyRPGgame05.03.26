@@ -4,7 +4,7 @@ public interface ISkill
     {
 
     }
-    void OnSetupCD()
+    void OnSetupSkillInfo(float radius, int damage, int level)
     {
 
     }

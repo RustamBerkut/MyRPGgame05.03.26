@@ -7,12 +7,14 @@ public class SkillButton : MonoBehaviour
     public GameObject        skillGO;
     public Slider            slider;
     public float             coolDownSkillMax;
-    public float             coolDownSkillCurrent;
+    public GameObject        noManaCanvas;
+    
     public PlayerManaSystem  playerManaSystem;
-    public int               skillManaCost;
-        
+
+    private int               skillManaCost;
     private bool             isSkillReady;
     private int              currentMana;
+    private float            coolDownSkillCurrent;
 
     private void Start()
     {
@@ -37,23 +39,26 @@ public class SkillButton : MonoBehaviour
         if (skillGO == null) return;
         if (!isSkillReady) return;
 
+        skillManaCost = skillGO.GetComponent<SkillCanvasActivated>().skillManaCost;
+        coolDownSkillMax = skillGO.GetComponent<SkillCanvasActivated>().coolDownTime;
         currentMana = playerManaSystem.currentMP;
-        if (currentMana > skillManaCost)
+        if (currentMana >= skillManaCost)
         {
             playerManaSystem.OnMageAttack(skillManaCost);
+            skillGO.GetComponent<ISkill>().OnSkillUse();
+
+            slider.maxValue = coolDownSkillMax;
+            coolDownSkillCurrent = 0;
+            slider.value = 0;
+            isSkillReady = false;
         }
-
-        skillGO.GetComponent<ISkill>().OnSkillUse();
-        skillGO.GetComponent<ISkill>().OnSetupCD();
-
-        coolDownSkillCurrent = 0;
-        slider.value = 0;
-        isSkillReady = false;
+        else Instantiate(noManaCanvas);
     }
 
     private void OnUpdateCD(float timer)
     {
         slider.value = timer;
+
         if (slider.value == slider.maxValue)
         {
             isSkillReady = true;
