@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3772389924322646117, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.22759427
+      value: 0.2472425
       objectReference: {fileID: 0}
     - target: {fileID: 3772389924322646117, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_LocalScale.y
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3772389924322646117, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11787
+      value: 0.12769
       objectReference: {fileID: 0}
     - target: {fileID: 3772389924322646117, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: _speed
-      value: 0.04
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: _bodyScaller

@@ -169,6 +169,10 @@ PrefabInstance:
       value: 0.0775
       objectReference: {fileID: 0}
     - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
+      propertyPath: _speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743357941239904692, guid: 291dbf19875b6b64abc01f05d9c840e6, type: 3}
       propertyPath: _bodyScaller
       value: 4
       objectReference: {fileID: 0}
