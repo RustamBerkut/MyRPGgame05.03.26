@@ -163,12 +163,12 @@ TextureImporter:
       name: Torch Yellow_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 10
-        height: 14
+        x: 4
+        y: 1
+        width: 8
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,20 +185,20 @@ TextureImporter:
       name: Torch Yellow_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 0
-        width: 10
-        height: 15
+        x: 20
+        y: 1
+        width: 8
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 582e4f5937eb92ca0800000000000000
-      internalID: -6041088021494439291
+      spriteID: 6577dd7135e5ea94d9827ce6e485d1b0
+      internalID: -785217174
       vertices: []
       indices: 
       edges: []
@@ -207,20 +207,20 @@ TextureImporter:
       name: Torch Yellow_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 10
-        height: 15
+        x: 36
+        y: 1
+        width: 8
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b0c899cb892b68270800000000000000
-      internalID: 8252479736271965195
+      spriteID: 2615541b3d70ac8479b1b0d9e95d4db9
+      internalID: -28132988
       vertices: []
       indices: 
       edges: []
@@ -229,20 +229,20 @@ TextureImporter:
       name: Torch Yellow_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 0
-        width: 10
-        height: 13
+        x: 52
+        y: 1
+        width: 8
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1cbbecbdabce4f60800000000000000
-      internalID: 8020571933452778523
+      spriteID: 5e47d07408e494f48ade17cacd4a0474
+      internalID: -622065123
       vertices: []
       indices: 
       edges: []
@@ -251,20 +251,20 @@ TextureImporter:
       name: Torch Yellow_4
       rect:
         serializedVersion: 2
-        x: 67
-        y: 0
-        width: 10
-        height: 14
+        x: 68
+        y: 1
+        width: 8
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bcfeb7b8b23cb3740800000000000000
-      internalID: 5132910792109977547
+      spriteID: a70c70431c33b8a4d9224b51236e38e9
+      internalID: -81155856
       vertices: []
       indices: 
       edges: []
@@ -273,20 +273,20 @@ TextureImporter:
       name: Torch Yellow_5
       rect:
         serializedVersion: 2
-        x: 83
-        y: 0
-        width: 10
-        height: 14
+        x: 84
+        y: 1
+        width: 8
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a272b89219d191890800000000000000
-      internalID: -7486920396222290134
+      spriteID: db066f64aca3e074d9f6f819dad0e19b
+      internalID: -1283910385
       vertices: []
       indices: 
       edges: []
@@ -295,20 +295,20 @@ TextureImporter:
       name: Torch Yellow_6
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 10
-        height: 15
+        x: 100
+        y: 1
+        width: 8
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1d3e6adb51ab5db90800000000000000
-      internalID: -7217658225252441135
+      spriteID: 8c81a1b2409217042bacfedee5b66fb1
+      internalID: -2047506840
       vertices: []
       indices: 
       edges: []
@@ -317,20 +317,20 @@ TextureImporter:
       name: Torch Yellow_7
       rect:
         serializedVersion: 2
-        x: 115
-        y: 0
-        width: 10
-        height: 13
+        x: 116
+        y: 1
+        width: 8
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc330cb0beb8528b0800000000000000
-      internalID: -5177578354961796149
+      spriteID: 646e7658da43545438f02f4e882bc2d8
+      internalID: 221439100
       vertices: []
       indices: 
       edges: []
@@ -339,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ad04a86ab6893bc4980f1839024dc83f
     internalID: 0
     vertices: []
     indices: 
@@ -347,16 +347,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
       Torch Yellow_0: 6870108113881788870
-      Torch Yellow_1: -6041088021494439291
-      Torch Yellow_2: 8252479736271965195
-      Torch Yellow_3: 8020571933452778523
-      Torch Yellow_4: 5132910792109977547
-      Torch Yellow_5: -7486920396222290134
-      Torch Yellow_6: -7217658225252441135
-      Torch Yellow_7: -5177578354961796149
+      Torch Yellow_1: -785217174
+      Torch Yellow_2: -28132988
+      Torch Yellow_3: -622065123
+      Torch Yellow_4: -81155856
+      Torch Yellow_5: -1283910385
+      Torch Yellow_6: -2047506840
+      Torch Yellow_7: 221439100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2352221092302890956}
   - component: {fileID: 3368375780894516828}
   m_Layer: 20
-  m_Name: PF Props - Pillar 01
+  m_Name: PF Props - Pillar 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

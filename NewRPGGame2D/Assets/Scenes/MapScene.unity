@@ -131684,63 +131684,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6210945134095137308, guid: 66626be85b215294e8144fb79c011de6, type: 3}
   m_PrefabInstance: {fileID: 1455188440}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1458002098
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.4194574
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.6415071
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.1922364
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838548259671366955, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8935536952533790403, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
-      propertyPath: m_Name
-      value: TRuneFireRain
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2bcc8d3c663e02544aea16effaecde1a, type: 3}
 --- !u!1 &1460809829
 GameObject:
   m_ObjectHideFlags: 0
@@ -204577,4 +204520,3 @@ SceneRoots:
   - {fileID: 1479878438}
   - {fileID: 777614104}
   - {fileID: 566297923}
-  - {fileID: 1458002098}
